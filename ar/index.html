@@ -35,29 +35,32 @@
 <body>
 
 <header class="header">
-  <div class="logo-container">
-    <img src="../assets/img/logo.svg" alt="GlobalScore" class="logo-img">
-    <a href="../ar/" class="logo">GlobalScore</a>
-  </div>
-  <nav class="nav">
-    <a href="../ar/" class="nav-link active">الرئيسية</a>
-    <a href="#live" class="nav-link">مباشر</a>
-    <a href="#today" class="nav-link">اليوم</a>
-    <a href="#leagues" class="nav-link">الدوريات</a>
-  </nav>
-  <div class="controls">
-    <button id="themeToggle" class="btn" aria-label="تبديل المظهر">🌙</button>
-    <button id="langToggle" class="btn">EN</button>
+  <div class="header-container">
+    <div class="logo-container">
+      <img src="../assets/img/logo.svg" alt="GlobalScore" class="logo-img">
+      <a href="../ar/" class="logo">GlobalScore</a>
+    </div>
+    <nav class="nav">
+      <a href="#today" class="nav-link active">اليوم</a>
+      <a href="#live" class="nav-link">مباشر</a>
+      <a href="#yesterday" class="nav-link">النتائج</a>
+      <a href="#leagues" class="nav-link">الدوريات</a>
+      <a href="#favorites" class="nav-link">المفضلة ⭐</a>
+    </nav>
+    <div class="controls">
+      <button id="themeToggle" class="btn" aria-label="تبديل المظهر">🌙</button>
+      <button id="langToggle" class="btn">EN</button>
+    </div>
   </div>
 </header>
 
 <main id="app">
-  <section class="hero">
-    <h1>نتائج مباريات اليوم مباشرة</h1>
-    <p>نتائج مباريات كرة القدم في الوقت الفعلي، المباريات، النتائج والجدول الزمني من جميع أنحاء العالم.</p>
-  </section>
+  <!-- Premium Search Bar -->
+  <div class="search-container">
+    <input type="text" id="searchBar" class="search-input" placeholder="ابحث عن المباريات، الدوريات، الفرق...">
+  </div>
+
   <section id="liveMatchesContainer">
-    <h2>المباريات المباشرة اليوم</h2>
     <div id="liveMatches" class="matches-list">
       <div class="loading">جاري تحميل المباريات...</div>
     </div>

@@ -1,4 +1,3 @@
-// Simple Router placeholder for future routing implementation in Phase 2
 export class Router {
   constructor(routes) {
     this.routes = routes;
@@ -7,10 +6,18 @@ export class Router {
   }
 
   handleRoute() {
-    const hash = window.location.hash || '#home';
-    const route = this.routes[hash] || this.routes['#home'];
+    const rawHash = window.location.hash || '#today';
+    // If hash has parameters like #match-1
+    const cleanHash = rawHash.split('-')[0];
+    const param = rawHash.split('-')[1] || null;
+
+    const route = this.routes[cleanHash] || this.routes['#today'];
     if (route) {
-      route();
+      route(param);
     }
+  }
+
+  static navigate(hash) {
+    window.location.hash = hash;
   }
 }

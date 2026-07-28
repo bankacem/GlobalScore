@@ -46,6 +46,31 @@ export function setupLanguageToggle() {
 }
 
 /**
+ * Favorites LocalStorage System Helpers
+ */
+export function getFavorites() {
+  const favs = localStorage.getItem('favorites');
+  return favs ? JSON.parse(favs) : [];
+}
+
+export function isFavorite(id) {
+  const favs = getFavorites();
+  return favs.includes(Number(id));
+}
+
+export function toggleFavorite(id) {
+  const numId = Number(id);
+  let favs = getFavorites();
+  if (favs.includes(numId)) {
+    favs = favs.filter(item => item !== numId);
+  } else {
+    favs.push(numId);
+  }
+  localStorage.setItem('favorites', JSON.stringify(favs));
+  return favs.includes(numId);
+}
+
+/**
  * Query parameter extractor
  */
 export function getQueryParam(param) {

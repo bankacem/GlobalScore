@@ -35,29 +35,32 @@
 <body>
 
 <header class="header">
-  <div class="logo-container">
-    <img src="../assets/img/logo.svg" alt="GlobalScore" class="logo-img">
-    <a href="../en/" class="logo">GlobalScore</a>
-  </div>
-  <nav class="nav">
-    <a href="../en/" class="nav-link active">Home</a>
-    <a href="#live" class="nav-link">Live</a>
-    <a href="#today" class="nav-link">Today</a>
-    <a href="#leagues" class="nav-link">Leagues</a>
-  </nav>
-  <div class="controls">
-    <button id="themeToggle" class="btn" aria-label="Toggle Theme">🌙</button>
-    <button id="langToggle" class="btn">AR</button>
+  <div class="header-container">
+    <div class="logo-container">
+      <img src="../assets/img/logo.svg" alt="GlobalScore" class="logo-img">
+      <a href="../en/" class="logo">GlobalScore</a>
+    </div>
+    <nav class="nav">
+      <a href="#today" class="nav-link active">Today</a>
+      <a href="#live" class="nav-link">Live</a>
+      <a href="#yesterday" class="nav-link">Yesterday</a>
+      <a href="#leagues" class="nav-link">Leagues</a>
+      <a href="#favorites" class="nav-link">Favorites ⭐</a>
+    </nav>
+    <div class="controls">
+      <button id="themeToggle" class="btn" aria-label="Toggle Theme">🌙</button>
+      <button id="langToggle" class="btn">AR</button>
+    </div>
   </div>
 </header>
 
 <main id="app">
-  <section class="hero">
-    <h1>Live Football Scores</h1>
-    <p>Real-time football scores, matches, results and schedules from all around the globe.</p>
-  </section>
+  <!-- Premium Search Bar -->
+  <div class="search-container">
+    <input type="text" id="searchBar" class="search-input" placeholder="Search matches, leagues, teams...">
+  </div>
+
   <section id="liveMatchesContainer">
-    <h2>Today's Live Actions</h2>
     <div id="liveMatches" class="matches-list">
       <div class="loading">Loading matches...</div>
     </div>
