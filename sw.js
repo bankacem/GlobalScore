@@ -1,16 +1,20 @@
-const CACHE_NAME = 'globalscore-v1';
+const CACHE_NAME = 'globalscore-v2';
 
 self.addEventListener('install', e => {
   e.waitUntil(
     caches.open(CACHE_NAME)
     .then(cache => cache.addAll([
-      '/',
-      '/en/',
-      '/ar/',
-      '/assets/css/main.css',
-      '/assets/js/app.js',
-      '/assets/js/data-source.js',
-      '/assets/data/live.json'
+      './',
+      './en/',
+      './ar/',
+      './assets/css/main.css',
+      './assets/css/critical.css',
+      './assets/js/app.js',
+      './assets/js/data-source.js',
+      './assets/js/components.js',
+      './assets/js/utils.js',
+      './assets/data/live.json',
+      './assets/img/logo.svg'
     ]))
   );
 });

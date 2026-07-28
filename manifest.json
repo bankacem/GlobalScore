@@ -4,12 +4,12 @@
   "description": "Live football scores, fixtures, results, league tables and match stats updated fast.",
   "icons": [
     {
-      "src": "/assets/img/logo.svg",
+      "src": "assets/img/logo.svg",
       "type": "image/svg+xml",
       "sizes": "any"
     }
   ],
-  "start_url": "/",
+  "start_url": "./",
   "background_color": "#0a84ff",
   "theme_color": "#0a84ff",
   "display": "standalone",

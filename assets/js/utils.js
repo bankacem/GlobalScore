@@ -38,9 +38,9 @@ export function setupLanguageToggle() {
   langToggle.addEventListener('click', () => {
     const currentLang = document.documentElement.lang;
     if (currentLang === 'en') {
-      window.location.href = '/ar/';
+      window.location.href = '../ar/';
     } else {
-      window.location.href = '/en/';
+      window.location.href = '../en/';
     }
   });
 }

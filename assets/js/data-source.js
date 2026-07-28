@@ -1,7 +1,8 @@
 export class DataSource {
   async getLiveMatches() {
     try {
-      const res = await fetch('/assets/data/live.json');
+      // Changed to relative path relative to index.html within en/ or ar/ subdirectory
+      const res = await fetch('../assets/data/live.json');
       if (!res.ok) {
         throw new Error(`HTTP error! status: ${res.status}`);
       }
