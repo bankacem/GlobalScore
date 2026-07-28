@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "home": "Real Madrid",
+    "homeAr": "ريال مدريد",
+    "away": "Barcelona",
+    "awayAr": "برشلونة",
+    "score": "2 - 1",
+    "status": "75'",
+    "statusAr": "75 دقيقة"
+  },
+  {
+    "id": 2,
+    "home": "Arsenal",
+    "homeAr": "أرسنال",
+    "away": "Chelsea",
+    "awayAr": "تشيلسي",
+    "score": "0 - 0",
+    "status": "HT",
+    "statusAr": "استراحة"
+  },
+  {
+    "id": 3,
+    "home": "Manchester City",
+    "homeAr": "مانشستر سيتي",
+    "away": "Liverpool",
+    "awayAr": "ليفربول",
+    "score": "1 - 3",
+    "status": "FT",
+    "statusAr": "نهاية المباراة"
+  },
+  {
+    "id": 4,
+    "home": "Al Ahly",
+    "homeAr": "الأهلي",
+    "away": "Zamalek",
+    "awayAr": "الزمالك",
+    "score": "1 - 0",
+    "status": "30'",
+    "statusAr": "30 دقيقة"
+  }
+]

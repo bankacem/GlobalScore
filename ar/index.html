@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مباشر كرة القدم اليوم | GlobalScore</title>
+<meta name="description" content="نتائج مباريات كرة القدم مباشرة، جدول المباريات، ترتيب الدوريات وإحصائيات مفصلة بسرعة عالية.">
+<link rel="canonical" href="https://yourdomain.com/ar/">
+<link rel="alternate" hreflang="en" href="https://yourdomain.com/en/">
+<link rel="alternate" hreflang="ar" href="https://yourdomain.com/ar/">
+<link rel="manifest" href="/manifest.json">
+
+<!-- Critical CSS Inline -->
+<link rel="stylesheet" href="/assets/css/critical.css">
+<!-- Main CSS Deferred -->
+<link rel="stylesheet" href="/assets/css/main.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="/assets/css/main.css"></noscript>
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"WebSite",
+ "name":"GlobalScore",
+ "url":"https://yourdomain.com",
+ "potentialAction":{
+   "@type":"SearchAction",
+   "target":"https://yourdomain.com/ar/search?q={search_term_string}",
+   "query-input":"required name=search_term_string"
+ }
+}
+</script>
+
+</head>
+
+<body>
+
+<header class="header">
+  <div class="logo-container">
+    <img src="/assets/img/logo.svg" alt="GlobalScore" class="logo-img">
+    <a href="/ar/" class="logo">GlobalScore</a>
+  </div>
+  <nav class="nav">
+    <a href="/ar/" class="nav-link active">الرئيسية</a>
+    <a href="#live" class="nav-link">مباشر</a>
+    <a href="#today" class="nav-link">اليوم</a>
+    <a href="#leagues" class="nav-link">الدوريات</a>
+  </nav>
+  <div class="controls">
+    <button id="themeToggle" class="btn" aria-label="تبديل المظهر">🌙</button>
+    <button id="langToggle" class="btn">EN</button>
+  </div>
+</header>
+
+<main id="app">
+  <section class="hero">
+    <h1>نتائج مباريات اليوم مباشرة</h1>
+    <p>نتائج مباريات كرة القدم في الوقت الفعلي، المباريات، النتائج والجدول الزمني من جميع أنحاء العالم.</p>
+  </section>
+  <section id="liveMatchesContainer">
+    <h2>المباريات المباشرة اليوم</h2>
+    <div id="liveMatches" class="matches-list">
+      <div class="loading">جاري تحميل المباريات...</div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>© 2026 GlobalScore. جميع الحقوق محفوظة.</p>
+</footer>
+
+<script defer src="/assets/js/app.js" type="module"></script>
+
+</body>
+</html>

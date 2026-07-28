@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="https://yourdomain.com/en/">
+<link rel="alternate" hreflang="en" href="https://yourdomain.com/en/">
+<link rel="alternate" hreflang="ar" href="https://yourdomain.com/ar/">
+<meta name="robots" content="index, follow">
+<title>GlobalScore - Live Football Scores</title>
+<script>
+  // Simple browser language detection for redirecting
+  const userLang = navigator.language || navigator.userLanguage;
+  if (userLang.startsWith('ar')) {
+    window.location.replace('/ar/');
+  } else {
+    window.location.replace('/en/');
+  }
+</script>
+<noscript>
+  <meta http-equiv="refresh" content="0; url=/en/">
+</noscript>
+</head>
+<body>
+Redirecting...
+</body>
+</html>
