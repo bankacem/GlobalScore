@@ -1,0 +1,169 @@
+/* assets/css/articles.css
+   Styles for SEO-generated match articles (previews / live / reports).
+   Reuses the CSS custom properties already defined in main.css. */
+
+.article-main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+}
+
+.article-breadcrumbs {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.article-breadcrumbs a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.article-breadcrumbs a:hover {
+  color: var(--primary);
+}
+
+.article-title {
+  font-size: 1.75rem;
+  line-height: 1.25;
+  margin-bottom: 0.5rem;
+}
+
+.article-meta {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.article-status-badge {
+  display: inline-block;
+  background: var(--primary);
+  color: #fff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.article-body h2 {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+  border-inline-start: 4px solid var(--primary);
+  padding-inline-start: 0.6rem;
+}
+
+.article-body h3 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.article-body p {
+  margin-bottom: 1rem;
+}
+
+.article-timeline {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.article-timeline li {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.6rem 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.article-stats-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.article-stats-table th,
+.article-stats-table td {
+  padding: 0.5rem 0.75rem;
+  text-align: start;
+  border-bottom: 1px solid var(--border);
+}
+
+.article-stats-table th {
+  background: var(--bg);
+  font-weight: 600;
+}
+
+.article-lineups-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.article-lineup {
+  padding-inline-start: 1.2rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+}
+
+.article-lineup li {
+  margin-bottom: 0.25rem;
+}
+
+.article-back-link {
+  display: inline-block;
+  margin-top: 2rem;
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.article-back-link:hover {
+  text-decoration: underline;
+}
+
+.articles-index-list {
+  list-style: none;
+  padding: 0;
+  max-width: 760px;
+  margin: 1.5rem auto;
+}
+
+.articles-index-list li {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+}
+
+.articles-index-list a {
+  display: block;
+  padding: 1rem;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.articles-index-list a:hover {
+  color: var(--primary);
+}
+
+.articles-index-list .article-index-meta {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+}
+
+@media (max-width: 640px) {
+  .article-lineups-grid {
+    grid-template-columns: 1fr;
+  }
+}
