@@ -2,6 +2,7 @@
   "matches": [
     {
       "id": "2494001",
+      "date": "2026-08-22",
       "league": "Premier League",
       "leagueAr": "الدوري الإنجليزي الممتاز",
       "home": "Hull City",
@@ -25,6 +26,7 @@
     },
     {
       "id": "2494002",
+      "date": "2026-08-22",
       "league": "Premier League",
       "leagueAr": "الدوري الإنجليزي الممتاز",
       "home": "Everton",
@@ -48,6 +50,7 @@
     },
     {
       "id": "2494003",
+      "date": "2026-08-22",
       "league": "Premier League",
       "leagueAr": "الدوري الإنجليزي الممتاز",
       "home": "Ipswich Town",
@@ -71,6 +74,7 @@
     },
     {
       "id": "2494006",
+      "date": "2026-08-23",
       "league": "Premier League",
       "leagueAr": "الدوري الإنجليزي الممتاز",
       "home": "Manchester City",
@@ -94,6 +98,7 @@
     },
     {
       "id": "2506180",
+      "date": "2026-08-22",
       "league": "La Liga",
       "leagueAr": "الدوري الإسباني",
       "home": "Athletic Bilbao",
@@ -117,6 +122,7 @@
     },
     {
       "id": "2506181",
+      "date": "2026-08-22",
       "league": "La Liga",
       "leagueAr": "الدوري الإسباني",
       "home": "Valencia",
@@ -126,7 +132,7 @@
       "homeLogo": "https://r2.thesportsdb.com/images/media/team/badge/dm8l6o1655594864.png",
       "awayLogo": "https://r2.thesportsdb.com/images/media/team/badge/xfjtku1690436219.png",
       "score": "0 - 0",
-      "status": "Live",
+      "status": "FT",
       "minute": 0,
       "time": "17:30",
       "day": "22",
@@ -140,6 +146,7 @@
     },
     {
       "id": "2506183",
+      "date": "2026-08-22",
       "league": "La Liga",
       "leagueAr": "الدوري الإسباني",
       "home": "Espanyol",
@@ -148,8 +155,8 @@
       "awayAr": "Real Madrid",
       "homeLogo": "https://r2.thesportsdb.com/images/media/team/badge/867nzz1681703222.png",
       "awayLogo": "https://r2.thesportsdb.com/images/media/team/badge/vwvwrw1473502969.png",
-      "score": "0 - 0",
-      "status": "Scheduled",
+      "score": "1 - 2",
+      "status": "FT",
       "minute": 0,
       "time": "19:30",
       "day": "22",
@@ -162,7 +169,32 @@
       "source": "TheSportsDB"
     },
     {
+      "id": "2506179",
+      "date": "2026-08-23",
+      "league": "La Liga",
+      "leagueAr": "الدوري الإسباني",
+      "home": "Atlético Madrid",
+      "homeAr": "Atlético Madrid",
+      "away": "Villarreal",
+      "awayAr": "Villarreal",
+      "homeLogo": "https://r2.thesportsdb.com/images/media/team/badge/0ulh3q1719984315.png",
+      "awayLogo": "https://r2.thesportsdb.com/images/media/team/badge/vrypqy1473503073.png",
+      "score": "0 - 0",
+      "status": "Scheduled",
+      "minute": 0,
+      "time": "15:00",
+      "day": "23",
+      "month": "AUG",
+      "dayAr": "23",
+      "monthAr": "08/2026",
+      "lineups": null,
+      "stats": [],
+      "events": [],
+      "source": "TheSportsDB"
+    },
+    {
       "id": "2561073",
+      "date": "2026-08-22",
       "league": "Egyptian Premier League",
       "leagueAr": "الدوري المصري الممتاز",
       "home": "Tala'ea El Gaish",
@@ -186,6 +218,7 @@
     },
     {
       "id": "2561074",
+      "date": "2026-08-22",
       "league": "Egyptian Premier League",
       "leagueAr": "الدوري المصري الممتاز",
       "home": "Asyut Petroleum",
@@ -209,6 +242,7 @@
     },
     {
       "id": "2561075",
+      "date": "2026-08-22",
       "league": "Egyptian Premier League",
       "leagueAr": "الدوري المصري الممتاز",
       "home": "Al Masry",
@@ -218,7 +252,7 @@
       "homeLogo": "https://r2.thesportsdb.com/images/media/team/badge/3aw86h1589807260.png",
       "awayLogo": "https://r2.thesportsdb.com/images/media/team/badge/qq4pkd1589807413.png",
       "score": "1 - 0",
-      "status": "Live",
+      "status": "FT",
       "minute": 0,
       "time": "17:00",
       "day": "22",
@@ -232,6 +266,7 @@
     },
     {
       "id": "2561077",
+      "date": "2026-08-23",
       "league": "Egyptian Premier League",
       "leagueAr": "الدوري المصري الممتاز",
       "home": "El Gouna",
@@ -372,5 +407,5 @@
       }
     ]
   },
-  "updatedAt": "2026-08-22T18:48:46.614753Z"
+  "updatedAt": "2026-08-22T22:15:45.053358Z"
 }

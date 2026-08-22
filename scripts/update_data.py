@@ -72,6 +72,7 @@ def event_to_match(event: dict, league_en: str, league_ar: str, now: datetime) -
     time_value = local_start.strftime("%H:%M") if timestamp else "--:--"
     return {
         "id": event.get("idEvent"),
+        "date": start.date().isoformat(),
         "league": league_en,
         "leagueAr": league_ar,
         "home": event.get("strHomeTeam") or "Home",

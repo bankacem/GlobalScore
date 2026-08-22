@@ -1,0 +1,114 @@
+{
+  "fallback:hull-city:manchester-united": {
+    "eventId": "",
+    "slug": "hull-city-manchester-united",
+    "date": "2026-08-22",
+    "home": "Hull City",
+    "away": "Manchester United",
+    "lastGenerated": "2026-08-22T22:13:09.888683+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ]
+  },
+  "fallback:everton:crystal-palace": {
+    "eventId": "",
+    "slug": "everton-crystal-palace",
+    "date": "2026-08-22",
+    "home": "Everton",
+    "away": "Crystal Palace",
+    "lastGenerated": "2026-08-22T22:13:09.888683+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ]
+  },
+  "snapshot:2494006": {
+    "eventId": "2494006",
+    "slug": "2026-08-23-manchester-city-bournemouth",
+    "date": "2026-08-23",
+    "home": "Manchester City",
+    "away": "Bournemouth",
+    "lastGenerated": "2026-08-22T22:16:06.331287+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ]
+  },
+  "snapshot:2506181": {
+    "eventId": "2506181",
+    "slug": "2026-08-22-valencia-celta-vigo",
+    "date": "2026-08-22",
+    "home": "Valencia",
+    "away": "Celta Vigo",
+    "lastGenerated": "2026-08-22T22:15:38.089886+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ]
+  },
+  "snapshot:2506183": {
+    "eventId": "2506183",
+    "slug": "2026-08-22-espanyol-real-madrid",
+    "date": "2026-08-22",
+    "home": "Espanyol",
+    "away": "Real Madrid",
+    "lastGenerated": "2026-08-22T22:15:38.089886+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ]
+  },
+  "snapshot:2561075": {
+    "eventId": "2561075",
+    "slug": "2026-08-22-al-masry-smouha",
+    "date": "2026-08-22",
+    "home": "Al Masry",
+    "away": "Smouha",
+    "lastGenerated": "2026-08-22T22:15:38.089886+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ]
+  },
+  "snapshot:2561077": {
+    "eventId": "2561077",
+    "slug": "2026-08-23-el-gouna-modern-sport",
+    "date": "2026-08-23",
+    "home": "El Gouna",
+    "away": "Modern Sport",
+    "lastGenerated": "2026-08-22T22:16:06.331287+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ]
+  },
+  "snapshot:2506179": {
+    "eventId": "2506179",
+    "slug": "2026-08-23-atletico-madrid-villarreal",
+    "date": "2026-08-23",
+    "home": "Atlético Madrid",
+    "away": "Villarreal",
+    "lastGenerated": "2026-08-22T22:16:06.331287+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ]
+  }
+}

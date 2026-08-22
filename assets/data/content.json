@@ -2,6 +2,7 @@
   "fixtures": [
     {
       "id": "2494001",
+      "date": "2026-08-22",
       "league": "Premier League",
       "leagueAr": "الدوري الإنجليزي الممتاز",
       "home": "Hull City",
@@ -25,6 +26,7 @@
     },
     {
       "id": "2494002",
+      "date": "2026-08-22",
       "league": "Premier League",
       "leagueAr": "الدوري الإنجليزي الممتاز",
       "home": "Everton",
@@ -48,6 +50,7 @@
     },
     {
       "id": "2494003",
+      "date": "2026-08-22",
       "league": "Premier League",
       "leagueAr": "الدوري الإنجليزي الممتاز",
       "home": "Ipswich Town",
@@ -71,6 +74,7 @@
     },
     {
       "id": "2494006",
+      "date": "2026-08-23",
       "league": "Premier League",
       "leagueAr": "الدوري الإنجليزي الممتاز",
       "home": "Manchester City",
@@ -94,6 +98,7 @@
     },
     {
       "id": "2506180",
+      "date": "2026-08-22",
       "league": "La Liga",
       "leagueAr": "الدوري الإسباني",
       "home": "Athletic Bilbao",
@@ -117,6 +122,7 @@
     },
     {
       "id": "2506181",
+      "date": "2026-08-22",
       "league": "La Liga",
       "leagueAr": "الدوري الإسباني",
       "home": "Valencia",
@@ -126,7 +132,7 @@
       "homeLogo": "https://r2.thesportsdb.com/images/media/team/badge/dm8l6o1655594864.png",
       "awayLogo": "https://r2.thesportsdb.com/images/media/team/badge/xfjtku1690436219.png",
       "score": "0 - 0",
-      "status": "Live",
+      "status": "FT",
       "minute": 0,
       "time": "17:30",
       "day": "22",
@@ -140,6 +146,7 @@
     },
     {
       "id": "2506183",
+      "date": "2026-08-22",
       "league": "La Liga",
       "leagueAr": "الدوري الإسباني",
       "home": "Espanyol",
@@ -148,8 +155,8 @@
       "awayAr": "Real Madrid",
       "homeLogo": "https://r2.thesportsdb.com/images/media/team/badge/867nzz1681703222.png",
       "awayLogo": "https://r2.thesportsdb.com/images/media/team/badge/vwvwrw1473502969.png",
-      "score": "0 - 0",
-      "status": "Scheduled",
+      "score": "1 - 2",
+      "status": "FT",
       "minute": 0,
       "time": "19:30",
       "day": "22",
@@ -162,7 +169,32 @@
       "source": "TheSportsDB"
     },
     {
+      "id": "2506179",
+      "date": "2026-08-23",
+      "league": "La Liga",
+      "leagueAr": "الدوري الإسباني",
+      "home": "Atlético Madrid",
+      "homeAr": "Atlético Madrid",
+      "away": "Villarreal",
+      "awayAr": "Villarreal",
+      "homeLogo": "https://r2.thesportsdb.com/images/media/team/badge/0ulh3q1719984315.png",
+      "awayLogo": "https://r2.thesportsdb.com/images/media/team/badge/vrypqy1473503073.png",
+      "score": "0 - 0",
+      "status": "Scheduled",
+      "minute": 0,
+      "time": "15:00",
+      "day": "23",
+      "month": "AUG",
+      "dayAr": "23",
+      "monthAr": "08/2026",
+      "lineups": null,
+      "stats": [],
+      "events": [],
+      "source": "TheSportsDB"
+    },
+    {
       "id": "2561073",
+      "date": "2026-08-22",
       "league": "Egyptian Premier League",
       "leagueAr": "الدوري المصري الممتاز",
       "home": "Tala'ea El Gaish",
@@ -186,6 +218,7 @@
     },
     {
       "id": "2561074",
+      "date": "2026-08-22",
       "league": "Egyptian Premier League",
       "leagueAr": "الدوري المصري الممتاز",
       "home": "Asyut Petroleum",
@@ -209,6 +242,7 @@
     },
     {
       "id": "2561075",
+      "date": "2026-08-22",
       "league": "Egyptian Premier League",
       "leagueAr": "الدوري المصري الممتاز",
       "home": "Al Masry",
@@ -218,7 +252,7 @@
       "homeLogo": "https://r2.thesportsdb.com/images/media/team/badge/3aw86h1589807260.png",
       "awayLogo": "https://r2.thesportsdb.com/images/media/team/badge/qq4pkd1589807413.png",
       "score": "1 - 0",
-      "status": "Live",
+      "status": "FT",
       "minute": 0,
       "time": "17:00",
       "day": "22",
@@ -232,6 +266,7 @@
     },
     {
       "id": "2561077",
+      "date": "2026-08-23",
       "league": "Egyptian Premier League",
       "leagueAr": "الدوري المصري الممتاز",
       "home": "El Gouna",
@@ -259,38 +294,6 @@
       "slug": "external-player-news",
       "category": "Player news",
       "categoryAr": "أخبار اللاعبين",
-      "title": "Tonali nightmare as Sangare stars - Brentford v Spurs player ratings",
-      "titleAr": "Tonali nightmare as Sangare stars - Brentford v Spurs player ratings",
-      "excerpt": "How Brentford and Tottenham's players rated following their Premier League match.",
-      "excerptAr": "عنوان ومقتطف من مصدر BBC Sport؛ افتح الرابط لقراءة التقرير الأصلي.",
-      "date": "Sat, 22 Aug 2026 18:29:05 GMT",
-      "dateAr": "Sat, 22 Aug 2026 18:29:05 GMT",
-      "readTime": "Source link",
-      "readTimeAr": "رابط المصدر",
-      "href": "https://www.bbc.co.uk/sport/football/articles/cp878q13v72o?at_medium=RSS&at_campaign=rss",
-      "external": true,
-      "source": "BBC Sport"
-    },
-    {
-      "slug": "external-player-news",
-      "category": "Player news",
-      "categoryAr": "أخبار اللاعبين",
-      "title": "'I'm very happy and have many compliments for my players' - Farke",
-      "titleAr": "'I'm very happy and have many compliments for my players' - Farke",
-      "excerpt": "Leeds United manager Daniel Farke reacts to his side's 1–0 win against Nottingham Forest, sealed by Anton Stach's free‑kick in the opening game of their 2026-27 Premier League seas…",
-      "excerptAr": "عنوان ومقتطف من مصدر BBC Sport؛ افتح الرابط لقراءة التقرير الأصلي.",
-      "date": "Sat, 22 Aug 2026 16:55:35 GMT",
-      "dateAr": "Sat, 22 Aug 2026 16:55:35 GMT",
-      "readTime": "Source link",
-      "readTimeAr": "رابط المصدر",
-      "href": "https://www.bbc.co.uk/sport/football/videos/cn5n57dwewko?at_medium=RSS&at_campaign=rss",
-      "external": true,
-      "source": "BBC Sport"
-    },
-    {
-      "slug": "external-player-news",
-      "category": "Player news",
-      "categoryAr": "أخبار اللاعبين",
       "title": "Arsenal start title defence with comfortable win over Coventry",
       "titleAr": "Arsenal start title defence with comfortable win over Coventry",
       "excerpt": "Goals from Kai Havertz, Bukayo Saka and Martin Odegaard give champions Arsenal a comfortable 3-0 win over newcomers Coventry City, in the opening game of the Premier League campaig…",
@@ -300,6 +303,38 @@
       "readTime": "Source link",
       "readTimeAr": "رابط المصدر",
       "href": "https://www.bbc.co.uk/sport/football/videos/cgr7e17010go?at_medium=RSS&at_campaign=rss",
+      "external": true,
+      "source": "BBC Sport"
+    },
+    {
+      "slug": "external-player-news",
+      "category": "Player news",
+      "categoryAr": "أخبار اللاعبين",
+      "title": "Man City will 'try to find the new Rodri' - Maresca",
+      "titleAr": "Man City will 'try to find the new Rodri' - Maresca",
+      "excerpt": "Manchester City will \"try to find the new Rodri\" after the Spain captain left the club earlier this week to join La Liga champions Barcelona, says manager Enzo Maresca.",
+      "excerptAr": "عنوان ومقتطف من مصدر BBC Sport؛ افتح الرابط لقراءة التقرير الأصلي.",
+      "date": "Sat, 22 Aug 2026 21:30:32 GMT",
+      "dateAr": "Sat, 22 Aug 2026 21:30:32 GMT",
+      "readTime": "Source link",
+      "readTimeAr": "رابط المصدر",
+      "href": "https://www.bbc.co.uk/sport/football/articles/cd9w1zkw7x8o?at_medium=RSS&at_campaign=rss",
+      "external": true,
+      "source": "BBC Sport"
+    },
+    {
+      "slug": "external-player-news",
+      "category": "Player news",
+      "categoryAr": "أخبار اللاعبين",
+      "title": "Tote bags & derby wins - how Pressley has defied Dundee expectations",
+      "titleAr": "Tote bags & derby wins - how Pressley has defied Dundee expectations",
+      "excerpt": "Steven Pressley says he is \"immensely proud\" of his Dundee players as the head coach's redemption arc continues with another derby victory.",
+      "excerptAr": "عنوان ومقتطف من مصدر BBC Sport؛ افتح الرابط لقراءة التقرير الأصلي.",
+      "date": "Sat, 22 Aug 2026 20:20:34 GMT",
+      "dateAr": "Sat, 22 Aug 2026 20:20:34 GMT",
+      "readTime": "Source link",
+      "readTimeAr": "رابط المصدر",
+      "href": "https://www.bbc.co.uk/sport/football/articles/c86n6j1x36zo?at_medium=RSS&at_campaign=rss",
       "external": true,
       "source": "BBC Sport"
     },
@@ -346,5 +381,5 @@
       "href": "articles/player-watch-odegaard.html"
     }
   ],
-  "lastUpdated": "2026-08-22T18:48:46.614753Z"
+  "lastUpdated": "2026-08-22T22:15:45.053358Z"
 }
