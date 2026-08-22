@@ -1,4 +1,4 @@
-import { DataSource } from './data-source.js?v=4';
+import { DataSource } from './data-source.js?v=6';
 import { MatchComponent, LeagueTableComponent, MatchDetailModalComponent } from './components.js?v=4';
 import { setupTheme, getFavorites } from './utils.js?v=4';
 
@@ -92,26 +92,44 @@ function setupNavigation() {
   }));
 }
 
+async function refreshEspnMatches() {
+  const liveMatches = await dataSource.getEspnMatches();
+  if (!liveMatches.length) return false;
+  allMatches = liveMatches;
+  renderCurrentState();
+  return true;
+}
+
+function setLiveStatus() {
+  const status = document.getElementById('dataStatus');
+  const description = document.getElementById('dataDescription');
+  if (status) status.textContent = isArabic() ? 'بث ESPN مباشر' : 'ESPN live feed';
+  if (description) description.textContent = isArabic() ? 'تحديث تلقائي كل 15 ثانية' : 'Auto-refresh every 15 seconds';
+}
+
 async function initApp() {
   setupTheme();
   const data = await dataSource.getLiveMatches();
-  allMatches = data.matches || [];
   allTables = data.tables || {};
   content = await dataSource.getContent();
+  const espnAvailable = await refreshEspnMatches();
+  if (!espnAvailable) allMatches = data.matches || [];
   document.getElementById('searchBar')?.addEventListener('input', event => { activeSearchQuery = event.target.value; renderCurrentState(); });
   setupNavigation();
-  renderCurrentState();
+  if (espnAvailable) setLiveStatus();
+  else renderCurrentState();
   renderFixtures();
   renderNews();
   renderLeagueSummary();
   const status = document.getElementById('dataStatus');
   const description = document.getElementById('dataDescription');
-  if (status && content.lastUpdated) {
+  if (!espnAvailable && status && content.lastUpdated) {
     const updated = new Date(content.lastUpdated);
     const stamp = Number.isNaN(updated.getTime()) ? content.lastUpdated : updated.toLocaleString(isArabic() ? 'ar' : 'en', {dateStyle: 'medium', timeStyle: 'short'});
     status.textContent = isArabic() ? 'بيانات محدثة' : 'Updated snapshot';
     if (description) description.textContent = isArabic() ? `آخر تحديث: ${stamp}` : `Last refresh: ${stamp}`;
   }
+  if (espnAvailable) window.setInterval(async () => { if (await refreshEspnMatches()) setLiveStatus(); }, 15000);
 }
 
 document.addEventListener('DOMContentLoaded', initApp);
