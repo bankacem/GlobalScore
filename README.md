@@ -1,18 +1,20 @@
 # GlobalScore
 
-GlobalScore is a static, mobile-first football hub for live-score presentation, upcoming fixtures, league tables, original match reports, tactical notes, and player-watch stories. It is designed for GitHub Pages and does not require a paid service to run the current demo.
+GlobalScore is a static, mobile-first football hub for live-score presentation, upcoming fixtures, league tables, original match reports, tactical notes, and player-watch stories. It is designed for GitHub Pages and now includes a free scheduled data-refresh workflow.
 
 ## What changed
 
 The interface now has a clear editorial hierarchy: a branded hero, a daily match board, upcoming fixtures, original stories, a league sidebar, favourites, dark mode, multilingual navigation, and accessible focus/skip-link states. Arabic and English homepages use matching canonical and `hreflang` metadata, while every article has its own canonical URL and structured Article metadata.
 
-The content layer is intentionally local. `assets/data/live.json` contains the current demo scoreboard and standings, while `assets/data/content.json` contains fixture cards and editorial stories. This keeps GitHub Pages deployment free and predictable. The previous five-second random live-score simulator was removed so the site does not present fabricated changes as real-time data.
+The content layer is stored as a JSON snapshot. `assets/data/live.json` contains the scoreboard and standings, while `assets/data/content.json` contains fixture cards and editorial stories. The previous five-second random live-score simulator was removed so the site does not present fabricated changes as real-time data.
 
-## Free data upgrade path
+## Free automatic data refresh
 
-The front end can later consume a generated JSON snapshot from a free public source, but API credentials must never be placed in this static repository. A safe approach is to run a scheduled build outside the browser, write a sanitised JSON snapshot into `assets/data/`, and deploy the result to GitHub Pages. API-Football advertises a no-card free plan with a daily request limit, and TheSportsDB advertises an open free sports API; both should be checked against their current terms before production use.
+`.github/workflows/update-sports-data.yml` runs manually or every six hours. It calls `scripts/update_data.py`, which fetches fixture metadata from TheSportsDB's documented free v1 API and reads football headlines from the BBC Sport RSS feed. It stores match metadata and short source-linked headlines only; it does not copy full third-party articles. The workflow commits the refreshed JSON and updates sitemap dates, after which GitHub Pages publishes the new snapshot.
 
-Until that connection is configured, the site clearly labels its local scores and fixtures as demo data.
+No API key is required for the documented TheSportsDB free v1 key. The workflow uses the repository's built-in GitHub token only to commit the generated snapshot. Because scheduled workflows run from the repository's default branch, the workflow is pinned to the current GitHub Pages branch. GitHub may disable scheduled workflows after long periods without repository activity, so the workflow also supports `workflow_dispatch` for a manual refresh.
+
+If a future provider requires a secret key, place it in GitHub Actions Secrets and read it from the workflow environment; never put it in HTML or client-side JavaScript.
 
 ## Sitemap and Search Console
 
@@ -42,7 +44,9 @@ Then open `http://localhost:4173/en/` or `http://localhost:4173/ar/`.
 /en/ and /ar/                 multilingual homepages
 /en/articles/ and /ar/articles/  indexable editorial pages
 /assets/data/live.json         demo scores and standings
-/assets/data/content.json      fixtures and editorial content
+  /assets/data/content.json      refreshed fixtures and editorial content snapshot
+/scripts/update_data.py          free API/RSS fetch and sanitisation
+/.github/workflows/              scheduled data refresh
 /assets/js/                    data loading, rendering, favourites and theme logic
 /assets/css/                   critical and full responsive styling
 Sitemap.xml                    root sitemap requested by Search Console

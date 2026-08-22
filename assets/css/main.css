@@ -91,6 +91,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .home-side { justify-content: flex-end; text-align: end; }
 .away-side { justify-content: flex-start; text-align: start; }
 .team-logo { display: grid; place-items: center; width: 32px; height: 32px; font-size: 1.25rem; }
+.team-badge { width: 30px; height: 30px; object-fit: contain; }
+.modal-badge { width: 54px; height: 54px; object-fit: contain; }
 .team-name { overflow: hidden; color: var(--ink-soft); font-size: .9rem; font-weight: 850; text-overflow: ellipsis; white-space: nowrap; }
 .score-display { display: flex; flex: 0 0 100px; flex-direction: column; align-items: center; justify-content: center; }
 .score-num { color: var(--ink); font-size: 1.18rem; font-weight: 950; letter-spacing: .08em; }
@@ -147,7 +149,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .modal-body { padding: 20px; }
 .modal-score-header { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 18px; border-radius: 16px; padding: 18px; background: var(--paper); }
 .modal-team { flex: 1; text-align: center; }
-.modal-logo { display: block; font-size: 2rem; }
+.modal-logo { display: grid; place-items: center; min-height: 54px; font-size: 2rem; }
 .modal-team h4 { margin-top: 4px; font-size: .95rem; }
 .modal-center { text-align: center; }
 .modal-score { font-size: 1.8rem; font-weight: 950; }

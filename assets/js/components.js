@@ -29,11 +29,12 @@ export function MatchComponent(match, onClick) {
   }
 
   const starChar = isFavorite(match.id) ? '★' : '☆';
+  const badge = (value) => value && value.startsWith('http') ? `<img class="team-badge" src="${value}" alt="">` : `<span>${value || '⚽'}</span>`;
 
   div.innerHTML = `
     <div class="match-info-section" style="flex: 1; display: flex; align-items: center; justify-content: space-between;">
       <div class="team-side home-side">
-        <span class="team-logo">${match.homeLogo}</span>
+        <span class="team-logo">${badge(match.homeLogo)}</span>
         <span class="team-name">${homeTeam}</span>
       </div>
 
@@ -44,7 +45,7 @@ export function MatchComponent(match, onClick) {
 
       <div class="team-side away-side">
         <span class="team-name">${awayTeam}</span>
-        <span class="team-logo">${match.awayLogo}</span>
+        <span class="team-logo">${badge(match.awayLogo)}</span>
       </div>
     </div>
     <div class="match-actions">
@@ -138,7 +139,7 @@ export function MatchDetailModalComponent(match, onFavChange) {
         <!-- Live Team header info -->
         <div class="modal-score-header">
           <div class="modal-team">
-            <span class="modal-logo">${match.homeLogo}</span>
+            <span class="modal-logo">${badge(match.homeLogo)}</span>
             <h4>${homeTeam}</h4>
           </div>
           <div class="modal-center">
@@ -146,7 +147,7 @@ export function MatchDetailModalComponent(match, onFavChange) {
             <span class="modal-status">${match.status === 'Live' ? `${match.minute}'` : match.status === 'FT' ? (isAr ? 'انتهت' : 'FT') : (isAr ? 'مجدولة' : 'Scheduled')}</span>
           </div>
           <div class="modal-team">
-            <span class="modal-logo">${match.awayLogo}</span>
+            <span class="modal-logo">${badge(match.awayLogo)}</span>
             <h4>${awayTeam}</h4>
           </div>
         </div>

@@ -1,6 +1,6 @@
-import { DataSource } from './data-source.js';
-import { MatchComponent, LeagueTableComponent, MatchDetailModalComponent } from './components.js';
-import { setupTheme, getFavorites } from './utils.js';
+import { DataSource } from './data-source.js?v=4';
+import { MatchComponent, LeagueTableComponent, MatchDetailModalComponent } from './components.js?v=4';
+import { setupTheme, getFavorites } from './utils.js?v=4';
 
 const dataSource = new DataSource();
 let allMatches = [];
@@ -56,7 +56,11 @@ function renderFixtures() {
 function renderNews() {
   const container = document.getElementById('newsList');
   if (!container) return;
-  container.innerHTML = content.articles.map(article => `<a class="news-card" href="${safeLink(article)}"><div class="news-meta"><span class="news-tag">${text(article, 'category')}</span><span>${text(article, 'readTime')}</span></div><h3>${text(article, 'title')}</h3><p>${text(article, 'excerpt')}</p><span class="news-arrow">${isArabic() ? '←' : '→'}</span></a>`).join('');
+  container.innerHTML = content.articles.map(article => {
+    const external = article.external ? ' target="_blank" rel="noopener noreferrer"' : '';
+    const source = article.source ? ` · ${article.source}` : '';
+    return `<a class="news-card" href="${safeLink(article)}"${external}><div class="news-meta"><span class="news-tag">${text(article, 'category')}</span><span>${text(article, 'readTime')}${source}</span></div><h3>${text(article, 'title')}</h3><p>${text(article, 'excerpt')}</p><span class="news-arrow">${isArabic() ? '←' : '→'}</span></a>`;
+  }).join('');
 }
 
 function renderLeagueSummary() {
@@ -100,6 +104,14 @@ async function initApp() {
   renderFixtures();
   renderNews();
   renderLeagueSummary();
+  const status = document.getElementById('dataStatus');
+  const description = document.getElementById('dataDescription');
+  if (status && content.lastUpdated) {
+    const updated = new Date(content.lastUpdated);
+    const stamp = Number.isNaN(updated.getTime()) ? content.lastUpdated : updated.toLocaleString(isArabic() ? 'ar' : 'en', {dateStyle: 'medium', timeStyle: 'short'});
+    status.textContent = isArabic() ? 'بيانات محدثة' : 'Updated snapshot';
+    if (description) description.textContent = isArabic() ? `آخر تحديث: ${stamp}` : `Last refresh: ${stamp}`;
+  }
 }
 
 document.addEventListener('DOMContentLoaded', initApp);
