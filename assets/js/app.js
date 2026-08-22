@@ -1,10 +1,11 @@
-import { DataSource } from './data-source.js?v=6';
-import { MatchComponent, LeagueTableComponent, MatchDetailModalComponent } from './components.js?v=5';
+import { DataSource } from './data-source.js?v=7';
+import { MatchComponent, LeagueTableComponent, MatchDetailModalComponent } from './components.js?v=7';
 import { setupTheme, getFavorites } from './utils.js?v=4';
 
 const dataSource = new DataSource();
 let allMatches = [];
 let allTables = {};
+let liveStandings = [];
 let content = { fixtures: [], articles: [] };
 let currentView = '#today';
 let activeSearchQuery = '';
@@ -67,7 +68,25 @@ function renderLeagueSummary() {
   const container = document.getElementById('leagueSummary');
   if (!container) return;
   const arabicLeagues = {'Premier League':'الدوري الإنجليزي الممتاز','La Liga':'الدوري الإسباني','Egyptian Premier League':'الدوري المصري الممتاز','Champions League':'دوري أبطال أوروبا'};
-  container.innerHTML = Object.entries(allTables).slice(0, 4).map(([league, rows]) => `<a href="#leagues"><span>${isArabic() ? (arabicLeagues[league] || league) : league}</span><span>${rows.length} ${isArabic() ? 'فرق' : 'teams'}</span></a>`).join('');
+  const summary = liveStandings.length ? liveStandings.map(item => [isArabic() ? item.leagueAr : item.league, item.groups.reduce((total, group) => total + group.rows.length, 0)]) : Object.entries(allTables);
+  container.innerHTML = summary.slice(0, 4).map(([league, count]) => `<a href="#leagues"><span>${isArabic() ? (arabicLeagues[league] || league) : league}</span><span>${count} ${isArabic() ? 'فرق' : 'teams'}</span></a>`).join('');
+}
+
+function renderStandings() {
+  const target = document.getElementById('liveMatches');
+  if (!target) return;
+  target.innerHTML = '';
+  if (liveStandings.length) {
+    liveStandings.forEach(league => league.groups.forEach(group => {
+      const title = document.createElement('h3');
+      title.className = 'table-league-title';
+      title.textContent = `🏆 ${isArabic() ? league.leagueAr : league.league}${league.groups.length > 1 ? ` · ${group.name}` : ''}`;
+      target.appendChild(title);
+      target.appendChild(LeagueTableComponent(group.rows, { live: true }));
+    }));
+  } else {
+    Object.entries(allTables).forEach(([league, rows]) => { const title = document.createElement('h3'); title.className = 'table-league-title'; title.textContent = `🏆 ${isArabic() ? league : league}`; target.appendChild(title); target.appendChild(LeagueTableComponent(rows)); });
+  }
 }
 
 async function showMatchDetails(id) {
@@ -91,7 +110,7 @@ function setupNavigation() {
       const target = document.getElementById('liveMatches');
       if (target) {
         target.innerHTML = '';
-        Object.entries(allTables).forEach(([league, rows]) => { const title = document.createElement('h3'); title.className = 'table-league-title'; title.textContent = `🏆 ${league}`; target.appendChild(title); target.appendChild(LeagueTableComponent(rows)); });
+        renderStandings();
       }
     } else renderCurrentState();
   }));
@@ -116,7 +135,9 @@ async function initApp() {
   setupTheme();
   const data = await dataSource.getLiveMatches();
   allTables = data.tables || {};
-  content = await dataSource.getContent();
+  const [contentData, standingsData] = await Promise.all([dataSource.getContent(), dataSource.getAllStandings()]);
+  content = contentData;
+  liveStandings = standingsData;
   const espnAvailable = await refreshEspnMatches();
   if (!espnAvailable) allMatches = data.matches || [];
   document.getElementById('searchBar')?.addEventListener('input', event => { activeSearchQuery = event.target.value; renderCurrentState(); });
@@ -135,6 +156,7 @@ async function initApp() {
     if (description) description.textContent = isArabic() ? `آخر تحديث: ${stamp}` : `Last refresh: ${stamp}`;
   }
   if (espnAvailable) window.setInterval(async () => { if (await refreshEspnMatches()) setLiveStatus(); }, 15000);
+  window.setInterval(async () => { const refreshed = await dataSource.getAllStandings(); if (refreshed.length) { liveStandings = refreshed; renderLeagueSummary(); if (currentView === '#leagues') renderStandings(); } }, 600000);
 }
 
 document.addEventListener('DOMContentLoaded', initApp);

@@ -59,3 +59,9 @@ robots.txt                     crawler directives
 ## Editorial workflow
 
 To publish a new article, add the Arabic and English HTML pages under their respective `articles/` directories, add a bilingual entry to `assets/data/content.json`, and add both canonical URLs to `Sitemap.xml` and `sitemap.xml`. Keep the title, description, publication date, canonical URL, and `hreflang` links consistent.
+
+## Live standings and team comparison
+
+The dashboard now fetches standings from ESPN's public v2 soccer standings endpoint for the Premier League, La Liga, and UEFA Champions League. It displays rank, team badge, matches played, wins, draws, losses, goals for, goals against, goal difference, points, and form, with the local JSON tables retained as a fallback. The league view refreshes every ten minutes while the live scoreboard continues refreshing every 15 seconds.
+
+Match details also turn the available ESPN box-score statistics into a side-by-side comparison with proportional bars for the home and away teams. No paid API key is required. Because these are public endpoints rather than an official commercial integration, availability and field coverage may change.

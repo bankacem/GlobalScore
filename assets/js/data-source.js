@@ -63,6 +63,49 @@ export class DataSource {
     return responses.flatMap(result => result.status === 'fulfilled' ? result.value : []);
   }
 
+  async getStandings(leagueCode) {
+    const league = ESPN_LEAGUES.find(item => item[0] === leagueCode) || [leagueCode, leagueCode, leagueCode];
+    try {
+      const response = await fetch(`https://site.api.espn.com/apis/v2/sports/soccer/${leagueCode}/standings`, { cache: 'no-store' });
+      if (!response.ok) throw new Error(`${leagueCode}: HTTP ${response.status}`);
+      const payload = await response.json();
+      const groups = (payload.children || []).map(group => ({
+        name: group.name || league[1],
+        rows: (group.standings?.entries || []).map(entry => {
+          const stats = Object.fromEntries((entry.stats || []).map(stat => [stat.name, stat]));
+          const value = (...names) => {
+            const stat = names.map(name => stats[name]).find(Boolean);
+            return stat?.displayValue ?? stat?.value ?? '';
+          };
+          return {
+            pos: value('rank'),
+            team: entry.team?.displayName || entry.team?.shortDisplayName || '',
+            teamAr: entry.team?.displayName || entry.team?.shortDisplayName || '',
+            logo: entry.team?.logos?.[0]?.href || '',
+            p: value('gamesPlayed'),
+            w: value('wins'),
+            d: value('ties', 'draws'),
+            l: value('losses'),
+            gf: value('goalsFor'),
+            ga: value('goalsAgainst'),
+            gd: value('pointDifferential', 'goalDifference'),
+            pts: value('points'),
+            form: value('form', 'streak'),
+          };
+        }),
+      })).filter(group => group.rows.length);
+      return { leagueCode, league: league[1], leagueAr: league[2], groups };
+    } catch (error) {
+      console.warn('Unable to load ESPN standings:', error);
+      return { leagueCode, league: league[1], leagueAr: league[2], groups: [] };
+    }
+  }
+
+  async getAllStandings() {
+    const responses = await Promise.all(ESPN_LEAGUES.map(([leagueCode]) => this.getStandings(leagueCode)));
+    return responses.filter(item => item.groups.length);
+  }
+
   async getMatchDetails(match) {
     if (!match?.id || !match?.leagueCode) return null;
     try {

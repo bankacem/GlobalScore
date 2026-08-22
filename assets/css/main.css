@@ -137,6 +137,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .table-container { overflow: hidden; margin-bottom: 20px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
 .standing-table { width: 100%; border-collapse: collapse; }
 .standing-table th, .standing-table td { border-bottom: 1px solid var(--line); padding: 11px 10px; font-size: .8rem; text-align: center; }
+.standing-team { display: flex; align-items: center; gap: 7px; min-width: 150px; text-align: start !important; }
+.standing-team strong { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.standing-logo { width: 22px; height: 22px; object-fit: contain; flex: 0 0 22px; }
 .standing-table th { background: var(--paper); color: var(--muted); font-size: .66rem; text-transform: uppercase; }
 .standing-table tr:last-child td { border: 0; }
 .highlight-pts { color: var(--blue); }
@@ -187,6 +190,19 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .stats-team:last-child { border-bottom: 0; }
 .stats-team h5 { margin-bottom: 8px; color: var(--blue); font-size: .78rem; }
 .stats-team .stat-row { padding: 4px 0; }
+.comparison-list { display: grid; gap: 14px; }
+.comparison-row { border-bottom: 1px solid var(--line); padding-bottom: 12px; }
+.comparison-row:last-child { border-bottom: 0; }
+.comparison-values, .comparison-teams { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 10px; }
+.comparison-values strong:first-child, .comparison-teams small:first-child { text-align: start; }
+.comparison-values strong:last-child, .comparison-teams small:last-child { text-align: end; }
+.comparison-values span { color: var(--muted); font-size: .68rem; font-weight: 850; text-align: center; }
+.comparison-values strong { color: var(--ink); font-size: .85rem; }
+.comparison-bars { display: flex; gap: 3px; height: 7px; overflow: hidden; margin: 7px 0 4px; border-radius: 99px; background: var(--line); }
+.comparison-bar { display: block; height: 100%; min-width: 2px; }
+.home-comparison { background: var(--blue); }
+.away-comparison { background: var(--cyan); }
+.comparison-teams small { overflow: hidden; color: var(--muted); font-size: .62rem; font-weight: 750; text-overflow: ellipsis; white-space: nowrap; }
 .goal-toast { position: fixed; right: 20px; bottom: 20px; z-index: 200; max-width: 340px; border-radius: 14px; padding: 15px; background: var(--blue-deep); color: #fff; box-shadow: 0 18px 45px rgba(0,0,0,.25); }
 [dir="rtl"] .goal-toast { right: auto; left: 20px; }
 .toast-body { display: grid; gap: 4px; }

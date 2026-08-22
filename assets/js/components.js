@@ -32,11 +32,12 @@ export function MatchComponent(match, onClick) {
   return div;
 }
 
-export function LeagueTableComponent(rows) {
+export function LeagueTableComponent(rows, options = {}) {
   const isAr = document.documentElement.lang === 'ar';
   const table = document.createElement('div');
-  table.className = 'table-container';
-  table.innerHTML = `<table class="standing-table"><thead><tr><th>#</th><th style="text-align:left">${isAr ? 'الفريق' : 'Team'}</th><th>${isAr ? 'لعب' : 'PL'}</th><th>${isAr ? 'فوز' : 'W'}</th><th>${isAr ? 'تعادل' : 'D'}</th><th>${isAr ? 'خسر' : 'L'}</th><th>${isAr ? 'نقاط' : 'PTS'}</th><th class="hide-mobile">${isAr ? 'النموذج' : 'Form'}</th></tr></thead><tbody>${rows.map(row => `<tr><td><strong>${esc(row.pos)}</strong></td><td style="text-align:left;font-weight:600">${esc(isAr ? row.teamAr : row.team)}</td><td>${esc(row.p)}</td><td>${esc(row.w)}</td><td>${esc(row.d)}</td><td>${esc(row.l)}</td><td><strong class="highlight-pts">${esc(row.pts)}</strong></td><td class="form-list hide-mobile">${esc(row.form)}</td></tr>`).join('')}</tbody></table>`;
+  table.className = 'table-container standings-live-table';
+  const logo = row => row.logo && String(row.logo).startsWith('http') ? `<img class="standing-logo" src="${esc(row.logo)}" alt="">` : '';
+  table.innerHTML = `<table class="standing-table"><thead><tr><th>#</th><th style="text-align:left">${isAr ? 'الفريق' : 'Team'}</th><th>${isAr ? 'لعب' : 'PL'}</th><th>${isAr ? 'فوز' : 'W'}</th><th>${isAr ? 'تعادل' : 'D'}</th><th>${isAr ? 'خسر' : 'L'}</th><th class="hide-mobile">${isAr ? 'له' : 'GF'}</th><th class="hide-mobile">${isAr ? 'عليه' : 'GA'}</th><th class="hide-mobile">${isAr ? 'الفارق' : 'GD'}</th><th>${isAr ? 'نقاط' : 'PTS'}</th><th class="hide-mobile">${isAr ? 'النموذج' : 'Form'}</th></tr></thead><tbody>${rows.map(row => `<tr><td><strong>${esc(row.pos)}</strong></td><td class="standing-team"><span>${logo(row)}</span><strong>${esc(isAr ? row.teamAr : row.team)}</strong></td><td>${esc(row.p)}</td><td>${esc(row.w)}</td><td>${esc(row.d)}</td><td>${esc(row.l)}</td><td class="hide-mobile">${esc(row.gf || '—')}</td><td class="hide-mobile">${esc(row.ga || '—')}</td><td class="hide-mobile">${esc(row.gd || '—')}</td><td><strong class="highlight-pts">${esc(row.pts)}</strong></td><td class="form-list hide-mobile">${esc(row.form || '—')}</td></tr>`).join('')}</tbody></table>`;
   return table;
 }
 
@@ -49,6 +50,22 @@ export function MatchDetailModalComponent(match, onFavChange) {
   const events = detail.events?.length ? detail.events : (match.events || []);
   const rosters = detail.rosters || [];
   const stats = detail.stats || [];
+  const statMap = new Map();
+  stats.forEach(section => (section.values || []).forEach(stat => {
+    const key = stat.name || stat.label;
+    if (!statMap.has(key)) statMap.set(key, { label: stat.label || stat.name, teams: [] });
+    statMap.get(key).teams.push({ team: section.team, value: stat.value });
+  }));
+  const statRows = [...statMap.values()];
+  const comparisonMarkup = statRows.map(stat => {
+    const first = stat.teams[0] || {};
+    const second = stat.teams[1] || {};
+    const firstNumber = Number.parseFloat(String(first.value ?? '').replace(/[^0-9.]/g, '')) || 0;
+    const secondNumber = Number.parseFloat(String(second.value ?? '').replace(/[^0-9.]/g, '')) || 0;
+    const total = firstNumber + secondNumber;
+    const firstWidth = total ? Math.round(firstNumber / total * 100) : 50;
+    return `<div class="comparison-row"><div class="comparison-values"><strong>${esc(first.value || '—')}</strong><span>${esc(stat.label)}</span><strong>${esc(second.value || '—')}</strong></div><div class="comparison-bars"><span class="comparison-bar home-comparison" style="width:${firstWidth}%"></span><span class="comparison-bar away-comparison" style="width:${100 - firstWidth}%"></span></div><div class="comparison-teams"><small>${esc(first.team || homeTeam)}</small><small>${esc(second.team || awayTeam)}</small></div></div>`;
+  }).join('');
   const venue = detail.venue ? `${esc(detail.venue)}${detail.city ? ` · ${esc(detail.city)}` : ''}` : (isAr ? 'معلومات الملعب غير متاحة حالياً' : 'Venue information is not available yet');
   const referee = detail.officials?.length ? detail.officials.map(esc).join('، ') : (isAr ? 'لم يُعلن بعد' : 'Not announced yet');
   const attendance = detail.attendance ? `${esc(detail.attendance.toLocaleString?.() || detail.attendance)}` : '—';
@@ -64,7 +81,7 @@ export function MatchDetailModalComponent(match, onFavChange) {
         <div class="modal-tabs"><button class="tab-btn active" data-tab="timeline">${isAr ? 'الأحداث' : 'Events'}</button><button class="tab-btn" data-tab="stats">${isAr ? 'الإحصائيات' : 'Stats'}</button><button class="tab-btn" data-tab="lineups">${isAr ? 'اللاعبون والتشكيلة' : 'Players & lineups'}</button></div>
         <div class="tab-contents">
           <div id="tab-timeline" class="tab-panel active">${events.length ? `<div class="timeline-list">${events.map(event => `<div class="timeline-item"><span class="time-pin">${esc(event.minute)}'</span><span class="event-desc">${esc(event.text)}</span></div>`).join('')}</div>` : `<div class="empty-state">${isAr ? 'لا توجد أحداث منشورة بعد.' : 'No match events have been published yet.'}</div>`}</div>
-          <div id="tab-stats" class="tab-panel">${stats.length ? `<div class="stats-list">${stats.map(section => `<div class="stats-team"><h5>${esc(section.team)}</h5>${section.values.map(stat => `<div class="stat-row"><span class="stat-label">${esc(stat.label || stat.name)}</span><strong class="stat-value">${esc(stat.value)}</strong></div>`).join('')}</div>`).join('')}</div>` : `<div class="empty-state">${isAr ? 'الإحصائيات غير متوفرة لهذه المباراة حالياً.' : 'Statistics are not available for this match yet.'}</div>`}</div>
+          <div id="tab-stats" class="tab-panel">${statRows.length ? `<div class="comparison-list">${comparisonMarkup}</div>` : `<div class="empty-state">${isAr ? 'الإحصائيات غير متوفرة لهذه المباراة حالياً.' : 'Statistics are not available for this match yet.'}</div>`}</div>
           <div id="tab-lineups" class="tab-panel">${rosters.length ? `<div class="lineup-grid">${rosters.map(roster => `<div class="lineup-column"><h5>${esc(roster.team)} ${roster.formation ? `<small>${esc(roster.formation)}</small>` : ''}</h5><ul>${roster.players.map(player => `<li><span>${esc(player.name)}</span><small>${player.starter ? (isAr ? 'أساسي' : 'XI') : (isAr ? 'بديل' : 'Sub')}${player.position ? ` · ${esc(player.position)}` : ''}${player.jersey ? ` · #${esc(player.jersey)}` : ''}</small></li>`).join('')}</ul></div>`).join('')}</div>` : `<div class="empty-state">${isAr ? 'لم يتم الإعلان عن التشكيلة بعد.' : 'Lineups have not been announced yet.'}</div>`}</div>
         </div>
       </div>
