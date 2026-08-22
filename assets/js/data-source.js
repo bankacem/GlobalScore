@@ -4,7 +4,7 @@ const ESPN_LEAGUES = [
   ['uefa.champions', 'UEFA Champions League', 'دوري أبطال أوروبا'],
 ];
 
-function mapEspnEvent(event, fallbackLeague, fallbackLeagueAr) {
+function mapEspnEvent(event, fallbackLeague, fallbackLeagueAr, leagueCode) {
   const competition = event.competitions?.[0] || {};
   const competitors = competition.competitors || [];
   const home = competitors.find(team => team.homeAway === 'home') || competitors[0] || {};
@@ -17,6 +17,7 @@ function mapEspnEvent(event, fallbackLeague, fallbackLeagueAr) {
   const start = event.date ? new Date(event.date) : null;
   return {
     id: event.id,
+    leagueCode,
     league: event.league?.name || fallbackLeague,
     leagueAr: fallbackLeagueAr,
     home: home.team?.displayName || home.team?.shortDisplayName || 'Home',
@@ -57,9 +58,62 @@ export class DataSource {
       const response = await fetch(`https://site.api.espn.com/apis/site/v2/sports/soccer/${leagueCode}/scoreboard`, { cache: 'no-store' });
       if (!response.ok) throw new Error(`${leagueCode}: HTTP ${response.status}`);
       const payload = await response.json();
-      return (payload.events || []).map(event => mapEspnEvent(event, league, leagueAr));
+      return (payload.events || []).map(event => mapEspnEvent(event, league, leagueAr, leagueCode));
     }));
     return responses.flatMap(result => result.status === 'fulfilled' ? result.value : []);
+  }
+
+  async getMatchDetails(match) {
+    if (!match?.id || !match?.leagueCode) return null;
+    try {
+      const response = await fetch(`https://site.api.espn.com/apis/site/v2/sports/soccer/${match.leagueCode}/summary?event=${encodeURIComponent(match.id)}`, { cache: 'no-store' });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const payload = await response.json();
+      const info = payload.gameInfo || {};
+      const venue = info.venue || {};
+      const address = venue.address || {};
+      const officials = (info.officials || []).map(referee => referee.fullName || referee.displayName).filter(Boolean);
+      const rosters = (payload.rosters || []).map(roster => ({
+        homeAway: roster.homeAway,
+        team: roster.team?.displayName || '',
+        formation: roster.formation?.displayName || roster.formation?.text || '',
+        players: (roster.roster || []).map(item => ({
+          name: item.athlete?.displayName || item.athlete?.shortName || '',
+          starter: Boolean(item.starter),
+          substitute: Boolean(item.substitute),
+          position: item.position?.abbreviation || item.position?.displayName || '',
+          jersey: item.jersey || '',
+        })).filter(item => item.name),
+      }));
+      const stats = (payload.boxscore?.teams || []).map(team => ({
+        team: team.team?.displayName || '',
+        values: (team.statistics || []).map(stat => ({
+          name: stat.name || stat.label || '',
+          label: stat.label || stat.name || '',
+          value: stat.displayValue ?? stat.value ?? '',
+        })),
+      }));
+      const events = (payload.keyEvents || []).filter(event => event.type?.type !== 'kickoff').map(event => ({
+        minute: event.clock?.displayValue || event.period?.displayValue || event.clock?.value || '',
+        text: event.text || event.type?.text || '',
+        type: event.type?.text || '',
+      }));
+      return {
+        venue: venue.fullName || venue.shortName || '',
+        city: address.city || '',
+        country: address.country || '',
+        mapUrl: venue.fullName && address.city ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${venue.fullName}, ${address.city}`)}` : '',
+        attendance: info.attendance || '',
+        officials,
+        rosters,
+        stats,
+        events,
+        summaryUrl: payload.links?.[0]?.href || '',
+      };
+    } catch (error) {
+      console.warn('Unable to load ESPN match details:', error);
+      return null;
+    }
   }
 
   async getContent() {

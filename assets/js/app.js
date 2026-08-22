@@ -1,5 +1,5 @@
 import { DataSource } from './data-source.js?v=6';
-import { MatchComponent, LeagueTableComponent, MatchDetailModalComponent } from './components.js?v=4';
+import { MatchComponent, LeagueTableComponent, MatchDetailModalComponent } from './components.js?v=5';
 import { setupTheme, getFavorites } from './utils.js?v=4';
 
 const dataSource = new DataSource();
@@ -70,11 +70,16 @@ function renderLeagueSummary() {
   container.innerHTML = Object.entries(allTables).slice(0, 4).map(([league, rows]) => `<a href="#leagues"><span>${isArabic() ? (arabicLeagues[league] || league) : league}</span><span>${rows.length} ${isArabic() ? 'فرق' : 'teams'}</span></a>`).join('');
 }
 
-function showMatchDetails(id) {
+async function showMatchDetails(id) {
   const match = allMatches.find(item => Number(item.id) === Number(id));
   if (!match) return;
   document.getElementById('matchDetailsModal')?.remove();
-  document.body.appendChild(MatchDetailModalComponent(match, renderCurrentState));
+  const initialModal = MatchDetailModalComponent(match, renderCurrentState);
+  document.body.appendChild(initialModal);
+  const details = await dataSource.getMatchDetails(match);
+  if (!document.body.contains(initialModal)) return;
+  match.details = details || {};
+  initialModal.replaceWith(MatchDetailModalComponent(match, renderCurrentState));
 }
 
 function setupNavigation() {

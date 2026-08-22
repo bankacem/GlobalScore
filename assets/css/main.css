@@ -172,6 +172,21 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .lineup-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
 .lineup-column h5 { margin-bottom: 8px; color: var(--blue); }
 .lineup-column ul { list-style: none; color: var(--ink-soft); font-size: .78rem; }
+.lineup-column li { display: flex; align-items: center; justify-content: space-between; gap: 8px; border-bottom: 1px solid var(--line); padding: 7px 0; }
+.lineup-column li small { color: var(--muted); font-size: .65rem; white-space: nowrap; }
+.lineup-column h5 small { display: block; margin-top: 2px; color: var(--muted); font-size: .65rem; font-weight: 700; }
+.match-meta-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 9px; margin: 0 0 18px; }
+.match-meta-item { display: flex; align-items: flex-start; gap: 8px; min-height: 76px; border: 1px solid var(--line); border-radius: 12px; padding: 11px; background: var(--surface); }
+.match-meta-item > span { font-size: 1.05rem; }
+.match-meta-item div { min-width: 0; }
+.match-meta-item small { display: block; color: var(--muted); font-size: .62rem; font-weight: 850; text-transform: uppercase; }
+.match-meta-item strong { display: block; margin-top: 3px; color: var(--ink-soft); font-size: .74rem; overflow-wrap: anywhere; }
+.match-meta-item a { display: inline-block; margin-top: 4px; color: var(--blue); font-size: .64rem; font-weight: 850; text-decoration: none; }
+.stats-team { border-bottom: 1px solid var(--line); padding: 0 0 12px; }
+.stats-team + .stats-team { padding-top: 12px; }
+.stats-team:last-child { border-bottom: 0; }
+.stats-team h5 { margin-bottom: 8px; color: var(--blue); font-size: .78rem; }
+.stats-team .stat-row { padding: 4px 0; }
 .goal-toast { position: fixed; right: 20px; bottom: 20px; z-index: 200; max-width: 340px; border-radius: 14px; padding: 15px; background: var(--blue-deep); color: #fff; box-shadow: 0 18px 45px rgba(0,0,0,.25); }
 [dir="rtl"] .goal-toast { right: auto; left: 20px; }
 .toast-body { display: grid; gap: 4px; }
@@ -190,10 +205,14 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .article-header h1 { max-width: 780px; margin: 12px 0; font-size: clamp(2rem, 5vw, 4.2rem); line-height: 1; letter-spacing: -.06em; }
 .article-dek { color: var(--muted); font-size: 1.05rem; }
 .article-meta { display: flex; gap: 15px; color: var(--muted); font-size: .72rem; font-weight: 800; }
+.article-fact-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 9px; margin: 0 0 28px; }
+.article-fact-grid > div { min-height: 70px; border: 1px solid var(--line); border-radius: 12px; padding: 12px; background: var(--surface); }
+.article-fact-grid small { display: block; color: var(--muted); font-size: .62rem; font-weight: 850; text-transform: uppercase; }
+.article-fact-grid strong { display: block; margin-top: 5px; color: var(--ink-soft); font-size: .78rem; overflow-wrap: anywhere; }
 .article-content { border-top: 1px solid var(--line); padding-top: 28px; }
 .article-content p { margin: 0 0 22px; color: var(--ink-soft); font-size: 1.05rem; }
 .article-content h2 { margin: 34px 0 12px; color: var(--ink); font-size: 1.5rem; }
 .article-note { margin: 28px 0; border-inline-start: 4px solid var(--lime); padding: 16px 20px; background: var(--surface); color: var(--ink-soft); font-weight: 800; }
 @media (max-width: 900px) { .header-container { flex-wrap: wrap; padding: 12px 18px; gap: 10px 18px; } .nav { order: 3; width: 100%; } .page-shell { padding: 18px 18px 50px; } .dashboard-grid { grid-template-columns: 1fr; } .sidebar { position: static; grid-template-columns: repeat(3, minmax(0,1fr)); } .sidebar-card { padding: 17px; } .highlight-card strong { font-size: 1.45rem; } }
-@media (max-width: 620px) { .hero-panel { min-height: 390px; align-items: flex-start; padding: 34px 24px; } .hero-mark { position: absolute; right: -35px; bottom: -40px; width: 170px; height: 170px; opacity: .55; } [dir="rtl"] .hero-mark { right: auto; left: -35px; } .hero-copy h1 { font-size: 3.2rem; } .hero-copy p { font-size: .92rem; } .status-strip { align-items: flex-start; flex-wrap: wrap; } .status-strip time { width: 100%; margin-inline-start: 18px; } .section-heading { align-items: flex-start; flex-direction: column; } .section-link { align-self: flex-end; margin-top: -8px; } .match-card { padding: 11px 9px; } .team-name { font-size: .75rem; } .score-display { flex-basis: 70px; } .team-logo { width: 25px; font-size: 1rem; } .fixture-list, .news-grid { grid-template-columns: 1fr; } .sidebar { grid-template-columns: 1fr; } .footer-inner { align-items: flex-start; flex-direction: column; gap: 12px; } .footer-links { margin-inline-start: 0; } .hide-mobile { display: none !important; } .modal-score-header { padding: 12px 7px; } }
+@media (max-width: 620px) { .hero-panel { min-height: 390px; align-items: flex-start; padding: 34px 24px; } .hero-mark { position: absolute; right: -35px; bottom: -40px; width: 170px; height: 170px; opacity: .55; } [dir="rtl"] .hero-mark { right: auto; left: -35px; } .hero-copy h1 { font-size: 3.2rem; } .hero-copy p { font-size: .92rem; } .status-strip { align-items: flex-start; flex-wrap: wrap; } .status-strip time { width: 100%; margin-inline-start: 18px; } .section-heading { align-items: flex-start; flex-direction: column; } .section-link { align-self: flex-end; margin-top: -8px; } .match-card { padding: 11px 9px; } .team-name { font-size: .75rem; } .score-display { flex-basis: 70px; } .team-logo { width: 25px; font-size: 1rem; } .fixture-list, .news-grid { grid-template-columns: 1fr; } .sidebar { grid-template-columns: 1fr; } .footer-inner { align-items: flex-start; flex-direction: column; gap: 12px; } .footer-links { margin-inline-start: 0; } .hide-mobile { display: none !important; } .modal-score-header { padding: 12px 7px; } .article-fact-grid { grid-template-columns: repeat(2, minmax(0,1fr)); } .match-meta-grid { grid-template-columns: 1fr; } .match-meta-item { min-height: auto; } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; } }

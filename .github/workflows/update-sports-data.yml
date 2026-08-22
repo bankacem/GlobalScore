@@ -29,14 +29,17 @@ jobs:
       - name: Fetch fixtures and player headlines
         run: python scripts/update_data.py
 
+      - name: Generate today and tomorrow articles
+        run: python scripts/generate_multilingual_articles.py
+
       - name: Commit the refreshed snapshot
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/data/content.json assets/data/live.json Sitemap.xml sitemap.xml sitemap-index.xml
+          git add ar en fr es assets/data/content.json assets/data/live.json Sitemap.xml sitemap.xml sitemap-index.xml
           if git diff --cached --quiet; then
             echo "No data changes to commit."
           else
-            git commit -m "chore: refresh football data"
+            git commit -m "chore: refresh football data and articles"
             git push origin HEAD:feature/globalscore-phase1-foundation-6374903721955978638
           fi
