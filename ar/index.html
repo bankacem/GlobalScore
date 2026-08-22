@@ -3,75 +3,74 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>مباشر كرة القدم اليوم | GlobalScore</title>
-<meta name="description" content="نتائج مباريات كرة القدم مباشرة، جدول المباريات، ترتيب الدوريات وإحصائيات مفصلة بسرعة عالية.">
+<meta name="theme-color" content="#08111f">
+<title>GlobalScore | نتائج ومواعيد وأخبار كرة القدم</title>
+<meta name="description" content="GlobalScore منصة عربية لمتابعة نتائج مباريات كرة القدم، المواعيد القادمة، ترتيب الدوريات ومقالات المباريات وأخبار اللاعبين.">
+<meta name="robots" content="index, follow">
 <link rel="canonical" href="https://bankacem.github.io/GlobalScore/ar/">
 <link rel="alternate" hreflang="en" href="https://bankacem.github.io/GlobalScore/en/">
 <link rel="alternate" hreflang="ar" href="https://bankacem.github.io/GlobalScore/ar/">
+<link rel="alternate" hreflang="x-default" href="https://bankacem.github.io/GlobalScore/en/">
 <link rel="manifest" href="../manifest.json">
-
-<!-- Critical CSS Inline -->
 <link rel="stylesheet" href="../assets/css/critical.css">
-<!-- Main CSS Deferred -->
-<link rel="stylesheet" href="../assets/css/main.css" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="../assets/css/main.css"></noscript>
-
+<link rel="stylesheet" href="../assets/css/main.css">
 <script type="application/ld+json">
 {
- "@context":"https://schema.org",
- "@type":"WebSite",
- "name":"GlobalScore",
- "url":"https://bankacem.github.io/GlobalScore",
- "potentialAction":{
-   "@type":"SearchAction",
-   "target":"https://bankacem.github.io/GlobalScore/ar/search?q={search_term_string}",
-   "query-input":"required name=search_term_string"
- }
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"GlobalScore",
+  "url":"https://bankacem.github.io/GlobalScore/ar/",
+  "inLanguage":"ar",
+  "description":"نتائج ومواعيد وأخبار كرة القدم باللغة العربية",
+  "potentialAction":{"@type":"SearchAction","target":"https://bankacem.github.io/GlobalScore/ar/?q={search_term_string}","query-input":"required name=search_term_string"}
 }
 </script>
-
 </head>
-
 <body>
-
-<header class="header">
+<a class="skip-link" href="#main-content">الانتقال إلى المحتوى</a>
+<header class="site-header">
   <div class="header-container">
-    <div class="logo-container">
-      <img src="../assets/img/logo.svg" alt="GlobalScore" class="logo-img">
-      <a href="../ar/" class="logo">GlobalScore</a>
-    </div>
-    <nav class="nav">
+    <a class="brand" href="../ar/" aria-label="GlobalScore الرئيسية"><img src="../assets/img/logo.svg" alt="" class="logo-img"><span>Global<span class="brand-accent">Score</span></span></a>
+    <nav class="nav" aria-label="التنقل الرئيسي">
       <a href="#today" class="nav-link active">اليوم</a>
+      <a href="#fixtures" class="nav-link">المواعيد</a>
       <a href="#live" class="nav-link">مباشر</a>
-      <a href="#yesterday" class="nav-link">النتائج</a>
+      <a href="#news" class="nav-link">الأخبار</a>
       <a href="#leagues" class="nav-link">الدوريات</a>
-      <a href="#favorites" class="nav-link">المفضلة ⭐</a>
+      <a href="#favorites" class="nav-link">المفضلة</a>
     </nav>
     <div class="controls">
-      <button id="themeToggle" class="btn" aria-label="تبديل المظهر">🌙</button>
-      <button id="langToggle" class="btn">EN</button>
+      <button id="themeToggle" class="icon-btn" aria-label="تبديل المظهر">☾</button>
+      <a class="language-btn" href="../en/">EN</a>
     </div>
   </div>
 </header>
-
-<main id="app">
-  <!-- Premium Search Bar -->
-  <div class="search-container">
-    <input type="text" id="searchBar" class="search-input" placeholder="ابحث عن المباريات، الدوريات، الفرق...">
-  </div>
-
-  <section id="liveMatchesContainer">
-    <div id="liveMatches" class="matches-list">
-      <div class="loading">جاري تحميل المباريات...</div>
+<main id="main-content" class="page-shell">
+  <section class="hero-panel" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <span class="eyebrow">مركزك الكروي اليومي</span>
+      <h1 id="hero-title">كل مباراة. كل قصة.<br><em>في مكان واحد.</em></h1>
+      <p>تابع النتائج والمواعيد والتحليلات التحريرية المختارة، مع تجربة سريعة وواضحة على الهاتف والكمبيوتر.</p>
+      <div class="hero-actions"><a class="primary-btn" href="#today">استكشف مباريات اليوم <span>←</span></a><a class="text-btn" href="#news">اقرأ أحدث المقالات</a></div>
     </div>
+    <div class="hero-mark" aria-hidden="true"><span>GS</span><small>FOOTBALL<br>DAILY</small></div>
   </section>
+  <div class="status-strip"><span class="status-dot"></span><strong>نسخة العرض الحالية</strong><span>النتائج والمواعيد المعروضة بيانات تجريبية محلية قابلة للربط بمصدر مجاني لاحقاً.</span><time datetime="2026-08-22">22 أغسطس 2026</time></div>
+  <div class="search-container"><label for="searchBar">بحث سريع</label><div class="search-field"><span aria-hidden="true">⌕</span><input type="search" id="searchBar" placeholder="ابحث عن فريق أو دوري أو مباراة..." autocomplete="off"></div></div>
+  <div class="dashboard-grid">
+    <div class="main-column">
+      <section id="today" class="content-section" aria-labelledby="today-title"><div class="section-heading"><div><span class="section-kicker">المتابعة اليومية</span><h2 id="today-title">مباريات اليوم</h2></div><a href="#fixtures" class="section-link">عرض المواعيد <span>←</span></a></div><div id="liveMatches" class="matches-list"><div class="loading">جاري تحميل المباريات...</div></div></section>
+      <section id="fixtures" class="content-section" aria-labelledby="fixtures-title"><div class="section-heading"><div><span class="section-kicker">لا تفوّت البداية</span><h2 id="fixtures-title">المواعيد القادمة</h2></div></div><div id="fixtureList" class="fixture-list"></div></section>
+      <section id="news" class="content-section" aria-labelledby="news-title"><div class="section-heading"><div><span class="section-kicker">تحرير GlobalScore</span><h2 id="news-title">آخر القصص</h2></div><a href="articles/arsenal-chelsea-match-report.html" class="section-link">كل المقالات <span>←</span></a></div><div id="newsList" class="news-grid"></div></section>
+    </div>
+    <aside class="sidebar" aria-label="معلومات إضافية">
+      <section class="sidebar-card highlight-card"><span class="card-label">نبض المنصة</span><strong>نتائج أوضح،<br>قراءة أذكى.</strong><p>واجهة خفيفة بلا إعلانات مزعجة، ومحتوى أصلي يشرح ما وراء النتيجة.</p><a href="#news" class="small-link">اكتشف القصص <span>←</span></a></section>
+      <section id="leagues" class="sidebar-card"><div class="card-heading"><span class="card-label">أهم الدوريات</span><span class="card-icon">◎</span></div><div id="leagueSummary" class="league-summary"></div><a class="outline-btn" href="#leagues">جداول الترتيب <span>←</span></a></section>
+      <section id="favorites" class="sidebar-card compact-card"><span class="card-label">المفضلة</span><h3>احفظ مبارياتك المهمة</h3><p>اضغط على النجمة في أي بطاقة لتعود إليها بسرعة من هذا المتصفح.</p></section>
+    </aside>
+  </div>
 </main>
-
-<footer class="footer">
-  <p>© 2026 GlobalScore. جميع الحقوق محفوظة.</p>
-</footer>
-
-<script defer src="../assets/js/app.js" type="module"></script>
-
+<footer class="footer"><div class="footer-inner"><a class="brand footer-brand" href="../ar/"><img src="../assets/img/logo.svg" alt=""><span>Global<span class="brand-accent">Score</span></span></a><p>منصة مستقلة لتجربة متابعة كرة القدم بوضوح.</p><div class="footer-links"><a href="../en/">English</a><a href="../sitemap.xml">خريطة الموقع</a><a href="../robots.txt">robots.txt</a></div></div><p class="copyright">© 2026 GlobalScore. جميع الحقوق محفوظة.</p></footer>
+<script defer src="../assets/js/app.js?v=3" type="module"></script>
 </body>
 </html>

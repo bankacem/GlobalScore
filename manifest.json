@@ -1,7 +1,9 @@
 {
   "short_name": "GlobalScore",
-  "name": "GlobalScore - Live Football Scores Today",
-  "description": "Live football scores, fixtures, results, league tables and match stats updated fast.",
+  "name": "GlobalScore — Football Scores, Fixtures & Stories",
+  "description": "A fast football hub for scores, fixtures, league tables and original match stories.",
+  "lang": "en",
+  "dir": "ltr",
   "icons": [
     {
       "src": "assets/img/logo.svg",
@@ -9,9 +11,10 @@
       "sizes": "any"
     }
   ],
-  "start_url": "./",
-  "background_color": "#0a84ff",
-  "theme_color": "#0a84ff",
+  "start_url": "./en/",
+  "scope": "./",
+  "background_color": "#08111f",
+  "theme_color": "#08111f",
   "display": "standalone",
   "orientation": "portrait"
 }
