@@ -1,15 +1,23 @@
 export class DataSource {
   async getLiveMatches() {
     try {
-      // Changed to relative path relative to index.html within en/ or ar/ subdirectory
-      const res = await fetch('../assets/data/live.json');
-      if (!res.ok) {
-        throw new Error(`HTTP error! status: ${res.status}`);
-      }
-      return await res.json();
-    } catch (e) {
-      console.error("Error fetching live matches: ", e);
-      return [];
+      const response = await fetch('../assets/data/live.json');
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      return await response.json();
+    } catch (error) {
+      console.error('Unable to load match data:', error);
+      return { matches: [], tables: {} };
+    }
+  }
+
+  async getContent() {
+    try {
+      const response = await fetch('../assets/data/content.json');
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      return await response.json();
+    } catch (error) {
+      console.error('Unable to load editorial content:', error);
+      return { fixtures: [], articles: [] };
     }
   }
 }

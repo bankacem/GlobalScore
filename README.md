@@ -1,90 +1,56 @@
-# GlobalScore ⚽️
+# GlobalScore
 
-GlobalScore is a highly optimized, responsive, and mobile-first live football scores web application. Designed for speed, accessibility, and high SEO performance, it features standard multilingual architecture (English & Arabic) and a modular data-layer foundation. Ready for immediate deployment to GitHub Pages.
+GlobalScore is a static, mobile-first football hub for live-score presentation, upcoming fixtures, league tables, original match reports, tactical notes, and player-watch stories. It is designed for GitHub Pages and does not require a paid service to run the current demo.
 
----
+## What changed
 
-## 🚀 Phase 1 Features Implemented (Production Ready Foundation)
+The interface now has a clear editorial hierarchy: a branded hero, a daily match board, upcoming fixtures, original stories, a league sidebar, favourites, dark mode, multilingual navigation, and accessible focus/skip-link states. Arabic and English homepages use matching canonical and `hreflang` metadata, while every article has its own canonical URL and structured Article metadata.
 
-- **Multilingual Architecture (en / ar):**
-  - High SEO compatibility with hreflang alternate links and canonical targets.
-  - Directional attributes (`dir="rtl"` / `dir="ltr"`) handled beautifully.
-  - Quick, interactive toggle button to switch language contexts.
-- **PWA Capabilities:**
-  - Modern `manifest.json` referencing high-quality vector brand assets (`logo.svg`).
-  - Active Service Worker (`sw.js`) supporting aggressive caching of core stylesheet, javascript modules, and offline storage.
-- **Mobile-First & Responsive Layouts:**
-  - Standard CSS custom properties supporting a fully accessible Dark Mode toggle.
-  - Critical CSS inline injection for exceptionally fast First Contentful Paint (FCP).
-- **Modular Data & Layout Layer:**
-  - Dynamic scores retrieved from an asynchronous `DataSource` API using standard mock resources (`live.json`).
-  - Interactive components dynamically rendering in respective localized views.
+The content layer is intentionally local. `assets/data/live.json` contains the current demo scoreboard and standings, while `assets/data/content.json` contains fixture cards and editorial stories. This keeps GitHub Pages deployment free and predictable. The previous five-second random live-score simulator was removed so the site does not present fabricated changes as real-time data.
 
----
+## Free data upgrade path
 
-## 📁 Directory Structure
+The front end can later consume a generated JSON snapshot from a free public source, but API credentials must never be placed in this static repository. A safe approach is to run a scheduled build outside the browser, write a sanitised JSON snapshot into `assets/data/`, and deploy the result to GitHub Pages. API-Football advertises a no-card free plan with a daily request limit, and TheSportsDB advertises an open free sports API; both should be checked against their current terms before production use.
 
-```
-globalscore/
-│
-├── index.html               # Language auto-detect redirect
-├── robots.txt               # Crawler instructions
-├── sitemap.xml              # Search engine sitemap
-├── sitemap-index.xml        # Sitemap index
-├── manifest.json            # PWA manifest
-├── sw.js                    # Service worker caching
-│
-├── /en/
-│   └── index.html           # English language home
-│
-├── /ar/
-│   └── index.html           # Arabic RTL language home
-│
-├── /assets/
-│   ├── css/
-│   │   ├── critical.css     # Inlined above fold styling
-│   │   └── main.css         # Responsive styling + Dark Mode definitions
-│   ├── js/
-│   │   ├── app.js           # Core JS entry point
-│   │   ├── router.js        # Dynamic SPA Router setup
-│   │   ├── data-source.js   # Dynamic fetch modular data provider
-│   │   ├── components.js    # Standard rendering components
-│   │   └── utils.js         # Theme & localized utilities
-│   ├── img/
-│   │   └── logo.svg         # Modern vector brand logo
-│   └── data/
-│       └── live.json        # Live mock fixtures database
-│
-└── README.md                # General Information and Developer Guidelines
+Until that connection is configured, the site clearly labels its local scores and fixtures as demo data.
+
+## Sitemap and Search Console
+
+The repository now includes both `Sitemap.xml` and `sitemap.xml` for compatibility with the URL previously submitted to Search Console. The root sitemap lists the English and Arabic homepages plus all six article pages using absolute URLs. `robots.txt` references both spellings, and `sitemap-index.xml` points to the canonical root sitemap.
+
+Submit this exact URL in Google Search Console:
+
+```text
+https://bankacem.github.io/GlobalScore/Sitemap.xml
 ```
 
----
+After GitHub Pages publishes the commit, open the URL in a browser and confirm that it returns XML rather than an HTML 404 page. Google recommends absolute canonical URLs, UTF-8 XML, and a sitemap at the site root; a sitemap improves discovery but does not guarantee indexing.
 
-## 🛠 Developer & Launch Instructions
+## Local development
 
-### Prerequisites
-You need a basic HTTP static server to run the app because it imports JavaScript files as modules (`type="module"`), which is blocked by CORS policy on the `file://` protocol.
+Because the site uses JavaScript modules, serve it through a local HTTP server:
 
-### Run Locally
-To run locally, execute either of the following commands in the project root:
-
-Using Node's `npx`:
 ```bash
-npx serve .
+python3 -m http.server 4173
 ```
 
-Or using Python's built-in server:
-```bash
-python3 -m http.server 8000
+Then open `http://localhost:4173/en/` or `http://localhost:4173/ar/`.
+
+## Project structure
+
+```text
+/en/ and /ar/                 multilingual homepages
+/en/articles/ and /ar/articles/  indexable editorial pages
+/assets/data/live.json         demo scores and standings
+/assets/data/content.json      fixtures and editorial content
+/assets/js/                    data loading, rendering, favourites and theme logic
+/assets/css/                   critical and full responsive styling
+Sitemap.xml                    root sitemap requested by Search Console
+sitemap.xml                    lowercase compatibility copy
+sitemap-index.xml              sitemap index
+robots.txt                     crawler directives
 ```
 
-Open `http://localhost:8000/` in your browser.
+## Editorial workflow
 
----
-
-## 🔮 Future Roadmap (Phase 2 & Beyond)
-- Expand routes to support dedicated views for `/live`, `/today`, and `/leagues`.
-- Match Detail, League Tables, and Standings with interactive charts.
-- Dark/Light Theme persists in local storage.
-- Push Notifications for match goals and updates.
-- Real-time API integration.
+To publish a new article, add the Arabic and English HTML pages under their respective `articles/` directories, add a bilingual entry to `assets/data/content.json`, and add both canonical URLs to `Sitemap.xml` and `sitemap.xml`. Keep the title, description, publication date, canonical URL, and `hreflang` links consistent.

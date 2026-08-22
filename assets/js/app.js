@@ -1,262 +1,106 @@
 import { DataSource } from './data-source.js';
-import { Router } from './router.js';
-import {
-  MatchComponent,
-  LeagueTableComponent,
-  MatchDetailModalComponent,
-  ToastNotification
-} from './components.js';
-import {
-  setupTheme,
-  setupLanguageToggle,
-  getFavorites
-} from './utils.js';
+import { MatchComponent, LeagueTableComponent, MatchDetailModalComponent } from './components.js';
+import { setupTheme, getFavorites } from './utils.js';
 
 const dataSource = new DataSource();
 let allMatches = [];
 let allTables = {};
+let content = { fixtures: [], articles: [] };
 let currentView = '#today';
-let activeFilterLeague = '';
 let activeSearchQuery = '';
 
-// Live Match Simulator config
-function startLiveSimulator() {
-  setInterval(() => {
-    let scoreChanged = false;
-    let scorer = '';
-    let goalMatch = null;
+const isArabic = () => document.documentElement.lang === 'ar';
+const text = (item, key) => isArabic() ? item[`${key}Ar`] : item[key];
 
-    allMatches = allMatches.map(match => {
-      if (match.status === 'Live') {
-        // Increment minute
-        const nextMin = match.minute + 1;
-        match.minute = nextMin > 90 ? 90 : nextMin;
-
-        // Random chance of goal (1.5%)
-        if (Math.random() < 0.015) {
-          scoreChanged = true;
-          const scores = match.score.split('-').map(s => parseInt(s.trim()));
-          const isHomeScoring = Math.random() > 0.5;
-          if (isHomeScoring) {
-            scores[0]++;
-            scorer = document.documentElement.lang === 'ar' ? `${match.homeAr} يسجل!` : `${match.home} Scores!`;
-          } else {
-            scores[1]++;
-            scorer = document.documentElement.lang === 'ar' ? `${match.awayAr} يسجل!` : `${match.away} Scores!`;
-          }
-          match.score = `${scores[0]} - ${scores[1]}`;
-          goalMatch = match;
-
-          // Push event to match timeline
-          const eventItem = {
-            minute: match.minute,
-            player: isHomeScoring ? "Scorer Goal" : "Away Goal",
-            playerAr: isHomeScoring ? "مسجل الهدف" : "هدف الضيف",
-            type: "Goal",
-            typeAr: "هدف",
-            score: match.score
-          };
-          match.events = match.events || [];
-          match.events.push(eventItem);
-        }
-      }
-      return match;
-    });
-
-    if (scoreChanged && goalMatch) {
-      ToastNotification(
-        document.documentElement.lang === 'ar' ? `⚽ هدف جديد! ${goalMatch.homeAr} ${goalMatch.score} ${goalMatch.awayAr}` : `⚽ GOAL! ${goalMatch.home} ${goalMatch.score} ${goalMatch.away}`,
-        scorer
-      );
-    }
-
-    // Live update UI elements without hard reloading entire page structure
-    renderCurrentState();
-  }, 5000); // simulation runs every 5 seconds
+function safeLink(article) {
+  return article.href || `articles/${article.slug}.html`;
 }
 
-// Render Engine
 function renderCurrentState() {
-  const isAr = document.documentElement.lang === 'ar';
-
-  // Highlight active tab
-  document.querySelectorAll('.nav-link').forEach(link => {
-    link.classList.remove('active');
-    const href = link.getAttribute('href');
-    if (href === currentView) {
-      link.classList.add('active');
-    }
-  });
-
-  const matchesContainer = document.getElementById('liveMatches');
-  if (!matchesContainer) return;
-
-  // Clear or build skeleton
-  matchesContainer.innerHTML = '';
-
-  // Get filtered elements based on current tab state
-  let displayed = [...allMatches];
-
-  // 1. Tab View Filter
-  if (currentView === '#live') {
-    displayed = displayed.filter(m => m.status === 'Live');
-  } else if (currentView === '#yesterday') {
-    displayed = displayed.filter(m => m.status === 'FT');
-  } else if (currentView === '#favorites') {
-    const favs = getFavorites();
-    displayed = displayed.filter(m => favs.includes(Number(m.id)));
-  }
-
-  // 2. League sidebar filter if active
-  if (activeFilterLeague) {
-    displayed = displayed.filter(m => m.league === activeFilterLeague);
-  }
-
-  // 3. Search query filter if active
-  if (activeSearchQuery) {
-    const q = activeSearchQuery.toLowerCase();
-    displayed = displayed.filter(m =>
-      m.home.toLowerCase().includes(q) ||
-      m.away.toLowerCase().includes(q) ||
-      m.homeAr.toLowerCase().includes(q) ||
-      m.awayAr.toLowerCase().includes(q) ||
-      m.league.toLowerCase().includes(q) ||
-      m.leagueAr.toLowerCase().includes(q)
-    );
-  }
-
-  if (displayed.length === 0) {
-    matchesContainer.innerHTML = `<div class="loading">${isAr ? 'لا توجد مباريات مطابقة.' : 'No matches match your criteria.'}</div>`;
-    return;
-  }
-
-  // Group by league for premium experience
-  const groupedByLeague = {};
-  displayed.forEach(m => {
-    const leagueName = isAr ? m.leagueAr : m.league;
-    if (!groupedByLeague[leagueName]) {
-      groupedByLeague[leagueName] = [];
-    }
-    groupedByLeague[leagueName].push(m);
-  });
-
-  for (const [leagueName, matchList] of Object.entries(groupedByLeague)) {
-    // Create league title segment
-    const headerDiv = document.createElement('div');
-    headerDiv.className = 'league-header';
-    headerDiv.innerHTML = `<h3>🏆 ${leagueName}</h3>`;
-    matchesContainer.appendChild(headerDiv);
-
-    matchList.forEach(match => {
-      const card = MatchComponent(match, () => {
-        // Show match detail modal on click
-        showMatchDetails(match.id);
-      });
-      matchesContainer.appendChild(card);
-    });
-  }
-}
-
-// Match details modal trigger
-function showMatchDetails(id) {
-  const match = allMatches.find(m => m.id === Number(id));
-  if (!match) return;
-
-  // If previous modal exists, remove it
-  const oldModal = document.getElementById('matchDetailsModal');
-  if (oldModal) oldModal.remove();
-
-  const modal = MatchDetailModalComponent(match, () => {
-    // on favorite toggled, re-render main list
-    renderCurrentState();
-  });
-  document.body.appendChild(modal);
-}
-
-// Show League tables view
-function renderLeaguesView() {
   const container = document.getElementById('liveMatches');
   if (!container) return;
+  const ar = isArabic();
+  let displayed = [...allMatches];
+  if (currentView === '#live') displayed = displayed.filter(match => match.status === 'Live');
+  if (currentView === '#yesterday') displayed = displayed.filter(match => match.status === 'FT');
+  if (currentView === '#favorites') displayed = displayed.filter(match => getFavorites().includes(Number(match.id)));
+  if (activeSearchQuery) {
+    const query = activeSearchQuery.toLowerCase();
+    displayed = displayed.filter(match => [match.home, match.away, match.homeAr, match.awayAr, match.league, match.leagueAr].some(value => value.toLowerCase().includes(query)));
+  }
   container.innerHTML = '';
-
-  const isAr = document.documentElement.lang === 'ar';
-
-  if (Object.keys(allTables).length === 0) {
-    container.innerHTML = `<div class="loading">${isAr ? 'جاري تحميل جدول الترتيب...' : 'Loading tables...'}</div>`;
+  if (!displayed.length) {
+    container.innerHTML = `<div class="empty-state">${ar ? 'لا توجد مباريات مطابقة حالياً.' : 'No matches match your search.'}</div>`;
     return;
   }
-
-  for (const [leagueName, tableRows] of Object.entries(allTables)) {
-    const leagueTitle = document.createElement('h3');
-    leagueTitle.className = 'table-league-title';
-    leagueTitle.textContent = `🏆 ${leagueName}`;
-    container.appendChild(leagueTitle);
-
-    const tableEl = LeagueTableComponent(tableRows);
-    container.appendChild(tableEl);
-  }
+  const groups = {};
+  displayed.forEach(match => {
+    const league = ar ? match.leagueAr : match.league;
+    (groups[league] ||= []).push(match);
+  });
+  Object.entries(groups).forEach(([league, matches]) => {
+    const header = document.createElement('div');
+    header.className = 'league-header';
+    header.innerHTML = `<h3>${league}</h3>`;
+    container.appendChild(header);
+    matches.forEach(match => container.appendChild(MatchComponent(match, () => showMatchDetails(match.id))));
+  });
 }
 
-// Initialise core modules
+function renderFixtures() {
+  const container = document.getElementById('fixtureList');
+  if (!container) return;
+  container.innerHTML = content.fixtures.map(fixture => `<article class="fixture-card"><div class="fixture-date"><strong>${text(fixture, 'day')}</strong>${text(fixture, 'month')}</div><div class="fixture-body"><div class="fixture-league">${text(fixture, 'league')}</div><div class="fixture-teams"><span>${text(fixture, 'home')}</span><span>${fixture.time}</span><span>${text(fixture, 'away')}</span></div></div></article>`).join('');
+}
+
+function renderNews() {
+  const container = document.getElementById('newsList');
+  if (!container) return;
+  container.innerHTML = content.articles.map(article => `<a class="news-card" href="${safeLink(article)}"><div class="news-meta"><span class="news-tag">${text(article, 'category')}</span><span>${text(article, 'readTime')}</span></div><h3>${text(article, 'title')}</h3><p>${text(article, 'excerpt')}</p><span class="news-arrow">${isArabic() ? '←' : '→'}</span></a>`).join('');
+}
+
+function renderLeagueSummary() {
+  const container = document.getElementById('leagueSummary');
+  if (!container) return;
+  const arabicLeagues = {'Premier League':'الدوري الإنجليزي الممتاز','La Liga':'الدوري الإسباني','Egyptian Premier League':'الدوري المصري الممتاز','Champions League':'دوري أبطال أوروبا'};
+  container.innerHTML = Object.entries(allTables).slice(0, 4).map(([league, rows]) => `<a href="#leagues"><span>${isArabic() ? (arabicLeagues[league] || league) : league}</span><span>${rows.length} ${isArabic() ? 'فرق' : 'teams'}</span></a>`).join('');
+}
+
+function showMatchDetails(id) {
+  const match = allMatches.find(item => Number(item.id) === Number(id));
+  if (!match) return;
+  document.getElementById('matchDetailsModal')?.remove();
+  document.body.appendChild(MatchDetailModalComponent(match, renderCurrentState));
+}
+
+function setupNavigation() {
+  document.querySelectorAll('.nav-link').forEach(link => link.addEventListener('click', () => {
+    document.querySelectorAll('.nav-link').forEach(item => item.classList.remove('active'));
+    link.classList.add('active');
+    currentView = link.getAttribute('href');
+    if (currentView === '#leagues') {
+      const target = document.getElementById('liveMatches');
+      if (target) {
+        target.innerHTML = '';
+        Object.entries(allTables).forEach(([league, rows]) => { const title = document.createElement('h3'); title.className = 'table-league-title'; title.textContent = `🏆 ${league}`; target.appendChild(title); target.appendChild(LeagueTableComponent(rows)); });
+      }
+    } else renderCurrentState();
+  }));
+}
+
 async function initApp() {
   setupTheme();
-  setupLanguageToggle();
-
-  // Load resources
   const data = await dataSource.getLiveMatches();
   allMatches = data.matches || [];
   allTables = data.tables || {};
-
-  // Setup search dynamic filtering
-  const searchBar = document.getElementById('searchBar');
-  if (searchBar) {
-    searchBar.addEventListener('input', (e) => {
-      activeSearchQuery = e.target.value;
-      if (currentView !== '#leagues') {
-        renderCurrentState();
-      }
-    });
-  }
-
-  // Setup routes mapping
-  const routes = {
-    '#today': () => {
-      currentView = '#today';
-      activeFilterLeague = '';
-      renderCurrentState();
-    },
-    '#live': () => {
-      currentView = '#live';
-      activeFilterLeague = '';
-      renderCurrentState();
-    },
-    '#yesterday': () => {
-      currentView = '#yesterday';
-      activeFilterLeague = '';
-      renderCurrentState();
-    },
-    '#leagues': () => {
-      currentView = '#leagues';
-      renderLeaguesView();
-    },
-    '#favorites': () => {
-      currentView = '#favorites';
-      activeFilterLeague = '';
-      renderCurrentState();
-    }
-  };
-
-  new Router(routes);
-  startLiveSimulator();
+  content = await dataSource.getContent();
+  document.getElementById('searchBar')?.addEventListener('input', event => { activeSearchQuery = event.target.value; renderCurrentState(); });
+  setupNavigation();
+  renderCurrentState();
+  renderFixtures();
+  renderNews();
+  renderLeagueSummary();
 }
 
 document.addEventListener('DOMContentLoaded', initApp);
-
-// Register Service Worker
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('../sw.js')
-      .then(reg => console.log('Service Worker registered successfully.', reg.scope))
-      .catch(err => console.error('Service Worker registration failed.', err));
-  });
-}
+if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('../sw.js').catch(() => {}));

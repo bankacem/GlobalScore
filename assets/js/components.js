@@ -48,7 +48,7 @@ export function MatchComponent(match, onClick) {
       </div>
     </div>
     <div class="match-actions">
-      <button class="fav-btn" aria-label="Favorite Match">${starChar}</button>
+      <button class="fav-btn ${isFavorite(match.id) ? 'active' : ''}" aria-label="${isAr ? 'إضافة المباراة إلى المفضلة' : 'Add match to favorites'}">${starChar}</button>
     </div>
   `;
 
@@ -131,7 +131,7 @@ export function MatchDetailModalComponent(match, onFavChange) {
     <div class="modal-card">
       <div class="modal-header">
         <span class="modal-title">🏆 ${leagueName}</span>
-        <button id="closeModal" class="close-btn" aria-label="Close Modal">&times;</button>
+        <button id="closeModal" class="close-btn" aria-label="${isAr ? 'إغلاق النافذة' : 'Close modal'}">&times;</button>
       </div>
 
       <div class="modal-body">
@@ -143,7 +143,7 @@ export function MatchDetailModalComponent(match, onFavChange) {
           </div>
           <div class="modal-center">
             <div class="modal-score">${match.status !== 'Scheduled' ? match.score : 'VS'}</div>
-            <span class="modal-status">${match.status === 'Live' ? `${match.minute}'` : match.status}</span>
+            <span class="modal-status">${match.status === 'Live' ? `${match.minute}'` : match.status === 'FT' ? (isAr ? 'انتهت' : 'FT') : (isAr ? 'مجدولة' : 'Scheduled')}</span>
           </div>
           <div class="modal-team">
             <span class="modal-logo">${match.awayLogo}</span>

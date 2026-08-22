@@ -1,0 +1,13 @@
+{
+  "fixtures": [
+    {"day":"23","month":"AUG","dayAr":"23","monthAr":"أغسطس","dateAr":"الأحد","dateEn":"SUN","league":"Premier League","leagueAr":"الدوري الإنجليزي الممتاز","home":"Liverpool","homeAr":"ليفربول","away":"Manchester City","awayAr":"مانشستر سيتي","time":"17:30"},
+    {"day":"24","month":"AUG","dayAr":"24","monthAr":"أغسطس","dateAr":"الإثنين","dateEn":"MON","league":"La Liga","leagueAr":"الدوري الإسباني","home":"Barcelona","homeAr":"برشلونة","away":"Atletico Madrid","awayAr":"أتلتيكو مدريد","time":"20:00"},
+    {"day":"25","month":"AUG","dayAr":"25","monthAr":"أغسطس","dateAr":"الثلاثاء","dateEn":"TUE","league":"Egyptian Premier League","leagueAr":"الدوري المصري الممتاز","home":"Pyramids","homeAr":"بيراميدز","away":"Zamalek","awayAr":"الزمالك","time":"18:00"},
+    {"day":"26","month":"AUG","dayAr":"26","monthAr":"أغسطس","dateAr":"الأربعاء","dateEn":"WED","league":"Champions League","leagueAr":"دوري أبطال أوروبا","home":"Bayern Munich","homeAr":"بايرن ميونخ","away":"Manchester City","awayAr":"مانشستر سيتي","time":"21:00"}
+  ],
+  "articles": [
+    {"slug":"arsenal-chelsea-match-report","category":"Match report","categoryAr":"تقرير مباراة","title":"Arsenal’s control turns a close derby into a statement","titleAr":"سيطرة أرسنال تحوّل الديربي إلى رسالة قوية","excerpt":"Three moments changed the rhythm of the match—and Arsenal stayed calm when Chelsea pushed back.","excerptAr":"ثلاث لحظات غيّرت إيقاع المباراة، لكن أرسنال حافظ على هدوئه عندما ضغط تشيلسي.","date":"22 Aug 2026","dateAr":"22 أغسطس 2026","readTime":"4 min read","readTimeAr":"4 دقائق قراءة","href":"articles/arsenal-chelsea-match-report.html"},
+    {"slug":"real-madrid-barcelona-tactical-notes","category":"Tactical notes","categoryAr":"ملاحظات تكتيكية","title":"The midfield duel that kept Madrid and Barça level","titleAr":"معركة الوسط التي أبقت ريال مدريد وبرشلونة متعادلين","excerpt":"A compact midfield and quick transitions produced a draw with more detail than drama.","excerptAr":"وسط ملعب متقارب وانتقالات سريعة أنتجا تعادلاً غنيّاً بالتفاصيل أكثر من الإثارة.","date":"22 Aug 2026","dateAr":"22 أغسطس 2026","readTime":"3 min read","readTimeAr":"3 دقائق قراءة","href":"articles/real-madrid-barcelona-tactical-notes.html"},
+    {"slug":"player-watch-odegaard","category":"Player watch","categoryAr":"عين على لاعب","title":"Player watch: Ødegaard’s quiet influence","titleAr":"عين على لاعب: تأثير أوديجارد الهادئ","excerpt":"The captain’s value was visible in the spaces he created before the final pass.","excerptAr":"ظهرت قيمة القائد في المساحات التي صنعها قبل التمريرة الحاسمة.","date":"22 Aug 2026","dateAr":"22 أغسطس 2026","readTime":"2 min read","readTimeAr":"دقيقتان قراءة","href":"articles/player-watch-odegaard.html"}
+  ]
+}
