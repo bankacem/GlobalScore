@@ -13,13 +13,13 @@ export function MatchComponent(match, onClick) {
   if (match.status === 'Live') statusText = isAr ? `مباشر ${esc(match.minute)}'` : `Live ${esc(match.minute)}'`;
   else if (match.status === 'FT') statusText = isAr ? 'انتهت' : 'FT';
   else if (match.status === 'HT') statusText = isAr ? 'استراحة' : 'HT';
-  else if (match.status === 'Scheduled') statusText = esc(match.time);
+  else if (match.status === 'Scheduled') statusText = isAr ? 'مجدولة' : 'Scheduled';
   const favorite = isFavorite(match.id);
   div.innerHTML = `
-    <div class="match-info-section" style="flex:1;display:flex;align-items:center;justify-content:space-between;">
-      <div class="team-side home-side"><span class="team-logo">${badge(match.homeLogo)}</span><span class="team-name">${homeTeam}</span></div>
+    <div class="match-info-section">
+      <div class="team-side home-side"><span class="team-logo">${badge(match.homeLogo)}</span><span class="team-name" title="${homeTeam}">${homeTeam}</span></div>
       <div class="score-display">${match.status !== 'Scheduled' ? `<span class="score-num">${esc(match.score)}</span>` : `<span class="match-time">${esc(match.time)}</span>`}<span class="status-badge ${match.status === 'Live' ? 'live-pulse' : ''}">${statusText}</span></div>
-      <div class="team-side away-side"><span class="team-name">${awayTeam}</span><span class="team-logo">${badge(match.awayLogo)}</span></div>
+      <div class="team-side away-side"><span class="team-name" title="${awayTeam}">${awayTeam}</span><span class="team-logo">${badge(match.awayLogo)}</span></div>
     </div>
     <div class="match-actions"><button class="fav-btn ${favorite ? 'active' : ''}" aria-label="${isAr ? 'إضافة المباراة إلى المفضلة' : 'Add match to favorites'}">${favorite ? '★' : '☆'}</button></div>`;
   div.querySelector('.fav-btn').addEventListener('click', event => {
@@ -37,7 +37,7 @@ export function LeagueTableComponent(rows, options = {}) {
   const table = document.createElement('div');
   table.className = 'table-container standings-live-table';
   const logo = row => row.logo && String(row.logo).startsWith('http') ? `<img class="standing-logo" src="${esc(row.logo)}" alt="">` : '';
-  table.innerHTML = `<table class="standing-table"><thead><tr><th>#</th><th style="text-align:left">${isAr ? 'الفريق' : 'Team'}</th><th>${isAr ? 'لعب' : 'PL'}</th><th>${isAr ? 'فوز' : 'W'}</th><th>${isAr ? 'تعادل' : 'D'}</th><th>${isAr ? 'خسر' : 'L'}</th><th class="hide-mobile">${isAr ? 'له' : 'GF'}</th><th class="hide-mobile">${isAr ? 'عليه' : 'GA'}</th><th class="hide-mobile">${isAr ? 'الفارق' : 'GD'}</th><th>${isAr ? 'نقاط' : 'PTS'}</th><th class="hide-mobile">${isAr ? 'النموذج' : 'Form'}</th></tr></thead><tbody>${rows.map(row => `<tr><td><strong>${esc(row.pos)}</strong></td><td class="standing-team"><span>${logo(row)}</span><strong>${esc(isAr ? row.teamAr : row.team)}</strong></td><td>${esc(row.p)}</td><td>${esc(row.w)}</td><td>${esc(row.d)}</td><td>${esc(row.l)}</td><td class="hide-mobile">${esc(row.gf || '—')}</td><td class="hide-mobile">${esc(row.ga || '—')}</td><td class="hide-mobile">${esc(row.gd || '—')}</td><td><strong class="highlight-pts">${esc(row.pts)}</strong></td><td class="form-list hide-mobile">${esc(row.form || '—')}</td></tr>`).join('')}</tbody></table>`;
+  table.innerHTML = `<table class="standing-table"><thead><tr><th>#</th><th style="text-align:left">${isAr ? 'الفريق' : 'Team'}</th><th>${isAr ? 'لعب' : 'PL'}</th><th>${isAr ? 'فوز' : 'W'}</th><th>${isAr ? 'تعادل' : 'D'}</th><th>${isAr ? 'خسر' : 'L'}</th><th class="hide-mobile">${isAr ? 'له' : 'GF'}</th><th class="hide-mobile">${isAr ? 'عليه' : 'GA'}</th><th class="hide-mobile">${isAr ? 'الفارق' : 'GD'}</th><th>${isAr ? 'نقاط' : 'PTS'}</th><th class="hide-mobile">${isAr ? 'النموذج' : 'Form'}</th></tr></thead><tbody>${rows.map(row => `<tr><td><strong>${esc(row.pos)}</strong></td><td class="standing-team"><span>${logo(row)}</span><strong title="${esc(isAr ? row.teamAr : row.team)}">${esc(isAr ? row.teamAr : row.team)}</strong></td><td>${esc(row.p)}</td><td>${esc(row.w)}</td><td>${esc(row.d)}</td><td>${esc(row.l)}</td><td class="hide-mobile">${esc(row.gf || '—')}</td><td class="hide-mobile">${esc(row.ga || '—')}</td><td class="hide-mobile">${esc(row.gd || '—')}</td><td><strong class="highlight-pts">${esc(row.pts)}</strong></td><td class="form-list hide-mobile">${esc(row.form || '—')}</td></tr>`).join('')}</tbody></table>`;
   return table;
 }
 
