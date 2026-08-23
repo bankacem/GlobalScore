@@ -1,5 +1,5 @@
 import { DataSource } from './data-source.js?v=7';
-import { MatchComponent, LeagueTableComponent, MatchDetailModalComponent } from './components.js?v=9';
+import { MatchComponent, LeagueTableComponent, MatchDetailModalComponent } from './components.js?v=10';
 import { setupTheme, getFavorites } from './utils.js?v=4';
 
 const dataSource = new DataSource();
@@ -12,6 +12,8 @@ let activeSearchQuery = '';
 
 const isArabic = () => document.documentElement.lang === 'ar';
 const text = (item, key) => isArabic() ? item[`${key}Ar`] : item[key];
+const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+const teamSlug = value => String(value ?? '').normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
 function safeLink(article) {
   return article.href || `articles/${article.slug}.html`;
@@ -51,7 +53,14 @@ function renderCurrentState() {
 function renderFixtures() {
   const container = document.getElementById('fixtureList');
   if (!container) return;
-  container.innerHTML = content.fixtures.map(fixture => `<article class="fixture-card"><div class="fixture-date"><strong>${text(fixture, 'day')}</strong>${text(fixture, 'month')}</div><div class="fixture-body"><div class="fixture-league">${text(fixture, 'league')}</div><div class="fixture-teams"><span class="fixture-team fixture-home" title="${text(fixture, 'home')}">${text(fixture, 'home')}</span><span class="fixture-time">${fixture.time}</span><span class="fixture-team fixture-away" title="${text(fixture, 'away')}">${text(fixture, 'away')}</span></div></div></article>`).join('');
+  container.innerHTML = content.fixtures.map(fixture => {
+    const home = text(fixture, 'home');
+    const away = text(fixture, 'away');
+    const league = text(fixture, 'league');
+    const matchUrl = fixture.id ? `matches/${encodeURIComponent(fixture.id)}.html` : '#today';
+    const leagueUrl = `leagues/${teamSlug(fixture.league || league)}.html`;
+    return `<article class="fixture-card"><div class="fixture-date"><strong>${escapeHtml(text(fixture, 'day'))}</strong>${escapeHtml(text(fixture, 'month'))}</div><div class="fixture-body"><a class="fixture-league" href="${leagueUrl}">${escapeHtml(league)}</a><div class="fixture-teams"><a class="fixture-team fixture-home" href="teams/${teamSlug(fixture.home || home)}.html" title="${escapeHtml(home)}">${escapeHtml(home)}</a><a class="fixture-time" href="${matchUrl}" title="${isArabic() ? 'فتح صفحة المباراة' : 'Open match center'}">${escapeHtml(fixture.time)}<small>${isArabic() ? 'مركز المباراة' : 'Match center'}</small></a><a class="fixture-team fixture-away" href="teams/${teamSlug(fixture.away || away)}.html" title="${escapeHtml(away)}">${escapeHtml(away)}</a></div></div></article>`;
+  }).join('');
 }
 
 function renderNews() {

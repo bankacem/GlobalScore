@@ -47,6 +47,8 @@ export function MatchDetailModalComponent(match, onFavChange) {
   const homeTeam = esc(isAr ? match.homeAr : match.home);
   const awayTeam = esc(isAr ? match.awayAr : match.away);
   const leagueName = esc(isAr ? match.leagueAr : match.league);
+  const permanentMatchUrl = `matches/${encodeURIComponent(match.id)}.html`;
+  const permanentMatchLabel = isAr ? 'فتح صفحة المباراة الدائمة' : 'Open permanent match center';
   const events = detail.events?.length ? detail.events : (match.events || []);
   const rosters = detail.rosters || [];
   const stats = detail.stats || [];
@@ -78,6 +80,7 @@ export function MatchDetailModalComponent(match, onFavChange) {
       <div class="modal-body">
         <div class="modal-score-header"><div class="modal-team"><span class="modal-logo">${badge(match.homeLogo)}</span><h4>${homeTeam}</h4></div><div class="modal-center"><div class="modal-score">${match.status !== 'Scheduled' ? esc(match.score) : 'VS'}</div><span class="modal-status">${match.status === 'Live' ? `${isAr ? 'مباشر' : 'Live'} ${esc(match.minute)}'` : match.status === 'FT' ? (isAr ? 'انتهت' : 'FT') : (isAr ? 'مجدولة' : 'Scheduled')}</span></div><div class="modal-team"><span class="modal-logo">${badge(match.awayLogo)}</span><h4>${awayTeam}</h4></div></div>
         <div class="match-meta-grid"><div class="match-meta-item"><span>⚖️</span><div><small>${isAr ? 'الحكم' : 'Referee'}</small><strong>${referee}</strong></div></div><div class="match-meta-item"><span>🏟️</span><div><small>${isAr ? 'الملعب' : 'Venue'}</small><strong>${venue}</strong>${detail.mapUrl ? `<a href="${esc(detail.mapUrl)}" target="_blank" rel="noopener noreferrer">${isAr ? 'فتح الموقع على الخريطة' : 'Open map location'}</a>` : ''}</div></div><div class="match-meta-item"><span>👥</span><div><small>${isAr ? 'الحضور' : 'Attendance'}</small><strong>${attendance}</strong></div></div></div>
+        <div class="modal-permanent-action"><a class="primary-btn" href="${permanentMatchUrl}">${permanentMatchLabel} <span>→</span></a></div>
         <div class="modal-tabs"><button class="tab-btn active" data-tab="timeline">${isAr ? 'الأحداث' : 'Events'}</button><button class="tab-btn" data-tab="stats">${isAr ? 'الإحصائيات' : 'Stats'}</button><button class="tab-btn" data-tab="lineups">${isAr ? 'اللاعبون والتشكيلة' : 'Players & lineups'}</button></div>
         <div class="tab-contents">
           <div id="tab-timeline" class="tab-panel active">${events.length ? `<div class="timeline-list">${events.map(event => `<div class="timeline-item"><span class="time-pin">${esc(event.minute)}'</span><span class="event-desc">${esc(event.text)}</span></div>`).join('')}</div>` : `<div class="empty-state">${isAr ? 'لا توجد أحداث منشورة بعد.' : 'No match events have been published yet.'}</div>`}</div>

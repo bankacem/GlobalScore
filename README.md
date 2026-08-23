@@ -10,7 +10,7 @@ The content layer is stored as a JSON snapshot. `assets/data/live.json` contains
 
 ## Free automatic data refresh
 
-`.github/workflows/update-sports-data.yml` runs manually or every six hours as a durable fallback snapshot. In the browser, `assets/js/data-source.js` polls the public ESPN scoreboard JSON endpoints every 15 seconds for Premier League, La Liga, and UEFA Champions League matches. It falls back to the latest generated JSON when ESPN has no response. The workflow calls `scripts/update_data.py`, which fetches fixture metadata from TheSportsDB's documented free v1 API and reads football headlines from the BBC Sport RSS feed. It stores match metadata and short source-linked headlines only; it does not copy full third-party articles. The workflow commits the refreshed JSON and updates sitemap dates, after which GitHub Pages publishes the new snapshot.
+`.github/workflows/update-sports-data.yml` runs manually or daily at 05:17 UTC as a durable fallback snapshot. In the browser, `assets/js/data-source.js` polls the public ESPN scoreboard JSON endpoints every 15 seconds for Premier League, La Liga, and UEFA Champions League matches. It falls back to the latest generated JSON when ESPN has no response. The workflow calls `scripts/update_data.py`, which fetches fixture metadata from TheSportsDB's documented free v1 API and reads football headlines from the BBC Sport RSS feed. It stores match metadata and short source-linked headlines only; it does not copy full third-party articles. The workflow commits the refreshed JSON and updates sitemap dates, after which GitHub Pages publishes the new snapshot.
 
 No API key is required for the documented TheSportsDB free v1 key. The workflow uses the repository's built-in GitHub token only to commit the generated snapshot. Because scheduled workflows run from the repository's default branch, the workflow is pinned to the current GitHub Pages branch. GitHub may disable scheduled workflows after long periods without repository activity, so the workflow also supports `workflow_dispatch` for a manual refresh.
 
@@ -18,7 +18,7 @@ The ESPN scoreboard endpoint used by the live browser view currently responds wi
 
 ## Sitemap and Search Console
 
-The repository now includes both `Sitemap.xml` and `sitemap.xml` for compatibility with the URL previously submitted to Search Console. The root sitemap lists the English and Arabic homepages plus all six article pages using absolute URLs. `robots.txt` references both spellings, and `sitemap-index.xml` points to the canonical root sitemap.
+The repository now includes both `Sitemap.xml` and `sitemap.xml` for compatibility with the URL previously submitted to Search Console. The root sitemap lists the four language homepages, editorial pages, permanent match centers, team pages, and competition hubs using absolute URLs. `robots.txt` references both spellings, and `sitemap-index.xml` points to the canonical root sitemap.
 
 Submit this exact URL in Google Search Console:
 
@@ -73,6 +73,12 @@ Match details also turn the available ESPN box-score statistics into a side-by-s
 For every selected match, the generator writes an original preview in Arabic, English, French, and Spanish, adds `canonical`, four `hreflang` links, Open Graph metadata, and `Article` JSON-LD, then updates both sitemap spellings. `assets/data/article_registry.json` records the event identifier, stable date-based slug, teams, date, generation time, and languages. The registry and event key prevent the same match from creating duplicate records on repeated workflow runs; an existing page is updated rather than duplicated.
 
 The workflow commits the generated HTML, JSON snapshot, registry, and sitemap to the GitHub Pages branch using the built-in GitHub token. No paid translation API, AI API key, or external database is required. The multilingual copy is generated from original language-specific editorial templates, which keeps the process deterministic and free. If a source is unavailable, the workflow preserves the last usable snapshot and continues without deleting the existing editorial pages.
+
+## Permanent match, team and competition pages
+
+The generator `scripts/generate_permanent_pages.py` creates crawlable pages under `/matches/`, `/teams/`, and `/leagues/` for Arabic, English, French, and Spanish. A permanent match center server-renders the fixture, score snapshot, competition, date, time, and SportsEvent JSON-LD, then enriches events, referee, venue, attendance, line-ups, and statistics in the browser from the public ESPN summary endpoint when available. The free local snapshot remains the fallback and no secret key is exposed to the browser.
+
+Articles and fixture cards link to the relevant match center, both team pages, and the competition hub using descriptive anchor text. Team pages collect their fixtures and related previews; competition pages collect fixtures and the available fallback standings. These pages are generated from verified snapshot data only, so unavailable live fields are shown as unavailable instead of being invented. The service worker cache is versioned when the permanent-page assets change.
 
 ## Editorial SEO standard
 

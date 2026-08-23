@@ -33,11 +33,14 @@ jobs:
       - name: Generate today and tomorrow articles
         run: python scripts/generate_multilingual_articles.py
 
+      - name: Generate permanent match, team and competition pages
+        run: python scripts/generate_permanent_pages.py
+
       - name: Commit the refreshed snapshot
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add ar en fr es assets/data/content.json assets/data/live.json assets/data/article_registry.json scripts/generate_multilingual_articles.py scripts/update_data.py Sitemap.xml sitemap.xml sitemap-index.xml
+          git add ar en fr es assets/data/content.json assets/data/live.json assets/data/article_registry.json scripts/generate_multilingual_articles.py scripts/generate_permanent_pages.py scripts/update_data.py assets/js/match-page.js assets/css/main.css sw.js Sitemap.xml sitemap.xml sitemap-index.xml
           if git diff --cached --quiet; then
             echo "No data changes to commit."
           else
