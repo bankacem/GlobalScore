@@ -33,7 +33,7 @@
     "date": "2026-08-23",
     "home": "Manchester City",
     "away": "Bournemouth",
-    "lastGenerated": "2026-08-22T22:17:38.577188+00:00",
+    "lastGenerated": "2026-08-23T05:47:32.253606+00:00",
     "languages": [
       "ar",
       "en",
@@ -89,7 +89,7 @@
     "date": "2026-08-23",
     "home": "El Gouna",
     "away": "Modern Sport",
-    "lastGenerated": "2026-08-22T22:17:38.577188+00:00",
+    "lastGenerated": "2026-08-23T05:47:32.253606+00:00",
     "languages": [
       "ar",
       "en",
@@ -103,7 +103,91 @@
     "date": "2026-08-23",
     "home": "Atlético Madrid",
     "away": "Villarreal",
-    "lastGenerated": "2026-08-22T22:17:38.577188+00:00",
+    "lastGenerated": "2026-08-23T05:47:32.253606+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ]
+  },
+  "snapshot:2494007": {
+    "eventId": "2494007",
+    "slug": "2026-08-23-brighton-and-hove-albion-aston-villa",
+    "date": "2026-08-23",
+    "home": "Brighton and Hove Albion",
+    "away": "Aston Villa",
+    "lastGenerated": "2026-08-23T05:47:32.253606+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ]
+  },
+  "snapshot:2494008": {
+    "eventId": "2494008",
+    "slug": "2026-08-23-newcastle-united-liverpool",
+    "date": "2026-08-23",
+    "home": "Newcastle United",
+    "away": "Liverpool",
+    "lastGenerated": "2026-08-23T05:47:32.253606+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ]
+  },
+  "snapshot:2506185": {
+    "eventId": "2506185",
+    "slug": "2026-08-23-getafe-racing-de-santander",
+    "date": "2026-08-23",
+    "home": "Getafe",
+    "away": "Racing de Santander",
+    "lastGenerated": "2026-08-23T05:47:32.253606+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ]
+  },
+  "snapshot:2506188": {
+    "eventId": "2506188",
+    "slug": "2026-08-23-elche-barcelona",
+    "date": "2026-08-23",
+    "home": "Elche",
+    "away": "Barcelona",
+    "lastGenerated": "2026-08-23T05:47:32.253606+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ]
+  },
+  "snapshot:2561078": {
+    "eventId": "2561078",
+    "slug": "2026-08-23-al-ahly-enppi",
+    "date": "2026-08-23",
+    "home": "Al Ahly",
+    "away": "ENPPI",
+    "lastGenerated": "2026-08-23T05:47:32.253606+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ]
+  },
+  "snapshot:2561079": {
+    "eventId": "2561079",
+    "slug": "2026-08-23-ceramica-cleopatra-el-qanah",
+    "date": "2026-08-23",
+    "home": "Ceramica Cleopatra",
+    "away": "El Qanah",
+    "lastGenerated": "2026-08-23T05:47:32.253606+00:00",
     "languages": [
       "ar",
       "en",
