@@ -90,7 +90,7 @@ The player-analysis example `player-watch-odegaard.html` is available in Arabic,
 
 ## Search and player discovery
 
-The repository now generates `/search/`, `/players/`, and `/players/martin-odegaard.html` for Arabic, English, French, and Spanish through `scripts/generate_discovery_pages.py`. The search page indexes the local fixture snapshot, team and competition pages, internal editorial articles, and source-linked BBC Sport headlines in the browser. Pressing Enter in the homepage search field opens the full search route with the query preserved.
+The repository now generates `/search/`, `/players/`, and verified individual player pages for Arabic, English, French, and Spanish through `scripts/generate_discovery_pages.py`. The search page indexes the local fixture snapshot, team and competition pages, internal editorial articles, and source-linked BBC Sport headlines in the browser. Pressing Enter in the homepage search field opens the full search route with the query preserved.
 
 The player area separates original GlobalScore analysis from external source-linked headlines. The Martin Ødegaard profile uses official Arsenal and Premier League reference links and does not invent current injuries, line-ups, or statistics. External headlines open on their source website, while internal analysis remains on GlobalScore. The daily Actions workflow regenerates these discovery pages after the data, article, and permanent match pages.
 
@@ -102,4 +102,4 @@ The profile identifies the season and links to the ESPN source. Missing values a
 
 ## Player comparison
 
-Each language now includes `/compare/players.html`, a shareable comparison page for the verified player registry currently containing Martin Ødegaard, Bruno Fernandes, and Declan Rice. It fetches the same ESPN season summaries as the profile dashboard, compares starts and substitute appearances, goals, assists, and shots with side-by-side cards, dual bars, and an overlaid relative radar. The page preserves the selected IDs in the URL, links back to ESPN, and keeps unavailable values unavailable; it never creates a rating or infers a player from an unverified ID. New players should only be added after their ESPN athlete ID and league response are checked.
+Each language now includes `/compare/players.html`, a shareable comparison page for the verified player registry currently containing Martin Ødegaard, Bruno Fernandes, Declan Rice, Bukayo Saka, and Erling Haaland. It fetches the same ESPN season summaries as the profile dashboard, compares starts and substitute appearances, goals, assists, and shots with side-by-side cards, dual bars, and an overlaid relative radar. The page preserves the selected IDs in the URL, links back to ESPN, and keeps unavailable values unavailable; it never creates a rating or infers a player from an unverified ID. New players should only be added after their ESPN athlete ID and league response are checked.

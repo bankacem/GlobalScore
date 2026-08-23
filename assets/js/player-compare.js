@@ -7,11 +7,14 @@ const COPY = {
   es: { loading: 'Cargando ambos perfiles…', ready: 'Comparación verificada cargada', unavailable: 'Uno o ambos perfiles no están disponibles ahora.', season: 'Temporada', starts: 'Titularidades + entradas', goals: 'Goles', assists: 'Asistencias', shots: 'Tiros', playerOne: 'Jugador uno', playerTwo: 'Jugador dos', compare: 'Comparar ahora', source: 'Fuente: perfiles públicos de jugadores en ESPN. Los valores se muestran tal como se reportan; GlobalScore no calcula una valoración.', open: 'Abrir perfil de ESPN', relative: 'Escala relativa', sameSeason: 'Mismo resumen de temporada' },
 }[LANG] || {};
 
-const PLAYERS = [
+const FALLBACK_PLAYERS = [
   { id: '203669', name: 'Martin Ødegaard', team: 'Arsenal', slug: 'martin-odegaard' },
   { id: '124091', name: 'Bruno Fernandes', team: 'Manchester United', slug: 'bruno-fernandes' },
   { id: '238262', name: 'Declan Rice', team: 'Arsenal', slug: 'declan-rice' },
+  { id: '280555', name: 'Bukayo Saka', team: 'Arsenal', slug: 'bukayo-saka' },
+  { id: '253989', name: 'Erling Haaland', team: 'Manchester City', slug: 'erling-haaland' },
 ];
+let PLAYERS = [...FALLBACK_PLAYERS];
 
 const METRICS = [
   { key: 'starts-subIns', label: COPY.starts },
@@ -126,7 +129,16 @@ async function compare() {
   }
 }
 
-function init() {
+async function init() {
+  try {
+    const response = await fetch('../../assets/data/player-registry.json?v=1', { cache: 'no-store' });
+    if (response.ok) {
+      const registry = await response.json();
+      if (Array.isArray(registry.players) && registry.players.length > 1) PLAYERS = registry.players;
+    }
+  } catch (error) {
+    console.warn('Player registry unavailable; using fallback registry:', error);
+  }
   const selectOne = document.getElementById('comparePlayerOne');
   const selectTwo = document.getElementById('comparePlayerTwo');
   const params = new URLSearchParams(location.search);

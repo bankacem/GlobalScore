@@ -48,7 +48,16 @@ function render(data, query) {
       results.push(resultCard(article, 'article', href, title, excerpt));
     }
   });
-  if (!normalized) results.push(resultCard({}, 'player', '../players/martin-odegaard.html', 'Martin Ødegaard', AR ? 'تحليل اللاعب والروابط الرسمية والتغطية المرتبطة' : 'Player analysis, official references and related coverage'));
+  const players = Array.isArray(data.players) && data.players.length ? data.players : [
+    { name: 'Martin Ødegaard', slug: 'martin-odegaard' },
+    { name: 'Bruno Fernandes', slug: 'bruno-fernandes' },
+    { name: 'Declan Rice', slug: 'declan-rice' },
+    { name: 'Bukayo Saka', slug: 'bukayo-saka' },
+    { name: 'Erling Haaland', slug: 'erling-haaland' },
+  ];
+  players.forEach(({ name, slug: playerSlug }) => {
+    if (!normalized || name.toLowerCase().includes(normalized)) results.push(resultCard({}, 'player', `../players/${playerSlug}.html`, name, AR ? 'تحليل اللاعب وبيانات الأداء الموثقة من ESPN عند توفرها' : 'Verified ESPN performance indicators and player profile'));
+  });
   target.innerHTML = results.length ? results.slice(0, 60).join('') : `<div class="permanent-empty">${esc(copy.noResults)}</div>`;
 }
 
@@ -56,8 +65,8 @@ async function init() {
   const form = document.getElementById('globalSearchForm');
   const input = document.getElementById('globalSearchInput');
   try {
-    const [live, content] = await Promise.all([getJson('../../assets/data/live.json?v=4'), getJson('../../assets/data/content.json?v=4')]);
-    const data = { live, content };
+    const [live, content, registry] = await Promise.all([getJson('../../assets/data/live.json?v=4'), getJson('../../assets/data/content.json?v=4'), getJson('../../assets/data/player-registry.json?v=1').catch(() => ({ players: [] }))]);
+    const data = { live, content, players: registry.players };
     if (input) input.value = queryParam;
     render(data, queryParam);
     form?.addEventListener('submit', event => {

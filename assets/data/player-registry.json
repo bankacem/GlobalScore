@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "source": "ESPN public athlete profile endpoint",
+  "leagueCode": "eng.1",
+  "players": [
+    {
+      "id": "203669",
+      "name": "Martin Ødegaard",
+      "slug": "martin-odegaard",
+      "team": "Arsenal",
+      "espnProfile": "https://www.espn.com/soccer/player/stats/_/id/203669"
+    },
+    {
+      "id": "124091",
+      "name": "Bruno Fernandes",
+      "slug": "bruno-fernandes",
+      "team": "Manchester United",
+      "espnProfile": "https://www.espn.com/soccer/player/stats/_/id/124091"
+    },
+    {
+      "id": "238262",
+      "name": "Declan Rice",
+      "slug": "declan-rice",
+      "team": "Arsenal",
+      "espnProfile": "https://www.espn.com/soccer/player/stats/_/id/238262"
+    },
+    {
+      "id": "280555",
+      "name": "Bukayo Saka",
+      "slug": "bukayo-saka",
+      "team": "Arsenal",
+      "espnProfile": "https://www.espn.com/soccer/player/stats/_/id/280555"
+    },
+    {
+      "id": "253989",
+      "name": "Erling Haaland",
+      "slug": "erling-haaland",
+      "team": "Manchester City",
+      "espnProfile": "https://www.espn.com/soccer/player/stats/_/id/253989"
+    }
+  ]
+}
