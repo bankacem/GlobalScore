@@ -204,7 +204,7 @@ def matchday_hub_page(lang):
     c = COPY[lang]
     hub = HUB_COPY[lang]
     hub_date = min((fixture['date'] for fixture in fixtures), default=date.today().isoformat())
-    hub_slug = f'{hub_date}-football-matchday-guide'
+    hub_slug = f'{hub_date}-matchday-football-guide'
     canonical = f'{BASE}/{lang}/articles/{hub_slug}.html'
     hreflang = '\n'.join(f'<link rel="alternate" hreflang="{code}" href="{BASE}/{code}/articles/{hub_slug}.html">' for code in LANGS)
     items = ''.join(f'<li><a href="{escape(fixture["slug"])}.html">{escape(fixture["home"])} – {escape(fixture["away"])}</a><span>{escape(fixture["league"][lang])} · {escape(fixture["time"])}</span></li>' for fixture in fixtures)
@@ -240,7 +240,7 @@ def landing(lang):
     headings = {'en': 'Football previews for today and tomorrow', 'ar': 'معاينات مباريات اليوم والغد', 'fr': 'Avant-matchs du jour et du lendemain', 'es': 'Previas de los partidos de hoy y mañana'}
     intro = {'en': 'Original, source-aware match briefings with clear times, tactical questions and live-data links.', 'ar': 'معاينات أصلية للمباريات مع المواعيد والأسئلة التكتيكية وروابط البيانات الحية.', 'fr': 'Des avant-matchs originaux avec horaires clairs, clés tactiques et liens vers le direct.', 'es': 'Previas originales con horarios claros, claves tácticas y enlaces a los datos en directo.'}
     hub_date = min((fixture['date'] for fixture in fixtures), default=date.today().isoformat())
-    hub_slug = f'{hub_date}-football-matchday-guide'
+    hub_slug = f'{hub_date}-matchday-football-guide'
     hub_card = f'<a class="news-card matchday-hub-card" href="{hub_slug}.html"><div class="news-meta"><span class="news-tag">{escape(c["tag"])}</span><span>{escape(hub_date)}</span></div><h3>{escape(HUB_COPY[lang]["title"])}</h3><p>{escape(HUB_COPY[lang]["description"])}</p><span class="news-arrow">→</span></a>'
     cards = hub_card + ''.join(f'<a class="news-card" href="{f["slug"]}.html"><div class="news-meta"><span class="news-tag">{escape(c["tag"])}</span><span>{escape(f["date"])}</span></div><h3>{escape(f["home"] + " – " + f["away"])}</h3><p>{escape(f["league"][lang])} · {escape(f["time"])}</p><span class="news-arrow">→</span></a>' for f in fixtures)
     return f'''<!doctype html><html lang="{lang}" dir="{c['dir']}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>GlobalScore | {headings[lang]}</title><meta name="description" content="{intro[lang]}"><link rel="canonical" href="{BASE}/{lang}/articles/"><link rel="alternate" hreflang="ar" href="{BASE}/ar/articles/"><link rel="alternate" hreflang="en" href="{BASE}/en/articles/"><link rel="alternate" hreflang="fr" href="{BASE}/fr/articles/"><link rel="alternate" hreflang="es" href="{BASE}/es/articles/"><link rel="alternate" hreflang="x-default" href="{BASE}/en/articles/"><link rel="stylesheet" href="../../assets/css/critical.css?v=4"><link rel="stylesheet" href="../../assets/css/main.css?v=9"></head><body><header class="site-header"><div class="header-container"><a class="brand" href="../../{lang}/"><img class="logo-img" src="../../assets/img/logo.svg" alt=""><span>Global<span class="brand-accent">Score</span></span></a><div class="controls"><a class="language-btn" href="../../ar/articles/">AR</a><a class="language-btn" href="../../en/articles/">EN</a><a class="language-btn" href="../../fr/articles/">FR</a><a class="language-btn" href="../../es/articles/">ES</a></div></div></header><main class="page-shell"><section class="hero-panel"><div class="hero-copy"><span class="eyebrow">GLOBAL SCORE EDITORIAL</span><h1>{headings[lang]}</h1><p>{intro[lang]}</p></div></section><section class="content-section"><div class="section-heading"><div><span class="section-kicker">{c['tag']}</span><h2>{headings[lang]}</h2></div></div><div class="news-grid">{cards}</div></section></main><footer class="footer"><div class="footer-inner"><a class="brand footer-brand" href="../../{lang}/"><img class="logo-img" src="../../assets/img/logo.svg" alt=""><span>Global<span class="brand-accent">Score</span></span></a><div class="footer-links"><a href="../../ar/">العربية</a><a href="../../en/">English</a><a href="../../fr/">Français</a><a href="../../es/">Español</a></div></div></footer></body></html>'''
@@ -272,7 +272,11 @@ for fixture in fixtures:
     registry[key] = {'eventId': fixture['event_id'], 'slug': fixture['slug'], 'date': fixture['date'], 'home': fixture['home'], 'away': fixture['away'], 'lastGenerated': record.get('lastGenerated', now), 'languages': list(LANGS), 'templateVersion': TEMPLATE_VERSION}
 
 hub_date = min((fixture['date'] for fixture in fixtures), default=date.today().isoformat())
-hub_slug = f'{hub_date}-football-matchday-guide'
+hub_slug = f'{hub_date}-matchday-football-guide'
+legacy_hub_slug = f'{hub_date}-football-matchday-guide'
+for lang in LANGS:
+    (ROOT / lang / 'articles' / f'{legacy_hub_slug}.html').unlink(missing_ok=True)
+registry.pop(f'hub:{legacy_hub_slug}', None)
 hub_key = f'hub:{hub_slug}'
 hub_record = registry.get(hub_key, {})
 hub_paths = [ROOT / lang / 'articles' / f'{hub_slug}.html' for lang in LANGS]
@@ -297,6 +301,10 @@ sitemap_path = ROOT / 'Sitemap.xml'
 existing = sitemap_path.read_text(encoding='utf-8') if sitemap_path.exists() else ''
 existing_urls = set(re.findall(r'<loc>(.*?)</loc>', existing))
 existing_lastmods = dict(re.findall(r'<loc>(.*?)</loc>\s*<lastmod>(.*?)</lastmod>', existing))
+legacy_hub_urls = {f'{BASE}/{lang}/articles/{legacy_hub_slug}.html' for lang in LANGS}
+existing_urls -= legacy_hub_urls
+for url in legacy_hub_urls:
+    existing_lastmods.pop(url, None)
 new_urls = {f'{BASE}/{lang}/articles/{fixture["slug"]}.html' for lang in LANGS for fixture in fixtures}
 new_urls |= {f'{BASE}/{lang}/articles/' for lang in LANGS}
 new_urls |= {f'{BASE}/{lang}/articles/player-watch-odegaard.html' for lang in LANGS}
