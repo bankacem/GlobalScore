@@ -149,7 +149,13 @@ async function initApp() {
   liveStandings = standingsData;
   const espnAvailable = await refreshEspnMatches();
   if (!espnAvailable) allMatches = data.matches || [];
-  document.getElementById('searchBar')?.addEventListener('input', event => { activeSearchQuery = event.target.value; renderCurrentState(); });
+  const searchBar = document.getElementById('searchBar');
+  searchBar?.addEventListener('input', event => { activeSearchQuery = event.target.value; renderCurrentState(); });
+  searchBar?.addEventListener('keydown', event => {
+    if (event.key === 'Enter' && searchBar.value.trim()) {
+      window.location.href = `search/?q=${encodeURIComponent(searchBar.value.trim())}`;
+    }
+  });
   setupNavigation();
   if (espnAvailable) setLiveStatus();
   else renderCurrentState();
