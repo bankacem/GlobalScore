@@ -33,7 +33,7 @@
     "date": "2026-08-23",
     "home": "Manchester City",
     "away": "Bournemouth",
-    "lastGenerated": "2026-08-23T11:13:11.187731+00:00",
+    "lastGenerated": "2026-08-23T12:48:30.754845+00:00",
     "languages": [
       "ar",
       "en",
@@ -90,7 +90,7 @@
     "date": "2026-08-23",
     "home": "El Gouna",
     "away": "Modern Sport",
-    "lastGenerated": "2026-08-23T11:13:11.187731+00:00",
+    "lastGenerated": "2026-08-23T12:48:30.754845+00:00",
     "languages": [
       "ar",
       "en",
@@ -105,7 +105,7 @@
     "date": "2026-08-23",
     "home": "Atlético Madrid",
     "away": "Villarreal",
-    "lastGenerated": "2026-08-23T11:13:11.187731+00:00",
+    "lastGenerated": "2026-08-23T12:48:30.754845+00:00",
     "languages": [
       "ar",
       "en",
@@ -120,7 +120,7 @@
     "date": "2026-08-23",
     "home": "Brighton and Hove Albion",
     "away": "Aston Villa",
-    "lastGenerated": "2026-08-23T11:13:11.187731+00:00",
+    "lastGenerated": "2026-08-23T12:48:30.754845+00:00",
     "languages": [
       "ar",
       "en",
@@ -135,7 +135,7 @@
     "date": "2026-08-23",
     "home": "Newcastle United",
     "away": "Liverpool",
-    "lastGenerated": "2026-08-23T11:13:11.187731+00:00",
+    "lastGenerated": "2026-08-23T12:48:30.754845+00:00",
     "languages": [
       "ar",
       "en",
@@ -150,7 +150,7 @@
     "date": "2026-08-23",
     "home": "Getafe",
     "away": "Racing de Santander",
-    "lastGenerated": "2026-08-23T11:13:11.187731+00:00",
+    "lastGenerated": "2026-08-23T12:48:30.754845+00:00",
     "languages": [
       "ar",
       "en",
@@ -165,7 +165,7 @@
     "date": "2026-08-23",
     "home": "Elche",
     "away": "Barcelona",
-    "lastGenerated": "2026-08-23T11:13:11.187731+00:00",
+    "lastGenerated": "2026-08-23T12:48:30.754845+00:00",
     "languages": [
       "ar",
       "en",
@@ -180,7 +180,7 @@
     "date": "2026-08-23",
     "home": "Al Ahly",
     "away": "ENPPI",
-    "lastGenerated": "2026-08-23T11:13:11.187731+00:00",
+    "lastGenerated": "2026-08-23T12:48:30.754845+00:00",
     "languages": [
       "ar",
       "en",
@@ -195,7 +195,7 @@
     "date": "2026-08-23",
     "home": "Ceramica Cleopatra",
     "away": "El Qanah",
-    "lastGenerated": "2026-08-23T11:13:11.187731+00:00",
+    "lastGenerated": "2026-08-23T12:48:30.754845+00:00",
     "languages": [
       "ar",
       "en",
@@ -203,5 +203,21 @@
       "es"
     ],
     "templateVersion": "2026-08-editorial-v2"
+  },
+  "hub:2026-08-23-football-matchday-guide": {
+    "eventId": "",
+    "slug": "2026-08-23-football-matchday-guide",
+    "date": "2026-08-23",
+    "home": "GlobalScore",
+    "away": "Matchday guide",
+    "lastGenerated": "2026-08-23T12:48:30.754845+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-matchday-hub-v1",
+    "type": "matchday-hub"
   }
 }

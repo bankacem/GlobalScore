@@ -236,6 +236,12 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .article-content ul, .article-content ol { margin: 0 0 24px; padding-inline-start: 24px; color: var(--ink-soft); }
 .article-content li { margin: 0 0 11px; font-size: 1rem; }
 .article-checklist { display: grid; gap: 7px; border: 1px solid var(--line); border-radius: 14px; padding: 18px 24px; background: var(--surface); }
+.matchday-hub-list { list-style: none; padding-inline-start: 18px !important; }
+.matchday-hub-list li { display: flex; align-items: baseline; justify-content: space-between; gap: 14px; margin: 0; padding: 10px 0; border-bottom: 1px solid var(--line); }
+.matchday-hub-list li:last-child { border-bottom: 0; }
+.matchday-hub-list a { color: var(--ink); font-weight: 850; text-decoration: none; }
+.matchday-hub-list a:hover { color: var(--blue); }
+.matchday-hub-list span { color: var(--muted); font-size: .8rem; text-align: end; }
 .article-links { display: grid; gap: 9px; margin: 0 0 25px; }
 .article-links a { display: block; border: 1px solid var(--line); border-radius: 11px; padding: 11px 14px; background: var(--surface); color: var(--blue); font-size: .88rem; font-weight: 850; text-decoration: none; }
 .article-links a:hover { border-color: var(--blue); }
