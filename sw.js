@@ -1,4 +1,4 @@
-const CACHE_NAME = 'globalscore-v6';
+const CACHE_NAME = 'globalscore-v7';
 
 self.addEventListener('install', e => {
   self.skipWaiting();
@@ -16,6 +16,7 @@ self.addEventListener('install', e => {
       './assets/js/match-page.js',
       './assets/js/search-page.js',
       './assets/js/player-performance.js',
+      './assets/js/player-compare.js',
       './assets/js/utils.js',
       './assets/data/live.json',
       './assets/data/content.json',

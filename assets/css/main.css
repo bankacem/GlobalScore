@@ -406,3 +406,41 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .performance-source a { color: var(--blue); font-weight: 700; }
 @media (max-width: 700px) { .performance-panel { padding: 18px; } .performance-kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); } .performance-visuals { grid-template-columns: 1fr; } }
 @media (max-width: 390px) { .performance-kpis { gap: 8px; } .performance-kpi { padding: 11px; } .performance-kpi strong { font-size: 1.2rem; } }
+
+/* Player comparison */
+.compare-hero { background: linear-gradient(135deg, #102f55 0%, #176b75 100%); color: #fff; }
+.compare-hero h1, .compare-hero p, .compare-hero .section-kicker { color: inherit; }
+.compare-panel { margin-top: 20px; }
+.compare-controls { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto; align-items: end; gap: 12px; margin-bottom: 18px; }
+.compare-controls label { display: grid; gap: 7px; color: var(--muted); font-size: .78rem; font-weight: 700; }
+.compare-controls select { width: 100%; min-height: 44px; padding: 0 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); color: var(--ink); font: inherit; }
+.compare-vs { align-self: center; margin-top: 20px; color: var(--blue); font-size: .75rem; font-weight: 800; letter-spacing: .12em; }
+.compare-player-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 18px 0; }
+.compare-player-card { min-width: 0; padding: 18px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); }
+.compare-player-card:first-child { border-top: 3px solid var(--blue); }
+.compare-player-card:last-child { border-top: 3px solid #e58d4f; }
+.compare-player-name { color: var(--ink); font-size: 1.15rem; font-weight: 800; }
+.compare-player-team { margin-top: 3px; color: var(--muted); font-size: .82rem; }
+.compare-player-kpis { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin-top: 16px; }
+.compare-player-kpis div { min-width: 0; padding: 9px; border-radius: 10px; background: color-mix(in srgb, var(--blue) 6%, var(--surface)); }
+.compare-player-kpis span { display: block; min-height: 2.4em; color: var(--muted); font-size: .68rem; line-height: 1.2; }
+.compare-player-kpis strong { display: block; margin-top: 4px; color: var(--ink); font-size: 1.05rem; }
+.compare-bar-row { margin: 0 0 18px; }
+.compare-bar-row:last-child { margin-bottom: 0; }
+.compare-bar-label { display: flex; justify-content: space-between; gap: 12px; margin-bottom: 7px; color: var(--ink-soft); font-size: .82rem; }
+.compare-bar-label strong { color: var(--ink); }
+.compare-bar-label em { color: var(--muted); font-style: normal; }
+.compare-bar-track { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; height: 9px; overflow: hidden; border-radius: 999px; background: color-mix(in srgb, var(--blue) 9%, var(--surface)); }
+.compare-bar-track span { display: block; min-width: 8%; height: 100%; border-radius: 999px; transition: width .35s ease-out; }
+.compare-bar-left { justify-self: end; background: linear-gradient(90deg, #28b9a4, var(--blue)); }
+.compare-bar-right { background: linear-gradient(90deg, #e58d4f, #e05f79); }
+.compare-radar-left { fill: color-mix(in srgb, var(--blue) 25%, transparent); stroke: var(--blue); stroke-width: 2; }
+.compare-radar-right { fill: color-mix(in srgb, #e58d4f 23%, transparent); stroke: #e58d4f; stroke-width: 2; }
+.compare-legend { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 2px; color: var(--muted); font-size: .72rem; }
+.compare-legend span { display: inline-flex; align-items: center; gap: 5px; }
+.compare-dot { width: 8px; height: 8px; border-radius: 50%; }
+.compare-dot-left { background: var(--blue); }
+.compare-dot-right { background: #e58d4f; }
+.compare-disclaimer { padding-top: 12px; border-top: 1px solid var(--line); }
+@media (max-width: 700px) { .compare-controls { grid-template-columns: 1fr; align-items: stretch; } .compare-vs { display: none; } .compare-controls .primary-btn { width: 100%; } .compare-player-grid { grid-template-columns: 1fr; } .compare-player-kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 390px) { .compare-panel { padding: 14px; } .compare-player-card { padding: 14px; } .compare-player-kpis { gap: 6px; } }
