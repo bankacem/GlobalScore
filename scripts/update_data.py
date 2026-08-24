@@ -11,7 +11,7 @@ import json
 import re
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
-from urllib.parse import urlencode
+from urllib.parse import urlencode, urlparse
 from urllib.request import Request, urlopen
 from xml.etree import ElementTree
 
@@ -24,7 +24,16 @@ LEAGUES = {
     4335: ("La Liga", "الدوري الإسباني"),
     4829: ("Egyptian Premier League", "الدوري المصري الممتاز"),
 }
-RSS_URL = "https://feeds.bbci.co.uk/sport/football/rss.xml"
+RSS_FEEDS = (
+    ("BBC Sport", "https://feeds.bbci.co.uk/sport/football/rss.xml"),
+    ("Sky Sports", "https://www.skysports.com/rss/12040"),
+    ("ESPN", "https://www.espn.com/espn/rss/soccer/news"),
+)
+RSS_ALLOWED_HOSTS = {
+    "BBC Sport": {"bbc.co.uk", "bbc.com"},
+    "Sky Sports": {"skysports.com"},
+    "ESPN": {"espn.com", "espn.co.uk"},
+}
 PLAYER_TERMS = {
     "player", "players", "transfer", "injury", "captain", "goalkeeper", "striker",
     "salah", "saka", "odegaard", "mbappe", "haaland", "vinicius", "bellingham",
@@ -116,14 +125,21 @@ def fetch_fixtures(now: datetime, fallback: list) -> list:
     return collected[:24] or fallback
 
 
-def fetch_player_news(fallback: list) -> list:
-    previous = list(fallback)
-    manual_fallback = [article for article in fallback if not article.get("external")]
+def feed_host_allowed(source: str, link: str) -> bool:
     try:
-        root = ElementTree.fromstring(fetch_text(RSS_URL))
-    except Exception as exc:
-        print(f"warning: RSS fetch failed: {exc}")
-        return previous or manual_fallback
+        hostname = (urlparse(link).hostname or "").lower().removeprefix("www.")
+    except ValueError:
+        return False
+    if not hostname or not any(hostname == allowed or hostname.endswith(f".{allowed}") for allowed in RSS_ALLOWED_HOSTS[source]):
+        return False
+    path = urlparse(link).path.lower()
+    if source == "Sky Sports" and not (path.startswith("/football/") or path.startswith("/transfer/")):
+        return False
+    return True
+
+
+def parse_player_feed(source: str, feed_url: str) -> list[dict]:
+    root = ElementTree.fromstring(fetch_text(feed_url))
     stories: list[dict] = []
     for item in root.findall(".//item"):
         title = clean_text(item.findtext("title"))
@@ -131,27 +147,51 @@ def fetch_player_news(fallback: list) -> list:
         description = clean_text(item.findtext("description"))
         pub_date = clean_text(item.findtext("pubDate"))
         haystack = f"{title} {description}".lower()
-        if not title or not link or not any(term in haystack for term in PLAYER_TERMS):
+        if not title or not link or not feed_host_allowed(source, link) or not any(term in haystack for term in PLAYER_TERMS):
             continue
         stories.append({
-            "slug": "external-player-news",
+            "slug": f"external-player-news-{source.lower().replace(' ', '-')}",
             "category": "Player news",
             "categoryAr": "أخبار اللاعبين",
             "title": title,
             "titleAr": title,
             "excerpt": (description[:180] + "…") if len(description) > 180 else description,
-            "excerptAr": "عنوان ومقتطف من مصدر BBC Sport؛ افتح الرابط لقراءة التقرير الأصلي.",
+            "excerptAr": f"عنوان ومقتطف من مصدر {source}؛ افتح الرابط لقراءة التقرير الأصلي.",
             "date": pub_date or datetime.now(timezone.utc).strftime("%Y-%m-%d"),
             "dateAr": pub_date or datetime.now(timezone.utc).strftime("%Y-%m-%d"),
             "readTime": "Source link",
             "readTimeAr": "رابط المصدر",
             "href": link,
             "external": True,
-            "source": "BBC Sport",
+            "source": source,
         })
-        if len(stories) == 3:
-            break
-    return stories + manual_fallback if stories else (previous or manual_fallback)
+    return stories
+
+
+def fetch_player_news(fallback: list) -> list:
+    previous = list(fallback)
+    manual_fallback = [article for article in fallback if not article.get("external")]
+    stories: list[dict] = []
+    seen: set[str] = set()
+    successful_feeds = 0
+    for source, feed_url in RSS_FEEDS:
+        try:
+            feed_stories = parse_player_feed(source, feed_url)
+            successful_feeds += 1
+        except Exception as exc:
+            print(f"warning: {source} RSS fetch failed: {exc}")
+            continue
+        for story in feed_stories[:2]:
+            dedupe_key = story["href"].lower().rstrip("/") or story["title"].lower()
+            if dedupe_key in seen:
+                continue
+            seen.add(dedupe_key)
+            stories.append(story)
+    if stories:
+        return stories[:6] + manual_fallback
+    if successful_feeds:
+        print("warning: RSS feeds responded but yielded no player stories")
+    return previous or manual_fallback
 
 
 def update_sitemaps(lastmod: str) -> None:
