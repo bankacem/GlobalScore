@@ -219,5 +219,66 @@
     ],
     "templateVersion": "2026-08-matchday-hub-v1",
     "type": "matchday-hub"
+  },
+  "snapshot:2494009": {
+    "eventId": "2494009",
+    "slug": "2026-08-24-fulham-chelsea",
+    "date": "2026-08-24",
+    "home": "Fulham",
+    "away": "Chelsea",
+    "lastGenerated": "2026-08-24T05:55:53.666653+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506182": {
+    "eventId": "2506182",
+    "slug": "2026-08-24-malaga-deportivo-de-a-coruna",
+    "date": "2026-08-24",
+    "home": "Málaga",
+    "away": "Deportivo de A Coruña",
+    "lastGenerated": "2026-08-24T05:55:53.666653+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506186": {
+    "eventId": "2506186",
+    "slug": "2026-08-24-osasuna-levante",
+    "date": "2026-08-24",
+    "home": "Osasuna",
+    "away": "Levante",
+    "lastGenerated": "2026-08-24T05:55:53.666653+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "hub:2026-08-24-matchday-football-guide": {
+    "eventId": "",
+    "slug": "2026-08-24-matchday-football-guide",
+    "date": "2026-08-24",
+    "home": "GlobalScore",
+    "away": "Matchday guide",
+    "lastGenerated": "2026-08-24T05:55:53.666653+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-matchday-hub-v1",
+    "type": "matchday-hub"
   }
 }
