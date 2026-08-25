@@ -280,5 +280,51 @@
     ],
     "templateVersion": "2026-08-matchday-hub-v1",
     "type": "matchday-hub"
+  },
+  "snapshot:2506171": {
+    "eventId": "2506171",
+    "slug": "2026-08-25-valencia-real-betis",
+    "date": "2026-08-25",
+    "home": "Valencia",
+    "away": "Real Betis",
+    "lastGenerated": "2026-08-25T05:49:47.517835+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2561080": {
+    "eventId": "2561080",
+    "slug": "2026-08-26-smouha-asyut-petroleum",
+    "date": "2026-08-26",
+    "home": "Smouha",
+    "away": "Asyut Petroleum",
+    "lastGenerated": "2026-08-25T05:49:47.517835+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "hub:2026-08-25-matchday-football-guide": {
+    "eventId": "",
+    "slug": "2026-08-25-matchday-football-guide",
+    "date": "2026-08-25",
+    "home": "GlobalScore",
+    "away": "Matchday guide",
+    "lastGenerated": "2026-08-25T05:49:47.517835+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-matchday-hub-v1",
+    "type": "matchday-hub"
   }
 }
