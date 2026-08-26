@@ -326,5 +326,66 @@
     ],
     "templateVersion": "2026-08-matchday-hub-v1",
     "type": "matchday-hub"
+  },
+  "snapshot:2506175": {
+    "eventId": "2506175",
+    "slug": "2026-08-26-real-madrid-real-sociedad",
+    "date": "2026-08-26",
+    "home": "Real Madrid",
+    "away": "Real Sociedad",
+    "lastGenerated": "2026-08-26T05:52:23.222625+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2561081": {
+    "eventId": "2561081",
+    "slug": "2026-08-26-petrojet-tala-ea-el-gaish",
+    "date": "2026-08-26",
+    "home": "Petrojet",
+    "away": "Tala'ea El Gaish",
+    "lastGenerated": "2026-08-26T05:52:23.222625+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2561082": {
+    "eventId": "2561082",
+    "slug": "2026-08-26-national-bank-of-egypt-zamalek",
+    "date": "2026-08-26",
+    "home": "National Bank of Egypt",
+    "away": "Zamalek",
+    "lastGenerated": "2026-08-26T05:52:23.222625+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "hub:2026-08-26-matchday-football-guide": {
+    "eventId": "",
+    "slug": "2026-08-26-matchday-football-guide",
+    "date": "2026-08-26",
+    "home": "GlobalScore",
+    "away": "Matchday guide",
+    "lastGenerated": "2026-08-26T05:52:23.222625+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-matchday-hub-v1",
+    "type": "matchday-hub"
   }
 }
