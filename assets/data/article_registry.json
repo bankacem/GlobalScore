@@ -387,5 +387,111 @@
     ],
     "templateVersion": "2026-08-matchday-hub-v1",
     "type": "matchday-hub"
+  },
+  "snapshot:2494015": {
+    "eventId": "2494015",
+    "slug": "2026-08-28-crystal-palace-manchester-city",
+    "date": "2026-08-28",
+    "home": "Crystal Palace",
+    "away": "Manchester City",
+    "lastGenerated": "2026-08-27T16:33:00.259976+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506169": {
+    "eventId": "2506169",
+    "slug": "2026-08-27-barcelona-athletic-bilbao",
+    "date": "2026-08-27",
+    "home": "Barcelona",
+    "away": "Athletic Bilbao",
+    "lastGenerated": "2026-08-27T16:33:00.259976+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506173": {
+    "eventId": "2506173",
+    "slug": "2026-08-27-celta-vigo-osasuna",
+    "date": "2026-08-27",
+    "home": "Celta Vigo",
+    "away": "Osasuna",
+    "lastGenerated": "2026-08-27T16:33:00.259976+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2561083": {
+    "eventId": "2561083",
+    "slug": "2026-08-27-modern-sport-ghazl-el-mahalla",
+    "date": "2026-08-27",
+    "home": "Modern Sport",
+    "away": "Ghazl El Mahalla",
+    "lastGenerated": "2026-08-27T16:33:00.259976+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2561084": {
+    "eventId": "2561084",
+    "slug": "2026-08-27-pyramids-abou-qir-fertilizers",
+    "date": "2026-08-27",
+    "home": "Pyramids",
+    "away": "Abou Qir Fertilizers",
+    "lastGenerated": "2026-08-27T16:33:00.259976+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2561085": {
+    "eventId": "2561085",
+    "slug": "2026-08-27-al-mokawloon-al-arab-al-masry",
+    "date": "2026-08-27",
+    "home": "Al-Mokawloon al-Arab",
+    "away": "Al Masry",
+    "lastGenerated": "2026-08-27T16:33:00.259976+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "hub:2026-08-27-matchday-football-guide": {
+    "eventId": "",
+    "slug": "2026-08-27-matchday-football-guide",
+    "date": "2026-08-27",
+    "home": "GlobalScore",
+    "away": "Matchday guide",
+    "lastGenerated": "2026-08-27T16:33:00.259976+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-matchday-hub-v1",
+    "type": "matchday-hub"
   }
 }
