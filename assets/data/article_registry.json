@@ -493,5 +493,66 @@
     ],
     "templateVersion": "2026-08-matchday-hub-v1",
     "type": "matchday-hub"
+  },
+  "snapshot:2506194": {
+    "eventId": "2506194",
+    "slug": "2026-08-28-deportivo-alaves-villarreal",
+    "date": "2026-08-28",
+    "home": "Deportivo Alavés",
+    "away": "Villarreal",
+    "lastGenerated": "2026-08-28T17:27:56.412650+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506198": {
+    "eventId": "2506198",
+    "slug": "2026-08-28-racing-de-santander-elche",
+    "date": "2026-08-28",
+    "home": "Racing de Santander",
+    "away": "Elche",
+    "lastGenerated": "2026-08-28T17:27:56.412650+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2561088": {
+    "eventId": "2561088",
+    "slug": "2026-08-28-al-ittihad-alexandria-ceramica-cleopatra",
+    "date": "2026-08-28",
+    "home": "Al Ittihad Alexandria",
+    "away": "Ceramica Cleopatra",
+    "lastGenerated": "2026-08-28T17:27:56.412650+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "hub:2026-08-28-matchday-football-guide": {
+    "eventId": "",
+    "slug": "2026-08-28-matchday-football-guide",
+    "date": "2026-08-28",
+    "home": "GlobalScore",
+    "away": "Matchday guide",
+    "lastGenerated": "2026-08-28T17:27:56.412650+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-matchday-hub-v1",
+    "type": "matchday-hub"
   }
 }
