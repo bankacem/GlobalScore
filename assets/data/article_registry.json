@@ -554,5 +554,111 @@
     ],
     "templateVersion": "2026-08-matchday-hub-v1",
     "type": "matchday-hub"
+  },
+  "snapshot:2494011": {
+    "eventId": "2494011",
+    "slug": "2026-08-29-bournemouth-everton",
+    "date": "2026-08-29",
+    "home": "Bournemouth",
+    "away": "Everton",
+    "lastGenerated": "2026-08-29T11:40:41.058786+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2494012": {
+    "eventId": "2494012",
+    "slug": "2026-08-29-liverpool-nottingham-forest",
+    "date": "2026-08-29",
+    "home": "Liverpool",
+    "away": "Nottingham Forest",
+    "lastGenerated": "2026-08-29T11:40:41.058786+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2494013": {
+    "eventId": "2494013",
+    "slug": "2026-08-29-tottenham-hotspur-newcastle-united",
+    "date": "2026-08-29",
+    "home": "Tottenham Hotspur",
+    "away": "Newcastle United",
+    "lastGenerated": "2026-08-29T11:40:41.058786+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506190": {
+    "eventId": "2506190",
+    "slug": "2026-08-29-sevilla-atletico-madrid",
+    "date": "2026-08-29",
+    "home": "Sevilla",
+    "away": "Atlético Madrid",
+    "lastGenerated": "2026-08-29T11:40:41.058786+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506192": {
+    "eventId": "2506192",
+    "slug": "2026-08-29-levante-real-betis",
+    "date": "2026-08-29",
+    "home": "Levante",
+    "away": "Real Betis",
+    "lastGenerated": "2026-08-29T11:40:41.058786+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506196": {
+    "eventId": "2506196",
+    "slug": "2026-08-29-real-sociedad-espanyol",
+    "date": "2026-08-29",
+    "home": "Real Sociedad",
+    "away": "Espanyol",
+    "lastGenerated": "2026-08-29T11:40:41.058786+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "hub:2026-08-29-matchday-football-guide": {
+    "eventId": "",
+    "slug": "2026-08-29-matchday-football-guide",
+    "date": "2026-08-29",
+    "home": "GlobalScore",
+    "away": "Matchday guide",
+    "lastGenerated": "2026-08-29T11:40:41.058786+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-matchday-hub-v1",
+    "type": "matchday-hub"
   }
 }
