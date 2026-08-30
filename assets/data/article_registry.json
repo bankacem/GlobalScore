@@ -660,5 +660,126 @@
     ],
     "templateVersion": "2026-08-matchday-hub-v1",
     "type": "matchday-hub"
+  },
+  "snapshot:2494010": {
+    "eventId": "2494010",
+    "slug": "2026-08-30-manchester-united-ipswich-town",
+    "date": "2026-08-30",
+    "home": "Manchester United",
+    "away": "Ipswich Town",
+    "lastGenerated": "2026-08-30T10:30:03.632500+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2494014": {
+    "eventId": "2494014",
+    "slug": "2026-08-30-chelsea-brighton-and-hove-albion",
+    "date": "2026-08-30",
+    "home": "Chelsea",
+    "away": "Brighton and Hove Albion",
+    "lastGenerated": "2026-08-30T10:30:03.632500+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2494016": {
+    "eventId": "2494016",
+    "slug": "2026-08-30-leeds-united-brentford",
+    "date": "2026-08-30",
+    "home": "Leeds United",
+    "away": "Brentford",
+    "lastGenerated": "2026-08-30T10:30:03.632500+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506191": {
+    "eventId": "2506191",
+    "slug": "2026-08-30-celta-vigo-athletic-bilbao",
+    "date": "2026-08-30",
+    "home": "Celta Vigo",
+    "away": "Athletic Bilbao",
+    "lastGenerated": "2026-08-30T10:30:03.632500+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506193": {
+    "eventId": "2506193",
+    "slug": "2026-08-30-real-madrid-malaga",
+    "date": "2026-08-30",
+    "home": "Real Madrid",
+    "away": "Málaga",
+    "lastGenerated": "2026-08-30T10:30:03.632500+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506195": {
+    "eventId": "2506195",
+    "slug": "2026-08-30-deportivo-de-a-coruna-valencia",
+    "date": "2026-08-30",
+    "home": "Deportivo de A Coruña",
+    "away": "Valencia",
+    "lastGenerated": "2026-08-30T10:30:03.632500+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2561090": {
+    "eventId": "2561090",
+    "slug": "2026-08-31-asyut-petroleum-national-bank-of-egypt",
+    "date": "2026-08-31",
+    "home": "Asyut Petroleum",
+    "away": "National Bank of Egypt",
+    "lastGenerated": "2026-08-30T10:30:03.632500+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "hub:2026-08-30-matchday-football-guide": {
+    "eventId": "",
+    "slug": "2026-08-30-matchday-football-guide",
+    "date": "2026-08-30",
+    "home": "GlobalScore",
+    "away": "Matchday guide",
+    "lastGenerated": "2026-08-30T10:30:03.632500+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-matchday-hub-v1",
+    "type": "matchday-hub"
   }
 }
