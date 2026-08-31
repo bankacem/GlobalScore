@@ -781,5 +781,96 @@
     ],
     "templateVersion": "2026-08-matchday-hub-v1",
     "type": "matchday-hub"
+  },
+  "snapshot:2494017": {
+    "eventId": "2494017",
+    "slug": "2026-08-31-aston-villa-arsenal",
+    "date": "2026-08-31",
+    "home": "Aston Villa",
+    "away": "Arsenal",
+    "lastGenerated": "2026-08-31T11:37:53.725869+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506189": {
+    "eventId": "2506189",
+    "slug": "2026-08-31-barcelona-rayo-vallecano",
+    "date": "2026-08-31",
+    "home": "Barcelona",
+    "away": "Rayo Vallecano",
+    "lastGenerated": "2026-08-31T11:37:53.725869+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506197": {
+    "eventId": "2506197",
+    "slug": "2026-08-31-osasuna-getafe",
+    "date": "2026-08-31",
+    "home": "Osasuna",
+    "away": "Getafe",
+    "lastGenerated": "2026-08-31T11:37:53.725869+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2561091": {
+    "eventId": "2561091",
+    "slug": "2026-08-31-al-masry-pyramids",
+    "date": "2026-08-31",
+    "home": "Al Masry",
+    "away": "Pyramids",
+    "lastGenerated": "2026-08-31T11:37:53.725869+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2561092": {
+    "eventId": "2561092",
+    "slug": "2026-08-31-zamalek-petrojet",
+    "date": "2026-08-31",
+    "home": "Zamalek",
+    "away": "Petrojet",
+    "lastGenerated": "2026-08-31T11:37:53.725869+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "hub:2026-08-31-matchday-football-guide": {
+    "eventId": "",
+    "slug": "2026-08-31-matchday-football-guide",
+    "date": "2026-08-31",
+    "home": "GlobalScore",
+    "away": "Matchday guide",
+    "lastGenerated": "2026-08-31T11:37:53.725869+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-matchday-hub-v1",
+    "type": "matchday-hub"
   }
 }
