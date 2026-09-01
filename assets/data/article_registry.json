@@ -872,5 +872,66 @@
     ],
     "templateVersion": "2026-08-matchday-hub-v1",
     "type": "matchday-hub"
+  },
+  "snapshot:2561093": {
+    "eventId": "2561093",
+    "slug": "2026-09-01-tala-ea-el-gaish-zed",
+    "date": "2026-09-01",
+    "home": "Tala'ea El Gaish",
+    "away": "ZED",
+    "lastGenerated": "2026-09-01T10:10:23.635963+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2561094": {
+    "eventId": "2561094",
+    "slug": "2026-09-01-ghazl-el-mahalla-enppi",
+    "date": "2026-09-01",
+    "home": "Ghazl El Mahalla",
+    "away": "ENPPI",
+    "lastGenerated": "2026-09-01T10:10:23.635963+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2561095": {
+    "eventId": "2561095",
+    "slug": "2026-09-01-wadi-degla-el-qanah",
+    "date": "2026-09-01",
+    "home": "Wadi Degla",
+    "away": "El Qanah",
+    "lastGenerated": "2026-09-01T10:10:23.635963+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "hub:2026-09-01-matchday-football-guide": {
+    "eventId": "",
+    "slug": "2026-09-01-matchday-football-guide",
+    "date": "2026-09-01",
+    "home": "GlobalScore",
+    "away": "Matchday guide",
+    "lastGenerated": "2026-09-01T10:10:23.635963+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-matchday-hub-v1",
+    "type": "matchday-hub"
   }
 }
