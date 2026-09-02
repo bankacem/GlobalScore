@@ -933,5 +933,81 @@
     ],
     "templateVersion": "2026-08-matchday-hub-v1",
     "type": "matchday-hub"
+  },
+  "snapshot:2506226": {
+    "eventId": "2506226",
+    "slug": "2026-09-03-real-sociedad-celta-vigo",
+    "date": "2026-09-03",
+    "home": "Real Sociedad",
+    "away": "Celta Vigo",
+    "lastGenerated": "2026-09-02T09:41:10.366212+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2561097": {
+    "eventId": "2561097",
+    "slug": "2026-09-02-el-gouna-al-mokawloon-al-arab",
+    "date": "2026-09-02",
+    "home": "El Gouna",
+    "away": "Al-Mokawloon al-Arab",
+    "lastGenerated": "2026-09-02T09:41:10.366212+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2561098": {
+    "eventId": "2561098",
+    "slug": "2026-09-02-ceramica-cleopatra-modern-sport",
+    "date": "2026-09-02",
+    "home": "Ceramica Cleopatra",
+    "away": "Modern Sport",
+    "lastGenerated": "2026-09-02T09:41:10.366212+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2561099": {
+    "eventId": "2561099",
+    "slug": "2026-09-02-abou-qir-fertilizers-al-ittihad-alexandria",
+    "date": "2026-09-02",
+    "home": "Abou Qir Fertilizers",
+    "away": "Al Ittihad Alexandria",
+    "lastGenerated": "2026-09-02T09:41:10.366212+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "hub:2026-09-02-matchday-football-guide": {
+    "eventId": "",
+    "slug": "2026-09-02-matchday-football-guide",
+    "date": "2026-09-02",
+    "home": "GlobalScore",
+    "away": "Matchday guide",
+    "lastGenerated": "2026-09-02T09:41:10.366212+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-matchday-hub-v1",
+    "type": "matchday-hub"
   }
 }
