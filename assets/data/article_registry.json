@@ -1009,5 +1009,51 @@
     ],
     "templateVersion": "2026-08-matchday-hub-v1",
     "type": "matchday-hub"
+  },
+  "snapshot:2494027": {
+    "eventId": "2494027",
+    "slug": "2026-09-04-ipswich-town-liverpool",
+    "date": "2026-09-04",
+    "home": "Ipswich Town",
+    "away": "Liverpool",
+    "lastGenerated": "2026-09-03T09:53:57.463417+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2561096": {
+    "eventId": "2561096",
+    "slug": "2026-09-03-al-ahly-smouha",
+    "date": "2026-09-03",
+    "home": "Al Ahly",
+    "away": "Smouha",
+    "lastGenerated": "2026-09-03T09:53:57.463417+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "hub:2026-09-03-matchday-football-guide": {
+    "eventId": "",
+    "slug": "2026-09-03-matchday-football-guide",
+    "date": "2026-09-03",
+    "home": "GlobalScore",
+    "away": "Matchday guide",
+    "lastGenerated": "2026-09-03T09:53:57.463417+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-matchday-hub-v1",
+    "type": "matchday-hub"
   }
 }
