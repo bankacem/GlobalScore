@@ -1055,5 +1055,36 @@
     ],
     "templateVersion": "2026-08-matchday-hub-v1",
     "type": "matchday-hub"
+  },
+  "snapshot:2506205": {
+    "eventId": "2506205",
+    "slug": "2026-09-04-real-betis-real-madrid",
+    "date": "2026-09-04",
+    "home": "Real Betis",
+    "away": "Real Madrid",
+    "lastGenerated": "2026-09-04T09:42:16.776829+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "hub:2026-09-04-matchday-football-guide": {
+    "eventId": "",
+    "slug": "2026-09-04-matchday-football-guide",
+    "date": "2026-09-04",
+    "home": "GlobalScore",
+    "away": "Matchday guide",
+    "lastGenerated": "2026-09-04T09:42:16.776829+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-matchday-hub-v1",
+    "type": "matchday-hub"
   }
 }
