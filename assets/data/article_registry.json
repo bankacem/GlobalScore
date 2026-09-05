@@ -1086,5 +1086,111 @@
     ],
     "templateVersion": "2026-08-matchday-hub-v1",
     "type": "matchday-hub"
+  },
+  "snapshot:2494020": {
+    "eventId": "2494020",
+    "slug": "2026-09-05-newcastle-united-bournemouth",
+    "date": "2026-09-05",
+    "home": "Newcastle United",
+    "away": "Bournemouth",
+    "lastGenerated": "2026-09-05T09:07:46.058120+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2494021": {
+    "eventId": "2494021",
+    "slug": "2026-09-05-fulham-crystal-palace",
+    "date": "2026-09-05",
+    "home": "Fulham",
+    "away": "Crystal Palace",
+    "lastGenerated": "2026-09-05T09:07:46.058120+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2494024": {
+    "eventId": "2494024",
+    "slug": "2026-09-05-manchester-city-coventry-city",
+    "date": "2026-09-05",
+    "home": "Manchester City",
+    "away": "Coventry City",
+    "lastGenerated": "2026-09-05T09:07:46.058120+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506199": {
+    "eventId": "2506199",
+    "slug": "2026-09-05-athletic-bilbao-atletico-madrid",
+    "date": "2026-09-05",
+    "home": "Athletic Bilbao",
+    "away": "Atlético Madrid",
+    "lastGenerated": "2026-09-05T09:07:46.058120+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506201": {
+    "eventId": "2506201",
+    "slug": "2026-09-05-villarreal-deportivo-de-a-coruna",
+    "date": "2026-09-05",
+    "home": "Villarreal",
+    "away": "Deportivo de A Coruña",
+    "lastGenerated": "2026-09-05T09:07:46.058120+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506207": {
+    "eventId": "2506207",
+    "slug": "2026-09-05-rayo-vallecano-racing-de-santander",
+    "date": "2026-09-05",
+    "home": "Rayo Vallecano",
+    "away": "Racing de Santander",
+    "lastGenerated": "2026-09-05T09:07:46.058120+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "hub:2026-09-05-matchday-football-guide": {
+    "eventId": "",
+    "slug": "2026-09-05-matchday-football-guide",
+    "date": "2026-09-05",
+    "home": "GlobalScore",
+    "away": "Matchday guide",
+    "lastGenerated": "2026-09-05T09:07:46.058120+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-matchday-hub-v1",
+    "type": "matchday-hub"
   }
 }
