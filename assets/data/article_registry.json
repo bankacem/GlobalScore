@@ -1192,5 +1192,111 @@
     ],
     "templateVersion": "2026-08-matchday-hub-v1",
     "type": "matchday-hub"
+  },
+  "snapshot:2494022": {
+    "eventId": "2494022",
+    "slug": "2026-09-06-arsenal-chelsea",
+    "date": "2026-09-06",
+    "home": "Arsenal",
+    "away": "Chelsea",
+    "lastGenerated": "2026-09-06T09:28:44.014833+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2494023": {
+    "eventId": "2494023",
+    "slug": "2026-09-06-everton-manchester-united",
+    "date": "2026-09-06",
+    "home": "Everton",
+    "away": "Manchester United",
+    "lastGenerated": "2026-09-06T09:28:44.014833+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506200": {
+    "eventId": "2506200",
+    "slug": "2026-09-06-valencia-barcelona",
+    "date": "2026-09-06",
+    "home": "Valencia",
+    "away": "Barcelona",
+    "lastGenerated": "2026-09-06T09:28:44.014833+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506202": {
+    "eventId": "2506202",
+    "slug": "2026-09-06-malaga-levante",
+    "date": "2026-09-06",
+    "home": "Málaga",
+    "away": "Levante",
+    "lastGenerated": "2026-09-06T09:28:44.014833+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506203": {
+    "eventId": "2506203",
+    "slug": "2026-09-06-espanyol-sevilla",
+    "date": "2026-09-06",
+    "home": "Espanyol",
+    "away": "Sevilla",
+    "lastGenerated": "2026-09-06T09:28:44.014833+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2561100": {
+    "eventId": "2561100",
+    "slug": "2026-09-07-al-ittihad-alexandria-asyut-petroleum",
+    "date": "2026-09-07",
+    "home": "Al Ittihad Alexandria",
+    "away": "Asyut Petroleum",
+    "lastGenerated": "2026-09-06T09:28:44.014833+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "hub:2026-09-06-matchday-football-guide": {
+    "eventId": "",
+    "slug": "2026-09-06-matchday-football-guide",
+    "date": "2026-09-06",
+    "home": "GlobalScore",
+    "away": "Matchday guide",
+    "lastGenerated": "2026-09-06T09:28:44.014833+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-matchday-hub-v1",
+    "type": "matchday-hub"
   }
 }
