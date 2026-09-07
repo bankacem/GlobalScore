@@ -1298,5 +1298,81 @@
     ],
     "templateVersion": "2026-08-matchday-hub-v1",
     "type": "matchday-hub"
+  },
+  "snapshot:2506206": {
+    "eventId": "2506206",
+    "slug": "2026-09-07-getafe-celta-vigo",
+    "date": "2026-09-07",
+    "home": "Getafe",
+    "away": "Celta Vigo",
+    "lastGenerated": "2026-09-07T10:24:11.485916+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506208": {
+    "eventId": "2506208",
+    "slug": "2026-09-07-elche-real-sociedad",
+    "date": "2026-09-07",
+    "home": "Elche",
+    "away": "Real Sociedad",
+    "lastGenerated": "2026-09-07T10:24:11.485916+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2561101": {
+    "eventId": "2561101",
+    "slug": "2026-09-07-el-qanah-tala-ea-el-gaish",
+    "date": "2026-09-07",
+    "home": "El Qanah",
+    "away": "Tala'ea El Gaish",
+    "lastGenerated": "2026-09-07T10:24:11.485916+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2561102": {
+    "eventId": "2561102",
+    "slug": "2026-09-07-petrojet-al-masry",
+    "date": "2026-09-07",
+    "home": "Petrojet",
+    "away": "Al Masry",
+    "lastGenerated": "2026-09-07T10:24:11.485916+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "hub:2026-09-07-matchday-football-guide": {
+    "eventId": "",
+    "slug": "2026-09-07-matchday-football-guide",
+    "date": "2026-09-07",
+    "home": "GlobalScore",
+    "away": "Matchday guide",
+    "lastGenerated": "2026-09-07T10:24:11.485916+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-matchday-hub-v1",
+    "type": "matchday-hub"
   }
 }
