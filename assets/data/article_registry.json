@@ -1374,5 +1374,51 @@
     ],
     "templateVersion": "2026-08-matchday-hub-v1",
     "type": "matchday-hub"
+  },
+  "snapshot:2561105": {
+    "eventId": "2561105",
+    "slug": "2026-09-08-zamalek-abou-qir-fertilizers",
+    "date": "2026-09-08",
+    "home": "Zamalek",
+    "away": "Abou Qir Fertilizers",
+    "lastGenerated": "2026-09-08T09:45:33.867464+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2561106": {
+    "eventId": "2561106",
+    "slug": "2026-09-08-smouha-ceramica-cleopatra",
+    "date": "2026-09-08",
+    "home": "Smouha",
+    "away": "Ceramica Cleopatra",
+    "lastGenerated": "2026-09-08T09:45:33.867464+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "hub:2026-09-08-matchday-football-guide": {
+    "eventId": "",
+    "slug": "2026-09-08-matchday-football-guide",
+    "date": "2026-09-08",
+    "home": "GlobalScore",
+    "away": "Matchday guide",
+    "lastGenerated": "2026-09-08T09:45:33.867464+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-matchday-hub-v1",
+    "type": "matchday-hub"
   }
 }
