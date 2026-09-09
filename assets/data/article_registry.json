@@ -1420,5 +1420,66 @@
     ],
     "templateVersion": "2026-08-matchday-hub-v1",
     "type": "matchday-hub"
+  },
+  "snapshot:2561104": {
+    "eventId": "2561104",
+    "slug": "2026-09-09-pyramids-el-gouna",
+    "date": "2026-09-09",
+    "home": "Pyramids",
+    "away": "El Gouna",
+    "lastGenerated": "2026-09-09T09:49:53.901453+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2561107": {
+    "eventId": "2561107",
+    "slug": "2026-09-09-modern-sport-wadi-degla",
+    "date": "2026-09-09",
+    "home": "Modern Sport",
+    "away": "Wadi Degla",
+    "lastGenerated": "2026-09-09T09:49:53.901453+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2561108": {
+    "eventId": "2561108",
+    "slug": "2026-09-09-enppi-zed",
+    "date": "2026-09-09",
+    "home": "ENPPI",
+    "away": "ZED",
+    "lastGenerated": "2026-09-09T09:49:53.901453+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "hub:2026-09-09-matchday-football-guide": {
+    "eventId": "",
+    "slug": "2026-09-09-matchday-football-guide",
+    "date": "2026-09-09",
+    "home": "GlobalScore",
+    "away": "Matchday guide",
+    "lastGenerated": "2026-09-09T09:49:53.901453+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-matchday-hub-v1",
+    "type": "matchday-hub"
   }
 }
