@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://bankacem.github.io/GlobalScore/Sitemap.xml
 Sitemap: https://bankacem.github.io/GlobalScore/sitemap.xml
