@@ -1,6 +1,6 @@
 import { DataSource } from './data-source.js?v=8';
 import { MatchComponent, LeagueTableComponent, MatchDetailModalComponent } from './components.js?v=10';
-import { setupTheme, getFavorites } from './utils.js?v=4';
+import { setupTheme, getFavorites, requestNotifications } from './utils.js?v=5';
 
 const dataSource = new DataSource();
 let allMatches = [];
@@ -12,6 +12,7 @@ let activeSearchQuery = '';
 
 const isArabic = () => document.documentElement.lang === 'ar';
 const isoDate = (offset = 0) => { const date = new Date(); date.setDate(date.getDate() + offset); return date.toISOString().slice(0, 10); };
+let selectedDate = new URLSearchParams(window.location.search).get('date') || isoDate();
 const text = (item, key) => isArabic() ? item[`${key}Ar`] : item[key];
 const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
 const teamSlug = value => String(value ?? '').normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
@@ -25,9 +26,9 @@ function renderCurrentState() {
   if (!container) return;
   const ar = isArabic();
   let displayed = [...allMatches];
-  if (currentView === '#today') displayed = displayed.filter(match => !match.date || match.date === isoDate());
+  if (currentView === '#today') displayed = displayed.filter(match => !match.date || match.date === selectedDate);
   if (currentView === '#live') displayed = displayed.filter(match => match.status === 'Live');
-  if (currentView === '#yesterday') displayed = displayed.filter(match => match.date === isoDate(-1) && match.status === 'FT');
+  if (currentView === '#yesterday') displayed = displayed.filter(match => match.date === selectedDate && match.status === 'FT');
   if (currentView === '#favorites') displayed = displayed.filter(match => getFavorites().includes(Number(match.id)));
   if (activeSearchQuery) {
     const query = activeSearchQuery.toLowerCase();
@@ -117,6 +118,8 @@ function setupNavigation() {
     document.querySelectorAll('.nav-link').forEach(item => item.classList.remove('active'));
     link.classList.add('active');
     currentView = link.getAttribute('href');
+    if (currentView === '#yesterday') selectedDate = isoDate(-1);
+    if (currentView === '#today') selectedDate = isoDate();
     if (currentView === '#leagues') {
       const target = document.getElementById('liveMatches');
       if (target) {
@@ -127,12 +130,34 @@ function setupNavigation() {
   }));
 }
 
+function setupDateControls() {
+  const picker = document.getElementById('datePicker');
+  const label = document.getElementById('dateToday');
+  if (!picker || !label) return;
+  picker.value = selectedDate;
+  const apply = date => { if (!date) return; selectedDate = date; picker.value = date; currentView = '#today'; renderCurrentState(); label.textContent = date === isoDate() ? (isArabic() ? 'اليوم' : 'Today') : date; };
+  document.getElementById('datePrev')?.addEventListener('click', () => { const d = new Date(`${selectedDate}T12:00:00`); d.setDate(d.getDate() - 1); apply(d.toISOString().slice(0, 10)); });
+  document.getElementById('dateNext')?.addEventListener('click', () => { const d = new Date(`${selectedDate}T12:00:00`); d.setDate(d.getDate() + 1); apply(d.toISOString().slice(0, 10)); });
+  label.addEventListener('click', () => apply(isoDate()));
+  picker.addEventListener('change', event => apply(event.target.value));
+}
+
+function setupNotificationControl() {
+  const button = document.getElementById('notifyToggle');
+  if (!button) return;
+  button.addEventListener('click', async () => { const result = await requestNotifications(); button.textContent = result === 'granted' ? (isArabic() ? 'التنبيهات مفعلة' : 'Alerts enabled') : (isArabic() ? 'لم يتم التفعيل' : 'Alerts unavailable'); });
+}
+
 async function refreshEspnMatches() {
   const liveMatches = await dataSource.getEspnMatches();
   if (!liveMatches.length) return false;
+  const previous = new Map(allMatches.map(match => [String(match.id), match.score]));
   const snapshot = allMatches.filter(match => match.date !== isoDate());
   const byId = new Map([...snapshot, ...liveMatches].map(match => [String(match.id), match]));
   allMatches = [...byId.values()];
+  if ('Notification' in window && Notification.permission === 'granted') liveMatches.forEach(match => {
+    if (getFavorites().includes(Number(match.id)) && previous.has(String(match.id)) && previous.get(String(match.id)) !== match.score) new Notification(`${match.home} ${match.score} ${match.away}`, { body: match.status === 'FT' ? (isArabic() ? 'انتهت المباراة' : 'Full time') : (isArabic() ? 'تغيرت النتيجة' : 'Score update') });
+  });
   renderCurrentState();
   return true;
 }
@@ -146,6 +171,8 @@ function setLiveStatus() {
 
 async function initApp() {
   setupTheme();
+  setupDateControls();
+  setupNotificationControl();
   const data = await dataSource.getLiveMatches();
   allTables = data.tables || {};
   const [contentData, standingsData] = await Promise.all([dataSource.getContent(), dataSource.getAllStandings()]);

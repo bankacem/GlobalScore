@@ -70,6 +70,12 @@ export function toggleFavorite(id) {
   return favs.includes(numId);
 }
 
+export async function requestNotifications() {
+  if (!('Notification' in window)) return 'unsupported';
+  if (Notification.permission === 'default') return Notification.requestPermission();
+  return Notification.permission;
+}
+
 /**
  * Query parameter extractor
  */
