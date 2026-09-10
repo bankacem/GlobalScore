@@ -20,6 +20,7 @@ function mapEspnEvent(event, fallbackLeague, fallbackLeagueAr, leagueCode) {
     leagueCode,
     league: event.league?.name || fallbackLeague,
     leagueAr: fallbackLeagueAr,
+    date: start ? start.toISOString().slice(0, 10) : '',
     home: home.team?.displayName || home.team?.shortDisplayName || 'Home',
     homeAr: home.team?.displayName || home.team?.shortDisplayName || 'Home',
     away: away.team?.displayName || away.team?.shortDisplayName || 'Away',

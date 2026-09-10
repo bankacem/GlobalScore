@@ -1,4 +1,4 @@
-import { DataSource } from './data-source.js?v=7';
+import { DataSource } from './data-source.js?v=8';
 import { MatchComponent, LeagueTableComponent, MatchDetailModalComponent } from './components.js?v=10';
 import { setupTheme, getFavorites } from './utils.js?v=4';
 
@@ -11,6 +11,7 @@ let currentView = '#today';
 let activeSearchQuery = '';
 
 const isArabic = () => document.documentElement.lang === 'ar';
+const isoDate = (offset = 0) => { const date = new Date(); date.setDate(date.getDate() + offset); return date.toISOString().slice(0, 10); };
 const text = (item, key) => isArabic() ? item[`${key}Ar`] : item[key];
 const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
 const teamSlug = value => String(value ?? '').normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
@@ -24,8 +25,9 @@ function renderCurrentState() {
   if (!container) return;
   const ar = isArabic();
   let displayed = [...allMatches];
+  if (currentView === '#today') displayed = displayed.filter(match => !match.date || match.date === isoDate());
   if (currentView === '#live') displayed = displayed.filter(match => match.status === 'Live');
-  if (currentView === '#yesterday') displayed = displayed.filter(match => match.status === 'FT');
+  if (currentView === '#yesterday') displayed = displayed.filter(match => match.date === isoDate(-1) && match.status === 'FT');
   if (currentView === '#favorites') displayed = displayed.filter(match => getFavorites().includes(Number(match.id)));
   if (activeSearchQuery) {
     const query = activeSearchQuery.toLowerCase();
@@ -128,7 +130,9 @@ function setupNavigation() {
 async function refreshEspnMatches() {
   const liveMatches = await dataSource.getEspnMatches();
   if (!liveMatches.length) return false;
-  allMatches = liveMatches;
+  const snapshot = allMatches.filter(match => match.date !== isoDate());
+  const byId = new Map([...snapshot, ...liveMatches].map(match => [String(match.id), match]));
+  allMatches = [...byId.values()];
   renderCurrentState();
   return true;
 }
@@ -147,8 +151,8 @@ async function initApp() {
   const [contentData, standingsData] = await Promise.all([dataSource.getContent(), dataSource.getAllStandings()]);
   content = contentData;
   liveStandings = standingsData;
+  allMatches = data.matches || [];
   const espnAvailable = await refreshEspnMatches();
-  if (!espnAvailable) allMatches = data.matches || [];
   const searchBar = document.getElementById('searchBar');
   searchBar?.addEventListener('input', event => { activeSearchQuery = event.target.value; renderCurrentState(); });
   searchBar?.addEventListener('keydown', event => {
