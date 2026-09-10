@@ -76,7 +76,7 @@ def event_to_match(event: dict, league_en: str, league_ar: str, now: datetime) -
         status = "Scheduled"
     home_score = event.get("intHomeScore")
     away_score = event.get("intAwayScore")
-    score = f"{home_score or 0} - {away_score or 0}"
+    score = f"{home_score if home_score is not None else '—'} - {away_score if away_score is not None else '—'}"
     local_start = start.astimezone()
     time_value = local_start.strftime("%H:%M") if timestamp else "--:--"
     return {
@@ -110,19 +110,23 @@ def fetch_fixtures(now: datetime, fallback: list) -> list:
     seen: set[str] = set()
     for league_id, (league_en, league_ar) in LEAGUES.items():
         for endpoint in ("eventsday.php", "eventsnextleague.php"):
-            params = {"d": now.strftime("%Y-%m-%d"), "l": league_id} if endpoint == "eventsday.php" else {"id": league_id}
-            try:
-                payload = fetch_json(f"{API_BASE}/{endpoint}?{urlencode(params)}")
-            except Exception as exc:
-                print(f"warning: {endpoint} for {league_en}: {exc}")
-                continue
-            events = payload.get("events") or []
-            for event in events:
-                event_id = str(event.get("idEvent") or "")
-                if event_id and event_id not in seen and event.get("strSport") == "Soccer":
-                    seen.add(event_id)
-                    collected.append(event_to_match(event, league_en, league_ar, now))
-    return collected[:24] or fallback
+            # Keep yesterday in the snapshot so completed scores remain verifiable.
+            query_times = (now - timedelta(days=1), now) if endpoint == "eventsday.php" else (now,)
+            for query_time in query_times:
+                params = {"d": query_time.strftime("%Y-%m-%d"), "l": league_id} if endpoint == "eventsday.php" else {"id": league_id}
+                try:
+                    payload = fetch_json(f"{API_BASE}/{endpoint}?{urlencode(params)}")
+                except Exception as exc:
+                    print(f"warning: {endpoint} for {league_en}: {exc}")
+                    continue
+                events = payload.get("events") or []
+                for event in events:
+                    event_id = str(event.get("idEvent") or "")
+                    if event_id and event_id not in seen and event.get("strSport") == "Soccer":
+                        seen.add(event_id)
+                        collected.append(event_to_match(event, league_en, league_ar, now))
+    # Never replace a useful snapshot with an empty or partial provider response.
+    return collected[:48] or fallback
 
 
 def feed_host_allowed(source: str, link: str) -> bool:

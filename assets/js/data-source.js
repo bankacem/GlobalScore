@@ -13,7 +13,7 @@ function mapEspnEvent(event, fallbackLeague, fallbackLeagueAr, leagueCode) {
   const statusType = status.type || {};
   const statusName = statusType.name || '';
   const mappedStatus = statusName.includes('IN_PROGRESS') ? 'Live' : statusName.includes('FULL_TIME') || statusName.includes('FINAL') ? 'FT' : 'Scheduled';
-  const score = `${home.score ?? 0} - ${away.score ?? 0}`;
+  const score = `${home.score ?? '—'} - ${away.score ?? '—'}`;
   const start = event.date ? new Date(event.date) : null;
   return {
     id: event.id,

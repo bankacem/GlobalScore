@@ -27,6 +27,9 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Run regression tests
+        run: python -m unittest discover -s tests -v
+
       - name: Fetch fixtures and player headlines
         run: python scripts/update_data.py
 
@@ -43,7 +46,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add ar en fr es assets/data/content.json assets/data/live.json assets/data/article_registry.json scripts/generate_multilingual_articles.py scripts/generate_permanent_pages.py scripts/generate_discovery_pages.py scripts/update_data.py assets/js/match-page.js assets/js/search-page.js assets/js/player-performance.js assets/css/main.css sw.js Sitemap.xml sitemap.xml sitemap-index.xml
+          git add ar en fr es assets/data/content.json assets/data/live.json assets/data/article_registry.json scripts/generate_multilingual_articles.py scripts/generate_permanent_pages.py scripts/generate_discovery_pages.py scripts/update_data.py assets/js/data-source.js assets/js/match-page.js assets/js/search-page.js assets/js/player-performance.js assets/css/main.css sw.js Sitemap.xml sitemap.xml sitemap-index.xml tests .github/workflows/update-sports-data.yml
           if git diff --cached --quiet; then
             echo "No data changes to commit."
           else
