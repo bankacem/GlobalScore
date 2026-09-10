@@ -1481,5 +1481,36 @@
     ],
     "templateVersion": "2026-08-matchday-hub-v1",
     "type": "matchday-hub"
+  },
+  "snapshot:2506211": {
+    "eventId": "2506211",
+    "slug": "2026-09-11-sevilla-valencia",
+    "date": "2026-09-11",
+    "home": "Sevilla",
+    "away": "Valencia",
+    "lastGenerated": "2026-09-10T09:48:01.200539+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "hub:2026-09-11-matchday-football-guide": {
+    "eventId": "",
+    "slug": "2026-09-11-matchday-football-guide",
+    "date": "2026-09-11",
+    "home": "GlobalScore",
+    "away": "Matchday guide",
+    "lastGenerated": "2026-09-10T09:48:01.200539+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-matchday-hub-v1",
+    "type": "matchday-hub"
   }
 }
