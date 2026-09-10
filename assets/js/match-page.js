@@ -3,8 +3,8 @@ const LANG = window.GLOBAL_LANG || 'en';
 const AR = LANG === 'ar';
 const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
 const copy = {
-  en: { live: 'Live', ft: 'FT', scheduled: 'Scheduled', notAvailable: 'Not available yet', noEvents: 'No published events yet.', noStats: 'Statistics are not available yet.', noLineups: 'Line-ups have not been announced yet.', home: 'Home', away: 'Away', starter: 'XI', sub: 'Sub', referee: 'Referee', venue: 'Venue', attendance: 'Attendance', updated: 'Updated just now' },
-  ar: { live: 'مباشر', ft: 'انتهت', scheduled: 'مجدولة', notAvailable: 'غير متاح حالياً', noEvents: 'لا توجد أحداث منشورة بعد.', noStats: 'الإحصائيات غير متوفرة بعد.', noLineups: 'لم يتم الإعلان عن التشكيلات بعد.', home: 'صاحب الأرض', away: 'الضيف', starter: 'أساسي', sub: 'بديل', referee: 'الحكم', venue: 'الملعب', attendance: 'الحضور', updated: 'تم التحديث الآن' },
+  en: { live: 'Live', ft: 'FT', scheduled: 'Scheduled', notAvailable: 'Not available yet', noEvents: 'No published events yet.', noStats: 'Statistics are not available yet.', noLineups: 'Line-ups have not been announced yet.', home: 'Home', away: 'Away', starter: 'XI', sub: 'Sub', referee: 'Referee', venue: 'Venue', attendance: 'Attendance', updated: 'Updated just now', possession: 'Possession', shots: 'Shots', shotsOnTarget: 'Shots on target', corners: 'Corners', fouls: 'Fouls' },
+  ar: { live: 'مباشر', ft: 'انتهت', scheduled: 'مجدولة', notAvailable: 'غير متاح حالياً', noEvents: 'لا توجد أحداث منشورة بعد.', noStats: 'الإحصائيات غير متوفرة بعد.', noLineups: 'لم يتم الإعلان عن التشكيلات بعد.', home: 'صاحب الأرض', away: 'الضيف', starter: 'أساسي', sub: 'بديل', referee: 'الحكم', venue: 'الملعب', attendance: 'الحضور', updated: 'تم التحديث الآن', possession: 'الاستحواذ', shots: 'التسديدات', shotsOnTarget: 'تسديدات على المرمى', corners: 'الركنيات', fouls: 'الأخطاء' },
   fr: { live: 'En direct', ft: 'Terminé', scheduled: 'Programmé', notAvailable: 'Pas encore disponible', noEvents: 'Aucun événement publié pour le moment.', noStats: 'Les statistiques ne sont pas encore disponibles.', noLineups: 'Les compositions ne sont pas encore annoncées.', home: 'Domicile', away: 'Extérieur', starter: 'Titulaire', sub: 'Remplaçant', referee: 'Arbitre', venue: 'Stade', attendance: 'Affluence', updated: 'Mis à jour à l’instant' },
   es: { live: 'En directo', ft: 'Finalizado', scheduled: 'Programado', notAvailable: 'Todavía no disponible', noEvents: 'Todavía no hay acontecimientos publicados.', noStats: 'Las estadísticas todavía no están disponibles.', noLineups: 'Las alineaciones todavía no han sido anunciadas.', home: 'Local', away: 'Visitante', starter: 'Titular', sub: 'Suplente', referee: 'Árbitro', venue: 'Estadio', attendance: 'Asistencia', updated: 'Actualizado ahora' },
 }[LANG] || {};
@@ -49,6 +49,7 @@ function renderStats(stats) {
     map.get(key).teams.push({ team: section.team || '', value: stat.displayValue ?? stat.value ?? '' });
   }));
   const rows = [...map.values()];
+  renderStatSummary(rows);
   if (!rows.length) {
     target.className = 'permanent-empty';
     target.textContent = copy.noStats;
@@ -76,6 +77,25 @@ function renderLineups(rosters) {
   }
   target.className = 'permanent-lineup-grid';
   target.innerHTML = rosters.map(roster => `<section class="permanent-lineup-column"><h3>${esc(roster.team)}${roster.formation ? `<small>${esc(roster.formation)}</small>` : ''}</h3><ul>${(roster.players || []).map(player => `<li><span>${esc(player.name)}</span><small>${player.starter ? copy.starter : copy.sub}${player.position ? ` · ${esc(player.position)}` : ''}${player.jersey ? ` · #${esc(player.jersey)}` : ''}</small></li>`).join('')}</ul></section>`).join('');
+}
+
+function renderStatSummary(rows) {
+  let target = document.getElementById('match-stat-summary');
+  if (!target) {
+    const statsTarget = document.getElementById('match-stats');
+    if (!statsTarget) return;
+    target = document.createElement('div');
+    target.id = 'match-stat-summary';
+    statsTarget.parentNode.insertBefore(target, statsTarget);
+  }
+  const wanted = [['possessionPct', copy.possession], ['totalShots', copy.shots], ['shotsOnTarget', copy.shotsOnTarget], ['corners', copy.corners], ['foulsCommitted', copy.fouls]];
+  const cards = wanted.map(([key, label]) => {
+    const row = rows.find(item => item.teams.some(team => team.name === key) || item.label === key);
+    if (!row || row.teams.length < 2) return '';
+    return `<div class="match-kpi"><small>${esc(label)}</small><strong>${esc(row.teams[0].value || '—')} <span>·</span> ${esc(row.teams[1].value || '—')}</strong><em>${esc(MATCH.home)} · ${esc(MATCH.away)}</em></div>`;
+  }).join('');
+  target.innerHTML = cards;
+  target.className = cards ? 'match-stat-summary' : 'is-hidden';
 }
 
 function applySummary(payload) {
