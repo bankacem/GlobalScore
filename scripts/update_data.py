@@ -7,6 +7,7 @@ It does not copy full third-party articles into the repository.
 from __future__ import annotations
 
 import html
+import hashlib
 import json
 import re
 from datetime import datetime, timedelta, timezone
@@ -25,14 +26,20 @@ LEAGUES = {
     4829: ("Egyptian Premier League", "الدوري المصري الممتاز"),
 }
 RSS_FEEDS = (
-    ("BBC Sport", "https://feeds.bbci.co.uk/sport/football/rss.xml"),
-    ("Sky Sports", "https://www.skysports.com/rss/12040"),
-    ("ESPN", "https://www.espn.com/espn/rss/soccer/news"),
+    ("BBC Football", "https://feeds.bbci.co.uk/sport/football/rss.xml", "Football"),
+    ("BBC Sport", "https://feeds.bbci.co.uk/sport/rss.xml", "Sports"),
+    ("Sky Sports", "https://www.skysports.com/rss/12040", "Football"),
+    ("ESPN Soccer", "https://www.espn.com/espn/rss/soccer/news", "Football"),
+    ("ESPN Sports", "https://www.espn.com/espn/rss/news", "Sports"),
+    ("The Guardian Football", "https://www.theguardian.com/football/rss", "Football"),
 )
 RSS_ALLOWED_HOSTS = {
+    "BBC Football": {"bbc.co.uk", "bbc.com"},
     "BBC Sport": {"bbc.co.uk", "bbc.com"},
     "Sky Sports": {"skysports.com"},
-    "ESPN": {"espn.com", "espn.co.uk"},
+    "ESPN Soccer": {"espn.com", "espn.co.uk"},
+    "ESPN Sports": {"espn.com", "espn.co.uk"},
+    "The Guardian Football": {"theguardian.com"},
 }
 PLAYER_TERMS = {
     "player", "players", "transfer", "injury", "captain", "goalkeeper", "striker",
@@ -142,7 +149,7 @@ def feed_host_allowed(source: str, link: str) -> bool:
     return True
 
 
-def parse_player_feed(source: str, feed_url: str) -> list[dict]:
+def parse_sports_feed(source: str, feed_url: str, sport: str) -> list[dict]:
     root = ElementTree.fromstring(fetch_text(feed_url))
     stories: list[dict] = []
     for item in root.findall(".//item"):
@@ -150,21 +157,25 @@ def parse_player_feed(source: str, feed_url: str) -> list[dict]:
         link = clean_text(item.findtext("link"))
         description = clean_text(item.findtext("description"))
         pub_date = clean_text(item.findtext("pubDate"))
-        haystack = f"{title} {description}".lower()
-        if not title or not link or not feed_host_allowed(source, link) or not any(term in haystack for term in PLAYER_TERMS):
+        if not title or not link or not feed_host_allowed(source, link):
             continue
+        digest = hashlib.sha1(link.encode("utf-8")).hexdigest()[:12]
+        category = "Football news" if sport == "Football" else "Sports news"
+        category_ar = "أخبار كرة القدم" if sport == "Football" else "أخبار الرياضة"
         stories.append({
-            "slug": f"external-player-news-{source.lower().replace(' ', '-')}",
-            "category": "Player news",
-            "categoryAr": "أخبار اللاعبين",
+            "slug": f"external-sports-news-{digest}",
+            "category": category,
+            "categoryAr": category_ar,
+            "sport": sport,
+            "sportAr": "كرة القدم" if sport == "Football" else "رياضات متنوعة",
             "title": title,
             "titleAr": title,
             "excerpt": (description[:180] + "…") if len(description) > 180 else description,
             "excerptAr": f"عنوان ومقتطف من مصدر {source}؛ افتح الرابط لقراءة التقرير الأصلي.",
             "date": pub_date or datetime.now(timezone.utc).strftime("%Y-%m-%d"),
             "dateAr": pub_date or datetime.now(timezone.utc).strftime("%Y-%m-%d"),
-            "readTime": "Source link",
-            "readTimeAr": "رابط المصدر",
+            "readTime": "RSS source",
+            "readTimeAr": "مصدر RSS",
             "href": link,
             "external": True,
             "source": source,
@@ -178,21 +189,21 @@ def fetch_player_news(fallback: list) -> list:
     stories: list[dict] = []
     seen: set[str] = set()
     successful_feeds = 0
-    for source, feed_url in RSS_FEEDS:
+    for source, feed_url, sport in RSS_FEEDS:
         try:
-            feed_stories = parse_player_feed(source, feed_url)
+            feed_stories = parse_sports_feed(source, feed_url, sport)
             successful_feeds += 1
         except Exception as exc:
             print(f"warning: {source} RSS fetch failed: {exc}")
             continue
-        for story in feed_stories[:2]:
+        for story in feed_stories[:3]:
             dedupe_key = story["href"].lower().rstrip("/") or story["title"].lower()
             if dedupe_key in seen:
                 continue
             seen.add(dedupe_key)
             stories.append(story)
     if stories:
-        return stories[:6] + manual_fallback
+        return stories[:18] + manual_fallback
     if successful_feeds:
         print("warning: RSS feeds responded but yielded no player stories")
     return previous or manual_fallback
