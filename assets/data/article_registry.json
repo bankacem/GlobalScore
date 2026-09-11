@@ -1512,5 +1512,20 @@
     ],
     "templateVersion": "2026-08-matchday-hub-v1",
     "type": "matchday-hub"
+  },
+  "snapshot:2494031": {
+    "eventId": "2494031",
+    "slug": "2026-09-12-bournemouth-brentford",
+    "date": "2026-09-12",
+    "home": "Bournemouth",
+    "away": "Brentford",
+    "lastGenerated": "2026-09-11T09:46:23.970287+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
   }
 }
