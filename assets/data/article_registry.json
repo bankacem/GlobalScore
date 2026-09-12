@@ -1527,5 +1527,111 @@
       "es"
     ],
     "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2494032": {
+    "eventId": "2494032",
+    "slug": "2026-09-12-liverpool-fulham",
+    "date": "2026-09-12",
+    "home": "Liverpool",
+    "away": "Fulham",
+    "lastGenerated": "2026-09-12T09:24:50.631300+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2494033": {
+    "eventId": "2494033",
+    "slug": "2026-09-12-tottenham-hotspur-everton",
+    "date": "2026-09-12",
+    "home": "Tottenham Hotspur",
+    "away": "Everton",
+    "lastGenerated": "2026-09-12T09:24:50.631300+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506209": {
+    "eventId": "2506209",
+    "slug": "2026-09-12-athletic-bilbao-elche",
+    "date": "2026-09-12",
+    "home": "Athletic Bilbao",
+    "away": "Elche",
+    "lastGenerated": "2026-09-12T09:24:50.631300+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506214": {
+    "eventId": "2506214",
+    "slug": "2026-09-12-real-madrid-rayo-vallecano",
+    "date": "2026-09-12",
+    "home": "Real Madrid",
+    "away": "Rayo Vallecano",
+    "lastGenerated": "2026-09-12T09:24:50.631300+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506217": {
+    "eventId": "2506217",
+    "slug": "2026-09-12-osasuna-espanyol",
+    "date": "2026-09-12",
+    "home": "Osasuna",
+    "away": "Espanyol",
+    "lastGenerated": "2026-09-12T09:24:50.631300+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506218": {
+    "eventId": "2506218",
+    "slug": "2026-09-12-racing-de-santander-deportivo-alaves",
+    "date": "2026-09-12",
+    "home": "Racing de Santander",
+    "away": "Deportivo Alavés",
+    "lastGenerated": "2026-09-12T09:24:50.631300+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "hub:2026-09-12-matchday-football-guide": {
+    "eventId": "",
+    "slug": "2026-09-12-matchday-football-guide",
+    "date": "2026-09-12",
+    "home": "GlobalScore",
+    "away": "Matchday guide",
+    "lastGenerated": "2026-09-12T09:24:50.631300+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-matchday-hub-v1",
+    "type": "matchday-hub"
   }
 }
