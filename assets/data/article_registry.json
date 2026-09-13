@@ -1633,5 +1633,111 @@
     ],
     "templateVersion": "2026-08-matchday-hub-v1",
     "type": "matchday-hub"
+  },
+  "snapshot:2494030": {
+    "eventId": "2494030",
+    "slug": "2026-09-13-manchester-united-manchester-city",
+    "date": "2026-09-13",
+    "home": "Manchester United",
+    "away": "Manchester City",
+    "lastGenerated": "2026-09-13T10:19:51.990223+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2494039": {
+    "eventId": "2494039",
+    "slug": "2026-09-13-coventry-city-brighton-and-hove-albion",
+    "date": "2026-09-13",
+    "home": "Coventry City",
+    "away": "Brighton and Hove Albion",
+    "lastGenerated": "2026-09-13T10:19:51.990223+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506212": {
+    "eventId": "2506212",
+    "slug": "2026-09-13-celta-vigo-malaga",
+    "date": "2026-09-13",
+    "home": "Celta Vigo",
+    "away": "Málaga",
+    "lastGenerated": "2026-09-13T10:19:51.990223+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506213": {
+    "eventId": "2506213",
+    "slug": "2026-09-13-levante-barcelona",
+    "date": "2026-09-13",
+    "home": "Levante",
+    "away": "Barcelona",
+    "lastGenerated": "2026-09-13T10:19:51.990223+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506215": {
+    "eventId": "2506215",
+    "slug": "2026-09-13-getafe-deportivo-de-a-coruna",
+    "date": "2026-09-13",
+    "home": "Getafe",
+    "away": "Deportivo de A Coruña",
+    "lastGenerated": "2026-09-13T10:19:51.990223+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2561110": {
+    "eventId": "2561110",
+    "slug": "2026-09-14-tala-ea-el-gaish-smouha",
+    "date": "2026-09-14",
+    "home": "Tala'ea El Gaish",
+    "away": "Smouha",
+    "lastGenerated": "2026-09-13T10:19:51.990223+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "hub:2026-09-13-matchday-football-guide": {
+    "eventId": "",
+    "slug": "2026-09-13-matchday-football-guide",
+    "date": "2026-09-13",
+    "home": "GlobalScore",
+    "away": "Matchday guide",
+    "lastGenerated": "2026-09-13T10:19:51.990223+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-matchday-hub-v1",
+    "type": "matchday-hub"
   }
 }
