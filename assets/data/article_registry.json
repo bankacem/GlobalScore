@@ -1739,5 +1739,81 @@
     ],
     "templateVersion": "2026-08-matchday-hub-v1",
     "type": "matchday-hub"
+  },
+  "snapshot:2494036": {
+    "eventId": "2494036",
+    "slug": "2026-09-14-leeds-united-newcastle-united",
+    "date": "2026-09-14",
+    "home": "Leeds United",
+    "away": "Newcastle United",
+    "lastGenerated": "2026-09-14T10:44:12.647551+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506210": {
+    "eventId": "2506210",
+    "slug": "2026-09-14-villarreal-real-betis",
+    "date": "2026-09-14",
+    "home": "Villarreal",
+    "away": "Real Betis",
+    "lastGenerated": "2026-09-14T10:44:12.647551+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2561111": {
+    "eventId": "2561111",
+    "slug": "2026-09-14-zed-el-qanah",
+    "date": "2026-09-14",
+    "home": "ZED",
+    "away": "El Qanah",
+    "lastGenerated": "2026-09-14T10:44:12.647551+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2561112": {
+    "eventId": "2561112",
+    "slug": "2026-09-14-ceramica-cleopatra-national-bank-of-egypt",
+    "date": "2026-09-14",
+    "home": "Ceramica Cleopatra",
+    "away": "National Bank of Egypt",
+    "lastGenerated": "2026-09-14T10:44:12.647551+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "hub:2026-09-14-matchday-football-guide": {
+    "eventId": "",
+    "slug": "2026-09-14-matchday-football-guide",
+    "date": "2026-09-14",
+    "home": "GlobalScore",
+    "away": "Matchday guide",
+    "lastGenerated": "2026-09-14T10:44:12.647551+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-matchday-hub-v1",
+    "type": "matchday-hub"
   }
 }
