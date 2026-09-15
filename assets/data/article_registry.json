@@ -1815,5 +1815,111 @@
     ],
     "templateVersion": "2026-08-matchday-hub-v1",
     "type": "matchday-hub"
+  },
+  "snapshot:2506223": {
+    "eventId": "2506223",
+    "slug": "2026-09-15-deportivo-alaves-valencia",
+    "date": "2026-09-15",
+    "home": "Deportivo Alavés",
+    "away": "Valencia",
+    "lastGenerated": "2026-09-15T10:07:37.322471+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506227": {
+    "eventId": "2506227",
+    "slug": "2026-09-15-rayo-vallecano-espanyol",
+    "date": "2026-09-15",
+    "home": "Rayo Vallecano",
+    "away": "Espanyol",
+    "lastGenerated": "2026-09-15T10:07:37.322471+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506228": {
+    "eventId": "2506228",
+    "slug": "2026-09-15-elche-real-madrid",
+    "date": "2026-09-15",
+    "home": "Elche",
+    "away": "Real Madrid",
+    "lastGenerated": "2026-09-15T10:07:37.322471+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2561113": {
+    "eventId": "2561113",
+    "slug": "2026-09-15-wadi-degla-al-mokawloon-al-arab",
+    "date": "2026-09-15",
+    "home": "Wadi Degla",
+    "away": "Al-Mokawloon al-Arab",
+    "lastGenerated": "2026-09-15T10:07:37.322471+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2561114": {
+    "eventId": "2561114",
+    "slug": "2026-09-15-asyut-petroleum-modern-sport",
+    "date": "2026-09-15",
+    "home": "Asyut Petroleum",
+    "away": "Modern Sport",
+    "lastGenerated": "2026-09-15T10:07:37.322471+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2561115": {
+    "eventId": "2561115",
+    "slug": "2026-09-15-al-masry-al-ittihad-alexandria",
+    "date": "2026-09-15",
+    "home": "Al Masry",
+    "away": "Al Ittihad Alexandria",
+    "lastGenerated": "2026-09-15T10:07:37.322471+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "hub:2026-09-15-matchday-football-guide": {
+    "eventId": "",
+    "slug": "2026-09-15-matchday-football-guide",
+    "date": "2026-09-15",
+    "home": "GlobalScore",
+    "away": "Matchday guide",
+    "lastGenerated": "2026-09-15T10:07:37.322471+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-matchday-hub-v1",
+    "type": "matchday-hub"
   }
 }
