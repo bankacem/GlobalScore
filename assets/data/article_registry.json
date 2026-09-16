@@ -1921,5 +1921,96 @@
     ],
     "templateVersion": "2026-08-matchday-hub-v1",
     "type": "matchday-hub"
+  },
+  "snapshot:2506219": {
+    "eventId": "2506219",
+    "slug": "2026-09-16-barcelona-racing-de-santander",
+    "date": "2026-09-16",
+    "home": "Barcelona",
+    "away": "Racing de Santander",
+    "lastGenerated": "2026-09-16T09:59:40.690907+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506220": {
+    "eventId": "2506220",
+    "slug": "2026-09-16-atletico-madrid-osasuna",
+    "date": "2026-09-16",
+    "home": "Atlético Madrid",
+    "away": "Osasuna",
+    "lastGenerated": "2026-09-16T09:59:40.690907+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506222": {
+    "eventId": "2506222",
+    "slug": "2026-09-16-levante-athletic-bilbao",
+    "date": "2026-09-16",
+    "home": "Levante",
+    "away": "Athletic Bilbao",
+    "lastGenerated": "2026-09-16T09:59:40.690907+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2561117": {
+    "eventId": "2561117",
+    "slug": "2026-09-16-el-gouna-petrojet",
+    "date": "2026-09-16",
+    "home": "El Gouna",
+    "away": "Petrojet",
+    "lastGenerated": "2026-09-16T09:59:40.690907+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2561119": {
+    "eventId": "2561119",
+    "slug": "2026-09-16-ghazl-el-mahalla-zamalek",
+    "date": "2026-09-16",
+    "home": "Ghazl El Mahalla",
+    "away": "Zamalek",
+    "lastGenerated": "2026-09-16T09:59:40.690907+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "hub:2026-09-16-matchday-football-guide": {
+    "eventId": "",
+    "slug": "2026-09-16-matchday-football-guide",
+    "date": "2026-09-16",
+    "home": "GlobalScore",
+    "away": "Matchday guide",
+    "lastGenerated": "2026-09-16T09:59:40.690907+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-matchday-hub-v1",
+    "type": "matchday-hub"
   }
 }
