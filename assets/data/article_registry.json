@@ -1772,11 +1772,11 @@
   },
   "snapshot:2561111": {
     "eventId": "2561111",
-    "slug": "2026-09-14-zed-el-qanah",
-    "date": "2026-09-14",
+    "slug": "2026-09-17-zed-el-qanah",
+    "date": "2026-09-17",
     "home": "ZED",
     "away": "El Qanah",
-    "lastGenerated": "2026-09-14T10:44:12.647551+00:00",
+    "lastGenerated": "2026-09-17T10:02:25.491620+00:00",
     "languages": [
       "ar",
       "en",
@@ -2004,6 +2004,82 @@
     "home": "GlobalScore",
     "away": "Matchday guide",
     "lastGenerated": "2026-09-16T09:59:40.690907+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-matchday-hub-v1",
+    "type": "matchday-hub"
+  },
+  "snapshot:2494047": {
+    "eventId": "2494047",
+    "slug": "2026-09-18-brentford-chelsea",
+    "date": "2026-09-18",
+    "home": "Brentford",
+    "away": "Chelsea",
+    "lastGenerated": "2026-09-17T10:02:25.491620+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506221": {
+    "eventId": "2506221",
+    "slug": "2026-09-17-malaga-villarreal",
+    "date": "2026-09-17",
+    "home": "Málaga",
+    "away": "Villarreal",
+    "lastGenerated": "2026-09-17T10:02:25.491620+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506224": {
+    "eventId": "2506224",
+    "slug": "2026-09-17-real-betis-getafe",
+    "date": "2026-09-17",
+    "home": "Real Betis",
+    "away": "Getafe",
+    "lastGenerated": "2026-09-17T10:02:25.491620+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2561118": {
+    "eventId": "2561118",
+    "slug": "2026-09-17-enppi-pyramids",
+    "date": "2026-09-17",
+    "home": "ENPPI",
+    "away": "Pyramids",
+    "lastGenerated": "2026-09-17T10:02:25.491620+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "hub:2026-09-17-matchday-football-guide": {
+    "eventId": "",
+    "slug": "2026-09-17-matchday-football-guide",
+    "date": "2026-09-17",
+    "home": "GlobalScore",
+    "away": "Matchday guide",
+    "lastGenerated": "2026-09-17T10:02:25.491620+00:00",
     "languages": [
       "ar",
       "en",
