@@ -2088,5 +2088,36 @@
     ],
     "templateVersion": "2026-08-matchday-hub-v1",
     "type": "matchday-hub"
+  },
+  "snapshot:2506235": {
+    "eventId": "2506235",
+    "slug": "2026-09-18-espanyol-elche",
+    "date": "2026-09-18",
+    "home": "Espanyol",
+    "away": "Elche",
+    "lastGenerated": "2026-09-18T09:49:38.345214+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "hub:2026-09-18-matchday-football-guide": {
+    "eventId": "",
+    "slug": "2026-09-18-matchday-football-guide",
+    "date": "2026-09-18",
+    "home": "GlobalScore",
+    "away": "Matchday guide",
+    "lastGenerated": "2026-09-18T09:49:38.345214+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-matchday-hub-v1",
+    "type": "matchday-hub"
   }
 }
