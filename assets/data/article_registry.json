@@ -2119,5 +2119,126 @@
     ],
     "templateVersion": "2026-08-matchday-hub-v1",
     "type": "matchday-hub"
+  },
+  "snapshot:2494040": {
+    "eventId": "2494040",
+    "slug": "2026-09-19-newcastle-united-hull-city",
+    "date": "2026-09-19",
+    "home": "Newcastle United",
+    "away": "Hull City",
+    "lastGenerated": "2026-09-19T09:34:10.867186+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2494043": {
+    "eventId": "2494043",
+    "slug": "2026-09-19-everton-ipswich-town",
+    "date": "2026-09-19",
+    "home": "Everton",
+    "away": "Ipswich Town",
+    "lastGenerated": "2026-09-19T09:34:10.867186+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2494044": {
+    "eventId": "2494044",
+    "slug": "2026-09-19-tottenham-hotspur-aston-villa",
+    "date": "2026-09-19",
+    "home": "Tottenham Hotspur",
+    "away": "Aston Villa",
+    "lastGenerated": "2026-09-19T09:34:10.867186+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506230": {
+    "eventId": "2506230",
+    "slug": "2026-09-19-athletic-bilbao-deportivo-alaves",
+    "date": "2026-09-19",
+    "home": "Athletic Bilbao",
+    "away": "Deportivo Alavés",
+    "lastGenerated": "2026-09-19T09:34:10.867186+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506233": {
+    "eventId": "2506233",
+    "slug": "2026-09-19-sevilla-barcelona",
+    "date": "2026-09-19",
+    "home": "Sevilla",
+    "away": "Barcelona",
+    "lastGenerated": "2026-09-19T09:34:10.867186+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506234": {
+    "eventId": "2506234",
+    "slug": "2026-09-19-celta-vigo-racing-de-santander",
+    "date": "2026-09-19",
+    "home": "Celta Vigo",
+    "away": "Racing de Santander",
+    "lastGenerated": "2026-09-19T09:34:10.867186+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506238": {
+    "eventId": "2506238",
+    "slug": "2026-09-19-osasuna-rayo-vallecano",
+    "date": "2026-09-19",
+    "home": "Osasuna",
+    "away": "Rayo Vallecano",
+    "lastGenerated": "2026-09-19T09:34:10.867186+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "hub:2026-09-19-matchday-football-guide": {
+    "eventId": "",
+    "slug": "2026-09-19-matchday-football-guide",
+    "date": "2026-09-19",
+    "home": "GlobalScore",
+    "away": "Matchday guide",
+    "lastGenerated": "2026-09-19T09:34:10.867186+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-matchday-hub-v1",
+    "type": "matchday-hub"
   }
 }
