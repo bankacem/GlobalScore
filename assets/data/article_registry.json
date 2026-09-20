@@ -2240,5 +2240,126 @@
     ],
     "templateVersion": "2026-08-matchday-hub-v1",
     "type": "matchday-hub"
+  },
+  "snapshot:2494041": {
+    "eventId": "2494041",
+    "slug": "2026-09-20-bournemouth-liverpool",
+    "date": "2026-09-20",
+    "home": "Bournemouth",
+    "away": "Liverpool",
+    "lastGenerated": "2026-09-20T09:50:16.534754+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2494042": {
+    "eventId": "2494042",
+    "slug": "2026-09-20-fulham-manchester-united",
+    "date": "2026-09-20",
+    "home": "Fulham",
+    "away": "Manchester United",
+    "lastGenerated": "2026-09-20T09:50:16.534754+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2494045": {
+    "eventId": "2494045",
+    "slug": "2026-09-20-manchester-city-sunderland",
+    "date": "2026-09-20",
+    "home": "Manchester City",
+    "away": "Sunderland",
+    "lastGenerated": "2026-09-20T09:50:16.534754+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506229": {
+    "eventId": "2506229",
+    "slug": "2026-09-20-atletico-madrid-real-madrid",
+    "date": "2026-09-20",
+    "home": "Atlético Madrid",
+    "away": "Real Madrid",
+    "lastGenerated": "2026-09-20T09:50:16.534754+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506231": {
+    "eventId": "2506231",
+    "slug": "2026-09-20-valencia-real-sociedad",
+    "date": "2026-09-20",
+    "home": "Valencia",
+    "away": "Real Sociedad",
+    "lastGenerated": "2026-09-20T09:50:16.534754+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506232": {
+    "eventId": "2506232",
+    "slug": "2026-09-20-villarreal-levante",
+    "date": "2026-09-20",
+    "home": "Villarreal",
+    "away": "Levante",
+    "lastGenerated": "2026-09-20T09:50:16.534754+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506237": {
+    "eventId": "2506237",
+    "slug": "2026-09-20-getafe-malaga",
+    "date": "2026-09-20",
+    "home": "Getafe",
+    "away": "Málaga",
+    "lastGenerated": "2026-09-20T09:50:16.534754+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "hub:2026-09-20-matchday-football-guide": {
+    "eventId": "",
+    "slug": "2026-09-20-matchday-football-guide",
+    "date": "2026-09-20",
+    "home": "GlobalScore",
+    "away": "Matchday guide",
+    "lastGenerated": "2026-09-20T09:50:16.534754+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-matchday-hub-v1",
+    "type": "matchday-hub"
   }
 }
