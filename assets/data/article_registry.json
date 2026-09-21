@@ -1,31 +1,33 @@
 {
   "fallback:hull-city:manchester-united": {
     "eventId": "",
-    "slug": "hull-city-manchester-united",
+    "slug": "2026-08-22-hull-city-manchester-united",
     "date": "2026-08-22",
     "home": "Hull City",
     "away": "Manchester United",
-    "lastGenerated": "2026-08-22T22:13:09.888683+00:00",
+    "lastGenerated": "2026-09-21T10:47:21.356853+00:00",
     "languages": [
       "ar",
       "en",
       "fr",
       "es"
-    ]
+    ],
+    "templateVersion": "2026-08-editorial-v2"
   },
   "fallback:everton:crystal-palace": {
     "eventId": "",
-    "slug": "everton-crystal-palace",
+    "slug": "2026-08-22-everton-crystal-palace",
     "date": "2026-08-22",
     "home": "Everton",
     "away": "Crystal Palace",
-    "lastGenerated": "2026-08-22T22:13:09.888683+00:00",
+    "lastGenerated": "2026-09-21T10:47:21.356853+00:00",
     "languages": [
       "ar",
       "en",
       "fr",
       "es"
-    ]
+    ],
+    "templateVersion": "2026-08-editorial-v2"
   },
   "snapshot:2494006": {
     "eventId": "2494006",
@@ -2353,6 +2355,22 @@
     "home": "GlobalScore",
     "away": "Matchday guide",
     "lastGenerated": "2026-09-20T09:50:16.534754+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-matchday-hub-v1",
+    "type": "matchday-hub"
+  },
+  "hub:2026-08-22-matchday-football-guide": {
+    "eventId": "",
+    "slug": "2026-08-22-matchday-football-guide",
+    "date": "2026-08-22",
+    "home": "GlobalScore",
+    "away": "Matchday guide",
+    "lastGenerated": "2026-09-21T10:47:21.356853+00:00",
     "languages": [
       "ar",
       "en",
