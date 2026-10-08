@@ -2379,5 +2379,36 @@
     ],
     "templateVersion": "2026-08-matchday-hub-v1",
     "type": "matchday-hub"
+  },
+  "snapshot:2506240": {
+    "eventId": "2506240",
+    "slug": "2026-10-09-malaga-espanyol",
+    "date": "2026-10-09",
+    "home": "Málaga",
+    "away": "Espanyol",
+    "lastGenerated": "2026-10-08T12:04:25.274802+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "hub:2026-10-09-matchday-football-guide": {
+    "eventId": "",
+    "slug": "2026-10-09-matchday-football-guide",
+    "date": "2026-10-09",
+    "home": "GlobalScore",
+    "away": "Matchday guide",
+    "lastGenerated": "2026-10-08T12:04:25.274802+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-matchday-hub-v1",
+    "type": "matchday-hub"
   }
 }
