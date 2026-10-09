@@ -2410,5 +2410,20 @@
     ],
     "templateVersion": "2026-08-matchday-hub-v1",
     "type": "matchday-hub"
+  },
+  "snapshot:2494052": {
+    "eventId": "2494052",
+    "slug": "2026-10-10-arsenal-leeds-united",
+    "date": "2026-10-10",
+    "home": "Arsenal",
+    "away": "Leeds United",
+    "lastGenerated": "2026-10-09T11:56:12.221029+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
   }
 }
