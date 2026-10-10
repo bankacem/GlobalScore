@@ -2425,5 +2425,126 @@
       "es"
     ],
     "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2494050": {
+    "eventId": "2494050",
+    "slug": "2026-10-10-manchester-united-tottenham-hotspur",
+    "date": "2026-10-10",
+    "home": "Manchester United",
+    "away": "Tottenham Hotspur",
+    "lastGenerated": "2026-10-10T11:12:46.337309+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2494053": {
+    "eventId": "2494053",
+    "slug": "2026-10-10-chelsea-bournemouth",
+    "date": "2026-10-10",
+    "home": "Chelsea",
+    "away": "Bournemouth",
+    "lastGenerated": "2026-10-10T11:12:46.337309+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506239": {
+    "eventId": "2506239",
+    "slug": "2026-10-10-barcelona-getafe",
+    "date": "2026-10-10",
+    "home": "Barcelona",
+    "away": "Getafe",
+    "lastGenerated": "2026-10-10T11:12:46.337309+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506242": {
+    "eventId": "2506242",
+    "slug": "2026-10-10-real-madrid-villarreal",
+    "date": "2026-10-10",
+    "home": "Real Madrid",
+    "away": "Villarreal",
+    "lastGenerated": "2026-10-10T11:12:46.337309+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506243": {
+    "eventId": "2506243",
+    "slug": "2026-10-10-deportivo-alaves-atletico-madrid",
+    "date": "2026-10-10",
+    "home": "Deportivo Alavés",
+    "away": "Atlético Madrid",
+    "lastGenerated": "2026-10-10T11:12:46.337309+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506246": {
+    "eventId": "2506246",
+    "slug": "2026-10-10-rayo-vallecano-athletic-bilbao",
+    "date": "2026-10-10",
+    "home": "Rayo Vallecano",
+    "away": "Athletic Bilbao",
+    "lastGenerated": "2026-10-10T11:12:46.337309+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2561120": {
+    "eventId": "2561120",
+    "slug": "2026-10-11-el-qanah-al-masry",
+    "date": "2026-10-11",
+    "home": "El Qanah",
+    "away": "Al Masry",
+    "lastGenerated": "2026-10-10T11:12:46.337309+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "hub:2026-10-10-matchday-football-guide": {
+    "eventId": "",
+    "slug": "2026-10-10-matchday-football-guide",
+    "date": "2026-10-10",
+    "home": "GlobalScore",
+    "away": "Matchday guide",
+    "lastGenerated": "2026-10-10T11:12:46.337309+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-matchday-hub-v1",
+    "type": "matchday-hub"
   }
 }
