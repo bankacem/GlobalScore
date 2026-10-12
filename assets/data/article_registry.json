@@ -2667,5 +2667,96 @@
     ],
     "templateVersion": "2026-08-matchday-hub-v1",
     "type": "matchday-hub"
+  },
+  "snapshot:2494059": {
+    "eventId": "2494059",
+    "slug": "2026-10-12-coventry-city-newcastle-united",
+    "date": "2026-10-12",
+    "home": "Coventry City",
+    "away": "Newcastle United",
+    "lastGenerated": "2026-10-12T13:13:25.114319+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506241": {
+    "eventId": "2506241",
+    "slug": "2026-10-12-levante-sevilla",
+    "date": "2026-10-12",
+    "home": "Levante",
+    "away": "Sevilla",
+    "lastGenerated": "2026-10-12T13:13:25.114319+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2561122": {
+    "eventId": "2561122",
+    "slug": "2026-10-12-al-mokawloon-al-arab-zed",
+    "date": "2026-10-12",
+    "home": "Al-Mokawloon al-Arab",
+    "away": "ZED",
+    "lastGenerated": "2026-10-12T13:13:25.114319+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2561123": {
+    "eventId": "2561123",
+    "slug": "2026-10-12-modern-sport-enppi",
+    "date": "2026-10-12",
+    "home": "Modern Sport",
+    "away": "ENPPI",
+    "lastGenerated": "2026-10-12T13:13:25.114319+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2561124": {
+    "eventId": "2561124",
+    "slug": "2026-10-12-pyramids-ceramica-cleopatra",
+    "date": "2026-10-12",
+    "home": "Pyramids",
+    "away": "Ceramica Cleopatra",
+    "lastGenerated": "2026-10-12T13:13:25.114319+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "hub:2026-10-12-matchday-football-guide": {
+    "eventId": "",
+    "slug": "2026-10-12-matchday-football-guide",
+    "date": "2026-10-12",
+    "home": "GlobalScore",
+    "away": "Matchday guide",
+    "lastGenerated": "2026-10-12T13:13:25.114319+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-matchday-hub-v1",
+    "type": "matchday-hub"
   }
 }
