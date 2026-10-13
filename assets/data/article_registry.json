@@ -2758,5 +2758,66 @@
     ],
     "templateVersion": "2026-08-matchday-hub-v1",
     "type": "matchday-hub"
+  },
+  "snapshot:2561126": {
+    "eventId": "2561126",
+    "slug": "2026-10-13-national-bank-of-egypt-tala-ea-el-gaish",
+    "date": "2026-10-13",
+    "home": "National Bank of Egypt",
+    "away": "Tala'ea El Gaish",
+    "lastGenerated": "2026-10-13T12:44:58.674509+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2561127": {
+    "eventId": "2561127",
+    "slug": "2026-10-13-abou-qir-fertilizers-asyut-petroleum",
+    "date": "2026-10-13",
+    "home": "Abou Qir Fertilizers",
+    "away": "Asyut Petroleum",
+    "lastGenerated": "2026-10-13T12:44:58.674509+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2561128": {
+    "eventId": "2561128",
+    "slug": "2026-10-13-petrojet-wadi-degla",
+    "date": "2026-10-13",
+    "home": "Petrojet",
+    "away": "Wadi Degla",
+    "lastGenerated": "2026-10-13T12:44:58.674509+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "hub:2026-10-13-matchday-football-guide": {
+    "eventId": "",
+    "slug": "2026-10-13-matchday-football-guide",
+    "date": "2026-10-13",
+    "home": "GlobalScore",
+    "away": "Matchday guide",
+    "lastGenerated": "2026-10-13T12:44:58.674509+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-matchday-hub-v1",
+    "type": "matchday-hub"
   }
 }
