@@ -2819,5 +2819,36 @@
     ],
     "templateVersion": "2026-08-matchday-hub-v1",
     "type": "matchday-hub"
+  },
+  "snapshot:2506256": {
+    "eventId": "2506256",
+    "slug": "2026-10-16-deportivo-de-a-coruna-levante",
+    "date": "2026-10-16",
+    "home": "Deportivo de A Coruña",
+    "away": "Levante",
+    "lastGenerated": "2026-10-15T09:59:41.266528+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "hub:2026-10-16-matchday-football-guide": {
+    "eventId": "",
+    "slug": "2026-10-16-matchday-football-guide",
+    "date": "2026-10-16",
+    "home": "GlobalScore",
+    "away": "Matchday guide",
+    "lastGenerated": "2026-10-15T09:59:41.266528+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-matchday-hub-v1",
+    "type": "matchday-hub"
   }
 }
