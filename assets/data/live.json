@@ -1,30 +1,6 @@
 {
   "matches": [
     {
-      "id": "2494063",
-      "date": "2026-10-17",
-      "league": "Premier League",
-      "leagueAr": "الدوري الإنجليزي الممتاز",
-      "home": "Everton",
-      "homeAr": "Everton",
-      "away": "Chelsea",
-      "awayAr": "Chelsea",
-      "homeLogo": "https://r2.thesportsdb.com/images/media/team/badge/eqayrf1523184794.png",
-      "awayLogo": "https://r2.thesportsdb.com/images/media/team/badge/pbf4ul1782638263.png",
-      "score": "— - —",
-      "status": "Scheduled",
-      "minute": 0,
-      "time": "11:30",
-      "day": "17",
-      "month": "OCT",
-      "dayAr": "17",
-      "monthAr": "10/2026",
-      "lineups": null,
-      "stats": [],
-      "events": [],
-      "source": "TheSportsDB"
-    },
-    {
       "id": "2506256",
       "date": "2026-10-16",
       "league": "La Liga",
@@ -42,30 +18,6 @@
       "day": "16",
       "month": "OCT",
       "dayAr": "16",
-      "monthAr": "10/2026",
-      "lineups": null,
-      "stats": [],
-      "events": [],
-      "source": "TheSportsDB"
-    },
-    {
-      "id": "2561130",
-      "date": "2026-10-19",
-      "league": "Egyptian Premier League",
-      "leagueAr": "الدوري المصري الممتاز",
-      "home": "El Gouna",
-      "homeAr": "El Gouna",
-      "away": "Smouha",
-      "awayAr": "Smouha",
-      "homeLogo": "https://r2.thesportsdb.com/images/media/team/badge/6vdj631589807310.png",
-      "awayLogo": "https://r2.thesportsdb.com/images/media/team/badge/qq4pkd1589807413.png",
-      "score": "— - —",
-      "status": "Scheduled",
-      "minute": 0,
-      "time": "14:00",
-      "day": "19",
-      "month": "OCT",
-      "dayAr": "19",
       "monthAr": "10/2026",
       "lineups": null,
       "stats": [],
@@ -191,5 +143,5 @@
       }
     ]
   },
-  "updatedAt": "2026-10-15T09:59:39.726689Z"
+  "updatedAt": "2026-10-16T09:53:28.928334Z"
 }
