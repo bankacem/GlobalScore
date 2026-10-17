@@ -2850,5 +2850,111 @@
     ],
     "templateVersion": "2026-08-matchday-hub-v1",
     "type": "matchday-hub"
+  },
+  "snapshot:2494060": {
+    "eventId": "2494060",
+    "slug": "2026-10-17-newcastle-united-aston-villa",
+    "date": "2026-10-17",
+    "home": "Newcastle United",
+    "away": "Aston Villa",
+    "lastGenerated": "2026-10-17T09:26:03.631100+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2494062": {
+    "eventId": "2494062",
+    "slug": "2026-10-17-fulham-hull-city",
+    "date": "2026-10-17",
+    "home": "Fulham",
+    "away": "Hull City",
+    "lastGenerated": "2026-10-17T09:26:03.631100+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2494063": {
+    "eventId": "2494063",
+    "slug": "2026-10-17-everton-chelsea",
+    "date": "2026-10-17",
+    "home": "Everton",
+    "away": "Chelsea",
+    "lastGenerated": "2026-10-17T09:26:03.631100+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506249": {
+    "eventId": "2506249",
+    "slug": "2026-10-17-valencia-athletic-bilbao",
+    "date": "2026-10-17",
+    "home": "Valencia",
+    "away": "Athletic Bilbao",
+    "lastGenerated": "2026-10-17T09:26:03.631100+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506250": {
+    "eventId": "2506250",
+    "slug": "2026-10-17-villarreal-elche",
+    "date": "2026-10-17",
+    "home": "Villarreal",
+    "away": "Elche",
+    "lastGenerated": "2026-10-17T09:26:03.631100+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506253": {
+    "eventId": "2506253",
+    "slug": "2026-10-17-espanyol-atletico-madrid",
+    "date": "2026-10-17",
+    "home": "Espanyol",
+    "away": "Atlético Madrid",
+    "lastGenerated": "2026-10-17T09:26:03.631100+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "hub:2026-10-17-matchday-football-guide": {
+    "eventId": "",
+    "slug": "2026-10-17-matchday-football-guide",
+    "date": "2026-10-17",
+    "home": "GlobalScore",
+    "away": "Matchday guide",
+    "lastGenerated": "2026-10-17T09:26:03.631100+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-matchday-hub-v1",
+    "type": "matchday-hub"
   }
 }
