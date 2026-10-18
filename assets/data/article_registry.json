@@ -2956,5 +2956,141 @@
     ],
     "templateVersion": "2026-08-matchday-hub-v1",
     "type": "matchday-hub"
+  },
+  "snapshot:2494061": {
+    "eventId": "2494061",
+    "slug": "2026-10-18-bournemouth-sunderland",
+    "date": "2026-10-18",
+    "home": "Bournemouth",
+    "away": "Sunderland",
+    "lastGenerated": "2026-10-18T09:40:11.423823+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2494066": {
+    "eventId": "2494066",
+    "slug": "2026-10-18-brighton-and-hove-albion-crystal-palace",
+    "date": "2026-10-18",
+    "home": "Brighton and Hove Albion",
+    "away": "Crystal Palace",
+    "lastGenerated": "2026-10-18T09:40:11.423823+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2494068": {
+    "eventId": "2494068",
+    "slug": "2026-10-18-leeds-united-manchester-united",
+    "date": "2026-10-18",
+    "home": "Leeds United",
+    "away": "Manchester United",
+    "lastGenerated": "2026-10-18T09:40:11.423823+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506251": {
+    "eventId": "2506251",
+    "slug": "2026-10-18-malaga-real-sociedad",
+    "date": "2026-10-18",
+    "home": "Málaga",
+    "away": "Real Sociedad",
+    "lastGenerated": "2026-10-18T09:40:11.423823+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506252": {
+    "eventId": "2506252",
+    "slug": "2026-10-18-celta-vigo-deportivo-alaves",
+    "date": "2026-10-18",
+    "home": "Celta Vigo",
+    "away": "Deportivo Alavés",
+    "lastGenerated": "2026-10-18T09:40:11.423823+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506254": {
+    "eventId": "2506254",
+    "slug": "2026-10-18-real-madrid-sevilla",
+    "date": "2026-10-18",
+    "home": "Real Madrid",
+    "away": "Sevilla",
+    "lastGenerated": "2026-10-18T09:40:11.423823+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506258": {
+    "eventId": "2506258",
+    "slug": "2026-10-18-osasuna-racing-de-santander",
+    "date": "2026-10-18",
+    "home": "Osasuna",
+    "away": "Racing de Santander",
+    "lastGenerated": "2026-10-18T09:40:11.423823+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2561130": {
+    "eventId": "2561130",
+    "slug": "2026-10-19-el-gouna-smouha",
+    "date": "2026-10-19",
+    "home": "El Gouna",
+    "away": "Smouha",
+    "lastGenerated": "2026-10-18T09:40:11.423823+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "hub:2026-10-18-matchday-football-guide": {
+    "eventId": "",
+    "slug": "2026-10-18-matchday-football-guide",
+    "date": "2026-10-18",
+    "home": "GlobalScore",
+    "away": "Matchday guide",
+    "lastGenerated": "2026-10-18T09:40:11.423823+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-matchday-hub-v1",
+    "type": "matchday-hub"
   }
 }
