@@ -1956,11 +1956,11 @@
   },
   "snapshot:2506222": {
     "eventId": "2506222",
-    "slug": "2026-09-16-levante-athletic-bilbao",
-    "date": "2026-09-16",
+    "slug": "2026-10-21-levante-athletic-bilbao",
+    "date": "2026-10-21",
     "home": "Levante",
     "away": "Athletic Bilbao",
-    "lastGenerated": "2026-09-16T09:59:40.690907+00:00",
+    "lastGenerated": "2026-10-20T10:07:25.029521+00:00",
     "languages": [
       "ar",
       "en",
@@ -3160,6 +3160,67 @@
     "home": "GlobalScore",
     "away": "Matchday guide",
     "lastGenerated": "2026-10-19T10:49:50.138849+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-matchday-hub-v1",
+    "type": "matchday-hub"
+  },
+  "snapshot:2561133": {
+    "eventId": "2561133",
+    "slug": "2026-10-20-wadi-degla-national-bank-of-egypt",
+    "date": "2026-10-20",
+    "home": "Wadi Degla",
+    "away": "National Bank of Egypt",
+    "lastGenerated": "2026-10-20T10:07:25.029521+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2561134": {
+    "eventId": "2561134",
+    "slug": "2026-10-20-asyut-petroleum-zamalek",
+    "date": "2026-10-20",
+    "home": "Asyut Petroleum",
+    "away": "Zamalek",
+    "lastGenerated": "2026-10-20T10:07:25.029521+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2561135": {
+    "eventId": "2561135",
+    "slug": "2026-10-20-tala-ea-el-gaish-pyramids",
+    "date": "2026-10-20",
+    "home": "Tala'ea El Gaish",
+    "away": "Pyramids",
+    "lastGenerated": "2026-10-20T10:07:25.029521+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "hub:2026-10-20-matchday-football-guide": {
+    "eventId": "",
+    "slug": "2026-10-20-matchday-football-guide",
+    "date": "2026-10-20",
+    "home": "GlobalScore",
+    "away": "Matchday guide",
+    "lastGenerated": "2026-10-20T10:07:25.029521+00:00",
     "languages": [
       "ar",
       "en",
