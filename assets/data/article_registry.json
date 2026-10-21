@@ -3229,5 +3229,66 @@
     ],
     "templateVersion": "2026-08-matchday-hub-v1",
     "type": "matchday-hub"
+  },
+  "snapshot:2561136": {
+    "eventId": "2561136",
+    "slug": "2026-10-21-ghazl-el-mahalla-al-ittihad-alexandria",
+    "date": "2026-10-21",
+    "home": "Ghazl El Mahalla",
+    "away": "Al Ittihad Alexandria",
+    "lastGenerated": "2026-10-21T10:14:44.270507+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2561138": {
+    "eventId": "2561138",
+    "slug": "2026-10-21-al-ahly-el-qanah",
+    "date": "2026-10-21",
+    "home": "Al Ahly",
+    "away": "El Qanah",
+    "lastGenerated": "2026-10-21T10:14:44.270507+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2561139": {
+    "eventId": "2561139",
+    "slug": "2026-10-21-ceramica-cleopatra-petrojet",
+    "date": "2026-10-21",
+    "home": "Ceramica Cleopatra",
+    "away": "Petrojet",
+    "lastGenerated": "2026-10-21T10:14:44.270507+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "hub:2026-10-21-matchday-football-guide": {
+    "eventId": "",
+    "slug": "2026-10-21-matchday-football-guide",
+    "date": "2026-10-21",
+    "home": "GlobalScore",
+    "away": "Matchday guide",
+    "lastGenerated": "2026-10-21T10:14:44.270507+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-matchday-hub-v1",
+    "type": "matchday-hub"
   }
 }
