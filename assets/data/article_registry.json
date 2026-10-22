@@ -3290,5 +3290,51 @@
     ],
     "templateVersion": "2026-08-matchday-hub-v1",
     "type": "matchday-hub"
+  },
+  "snapshot:2494075": {
+    "eventId": "2494075",
+    "slug": "2026-10-23-ipswich-town-nottingham-forest",
+    "date": "2026-10-23",
+    "home": "Ipswich Town",
+    "away": "Nottingham Forest",
+    "lastGenerated": "2026-10-22T10:15:48.035759+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506265": {
+    "eventId": "2506265",
+    "slug": "2026-10-23-deportivo-alaves-malaga",
+    "date": "2026-10-23",
+    "home": "Deportivo Alavés",
+    "away": "Málaga",
+    "lastGenerated": "2026-10-22T10:15:48.035759+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "hub:2026-10-23-matchday-football-guide": {
+    "eventId": "",
+    "slug": "2026-10-23-matchday-football-guide",
+    "date": "2026-10-23",
+    "home": "GlobalScore",
+    "away": "Matchday guide",
+    "lastGenerated": "2026-10-22T10:15:48.035759+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-matchday-hub-v1",
+    "type": "matchday-hub"
   }
 }
