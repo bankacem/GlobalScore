@@ -3336,5 +3336,111 @@
     ],
     "templateVersion": "2026-08-matchday-hub-v1",
     "type": "matchday-hub"
+  },
+  "snapshot:2494072": {
+    "eventId": "2494072",
+    "slug": "2026-10-24-arsenal-everton",
+    "date": "2026-10-24",
+    "home": "Arsenal",
+    "away": "Everton",
+    "lastGenerated": "2026-10-24T09:35:14.644708+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2494073": {
+    "eventId": "2494073",
+    "slug": "2026-10-24-chelsea-tottenham-hotspur",
+    "date": "2026-10-24",
+    "home": "Chelsea",
+    "away": "Tottenham Hotspur",
+    "lastGenerated": "2026-10-24T09:35:14.644708+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2494077": {
+    "eventId": "2494077",
+    "slug": "2026-10-24-aston-villa-manchester-city",
+    "date": "2026-10-24",
+    "home": "Aston Villa",
+    "away": "Manchester City",
+    "lastGenerated": "2026-10-24T09:35:14.644708+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506260": {
+    "eventId": "2506260",
+    "slug": "2026-10-24-atletico-madrid-deportivo-de-a-coruna",
+    "date": "2026-10-24",
+    "home": "Atlético Madrid",
+    "away": "Deportivo de A Coruña",
+    "lastGenerated": "2026-10-24T09:35:14.644708+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506262": {
+    "eventId": "2506262",
+    "slug": "2026-10-24-valencia-villarreal",
+    "date": "2026-10-24",
+    "home": "Valencia",
+    "away": "Villarreal",
+    "lastGenerated": "2026-10-24T09:35:14.644708+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506267": {
+    "eventId": "2506267",
+    "slug": "2026-10-24-rayo-vallecano-elche",
+    "date": "2026-10-24",
+    "home": "Rayo Vallecano",
+    "away": "Elche",
+    "lastGenerated": "2026-10-24T09:35:14.644708+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "hub:2026-10-24-matchday-football-guide": {
+    "eventId": "",
+    "slug": "2026-10-24-matchday-football-guide",
+    "date": "2026-10-24",
+    "home": "GlobalScore",
+    "away": "Matchday guide",
+    "lastGenerated": "2026-10-24T09:35:14.644708+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-matchday-hub-v1",
+    "type": "matchday-hub"
   }
 }
