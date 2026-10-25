@@ -3442,5 +3442,111 @@
     ],
     "templateVersion": "2026-08-matchday-hub-v1",
     "type": "matchday-hub"
+  },
+  "snapshot:2494070": {
+    "eventId": "2494070",
+    "slug": "2026-10-25-manchester-united-bournemouth",
+    "date": "2026-10-25",
+    "home": "Manchester United",
+    "away": "Bournemouth",
+    "lastGenerated": "2026-10-25T09:51:12.766061+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2494071": {
+    "eventId": "2494071",
+    "slug": "2026-10-25-liverpool-brighton-and-hove-albion",
+    "date": "2026-10-25",
+    "home": "Liverpool",
+    "away": "Brighton and Hove Albion",
+    "lastGenerated": "2026-10-25T09:51:12.766061+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2494074": {
+    "eventId": "2494074",
+    "slug": "2026-10-25-crystal-palace-newcastle-united",
+    "date": "2026-10-25",
+    "home": "Crystal Palace",
+    "away": "Newcastle United",
+    "lastGenerated": "2026-10-25T09:51:12.766061+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506259": {
+    "eventId": "2506259",
+    "slug": "2026-10-25-barcelona-real-madrid",
+    "date": "2026-10-25",
+    "home": "Barcelona",
+    "away": "Real Madrid",
+    "lastGenerated": "2026-10-25T09:51:12.766061+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506261": {
+    "eventId": "2506261",
+    "slug": "2026-10-25-athletic-bilbao-getafe",
+    "date": "2026-10-25",
+    "home": "Athletic Bilbao",
+    "away": "Getafe",
+    "lastGenerated": "2026-10-25T09:51:12.766061+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506264": {
+    "eventId": "2506264",
+    "slug": "2026-10-25-celta-vigo-real-betis",
+    "date": "2026-10-25",
+    "home": "Celta Vigo",
+    "away": "Real Betis",
+    "lastGenerated": "2026-10-25T09:51:12.766061+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "hub:2026-10-25-matchday-football-guide": {
+    "eventId": "",
+    "slug": "2026-10-25-matchday-football-guide",
+    "date": "2026-10-25",
+    "home": "GlobalScore",
+    "away": "Matchday guide",
+    "lastGenerated": "2026-10-25T09:51:12.766061+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-matchday-hub-v1",
+    "type": "matchday-hub"
   }
 }
