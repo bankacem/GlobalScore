@@ -3548,5 +3548,36 @@
     ],
     "templateVersion": "2026-08-matchday-hub-v1",
     "type": "matchday-hub"
+  },
+  "snapshot:2506263": {
+    "eventId": "2506263",
+    "slug": "2026-10-26-sevilla-osasuna",
+    "date": "2026-10-26",
+    "home": "Sevilla",
+    "away": "Osasuna",
+    "lastGenerated": "2026-10-26T11:10:33.442146+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "hub:2026-10-26-matchday-football-guide": {
+    "eventId": "",
+    "slug": "2026-10-26-matchday-football-guide",
+    "date": "2026-10-26",
+    "home": "GlobalScore",
+    "away": "Matchday guide",
+    "lastGenerated": "2026-10-26T11:10:33.442146+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-matchday-hub-v1",
+    "type": "matchday-hub"
   }
 }
