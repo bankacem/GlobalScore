@@ -3579,5 +3579,36 @@
     ],
     "templateVersion": "2026-08-matchday-hub-v1",
     "type": "matchday-hub"
+  },
+  "snapshot:2561140": {
+    "eventId": "2561140",
+    "slug": "2026-10-28-national-bank-of-egypt-al-masry",
+    "date": "2026-10-28",
+    "home": "National Bank of Egypt",
+    "away": "Al Masry",
+    "lastGenerated": "2026-10-27T10:38:40.567431+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "hub:2026-10-28-matchday-football-guide": {
+    "eventId": "",
+    "slug": "2026-10-28-matchday-football-guide",
+    "date": "2026-10-28",
+    "home": "GlobalScore",
+    "away": "Matchday guide",
+    "lastGenerated": "2026-10-27T10:38:40.567431+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-matchday-hub-v1",
+    "type": "matchday-hub"
   }
 }
