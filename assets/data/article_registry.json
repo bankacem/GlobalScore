@@ -3610,5 +3610,20 @@
     ],
     "templateVersion": "2026-08-matchday-hub-v1",
     "type": "matchday-hub"
+  },
+  "snapshot:2561141": {
+    "eventId": "2561141",
+    "slug": "2026-10-28-zamalek-al-mokawloon-al-arab",
+    "date": "2026-10-28",
+    "home": "Zamalek",
+    "away": "Al-Mokawloon al-Arab",
+    "lastGenerated": "2026-10-28T11:23:10.086929+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
   }
 }
