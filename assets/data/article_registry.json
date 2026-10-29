@@ -3625,5 +3625,66 @@
       "es"
     ],
     "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506271": {
+    "eventId": "2506271",
+    "slug": "2026-10-30-villarreal-espanyol",
+    "date": "2026-10-30",
+    "home": "Villarreal",
+    "away": "Espanyol",
+    "lastGenerated": "2026-10-29T11:33:44.556842+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2561142": {
+    "eventId": "2561142",
+    "slug": "2026-10-29-modern-sport-al-ahly",
+    "date": "2026-10-29",
+    "home": "Modern Sport",
+    "away": "Al Ahly",
+    "lastGenerated": "2026-10-29T11:33:44.556842+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2561143": {
+    "eventId": "2561143",
+    "slug": "2026-10-29-pyramids-wadi-degla",
+    "date": "2026-10-29",
+    "home": "Pyramids",
+    "away": "Wadi Degla",
+    "lastGenerated": "2026-10-29T11:33:44.556842+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "hub:2026-10-29-matchday-football-guide": {
+    "eventId": "",
+    "slug": "2026-10-29-matchday-football-guide",
+    "date": "2026-10-29",
+    "home": "GlobalScore",
+    "away": "Matchday guide",
+    "lastGenerated": "2026-10-29T11:33:44.556842+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-matchday-hub-v1",
+    "type": "matchday-hub"
   }
 }
