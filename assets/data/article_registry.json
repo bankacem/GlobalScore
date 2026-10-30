@@ -3686,5 +3686,81 @@
     ],
     "templateVersion": "2026-08-matchday-hub-v1",
     "type": "matchday-hub"
+  },
+  "snapshot:2494084": {
+    "eventId": "2494084",
+    "slug": "2026-10-31-chelsea-manchester-united",
+    "date": "2026-10-31",
+    "home": "Chelsea",
+    "away": "Manchester United",
+    "lastGenerated": "2026-10-30T11:26:03.992677+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2561144": {
+    "eventId": "2561144",
+    "slug": "2026-10-30-asyut-petroleum-el-gouna",
+    "date": "2026-10-30",
+    "home": "Asyut Petroleum",
+    "away": "El Gouna",
+    "lastGenerated": "2026-10-30T11:26:03.992677+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2561145": {
+    "eventId": "2561145",
+    "slug": "2026-10-30-al-ittihad-alexandria-tala-ea-el-gaish",
+    "date": "2026-10-30",
+    "home": "Al Ittihad Alexandria",
+    "away": "Tala'ea El Gaish",
+    "lastGenerated": "2026-10-30T11:26:03.992677+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2561146": {
+    "eventId": "2561146",
+    "slug": "2026-10-30-el-qanah-enppi",
+    "date": "2026-10-30",
+    "home": "El Qanah",
+    "away": "ENPPI",
+    "lastGenerated": "2026-10-30T11:26:03.992677+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "hub:2026-10-30-matchday-football-guide": {
+    "eventId": "",
+    "slug": "2026-10-30-matchday-football-guide",
+    "date": "2026-10-30",
+    "home": "GlobalScore",
+    "away": "Matchday guide",
+    "lastGenerated": "2026-10-30T11:26:03.992677+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-matchday-hub-v1",
+    "type": "matchday-hub"
   }
 }
