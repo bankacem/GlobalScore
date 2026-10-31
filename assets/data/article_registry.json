@@ -3762,5 +3762,141 @@
     ],
     "templateVersion": "2026-08-matchday-hub-v1",
     "type": "matchday-hub"
+  },
+  "snapshot:2494081": {
+    "eventId": "2494081",
+    "slug": "2026-10-31-bournemouth-leeds-united",
+    "date": "2026-10-31",
+    "home": "Bournemouth",
+    "away": "Leeds United",
+    "lastGenerated": "2026-10-31T10:57:01.488391+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2494083": {
+    "eventId": "2494083",
+    "slug": "2026-10-31-tottenham-hotspur-crystal-palace",
+    "date": "2026-10-31",
+    "home": "Tottenham Hotspur",
+    "away": "Crystal Palace",
+    "lastGenerated": "2026-10-31T10:57:01.488391+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506269": {
+    "eventId": "2506269",
+    "slug": "2026-10-31-barcelona-deportivo-alaves",
+    "date": "2026-10-31",
+    "home": "Barcelona",
+    "away": "Deportivo Alavés",
+    "lastGenerated": "2026-10-31T10:57:01.488391+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506272": {
+    "eventId": "2506272",
+    "slug": "2026-10-31-levante-atletico-madrid",
+    "date": "2026-10-31",
+    "home": "Levante",
+    "away": "Atlético Madrid",
+    "lastGenerated": "2026-10-31T10:57:01.488391+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506273": {
+    "eventId": "2506273",
+    "slug": "2026-10-31-real-betis-malaga",
+    "date": "2026-10-31",
+    "home": "Real Betis",
+    "away": "Málaga",
+    "lastGenerated": "2026-10-31T10:57:01.488391+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2561147": {
+    "eventId": "2561147",
+    "slug": "2026-10-31-abou-qir-fertilizers-ghazl-el-mahalla",
+    "date": "2026-10-31",
+    "home": "Abou Qir Fertilizers",
+    "away": "Ghazl El Mahalla",
+    "lastGenerated": "2026-10-31T10:57:01.488391+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2561148": {
+    "eventId": "2561148",
+    "slug": "2026-10-31-petrojet-smouha",
+    "date": "2026-10-31",
+    "home": "Petrojet",
+    "away": "Smouha",
+    "lastGenerated": "2026-10-31T10:57:01.488391+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2561149": {
+    "eventId": "2561149",
+    "slug": "2026-10-31-ceramica-cleopatra-zed",
+    "date": "2026-10-31",
+    "home": "Ceramica Cleopatra",
+    "away": "ZED",
+    "lastGenerated": "2026-10-31T10:57:01.488391+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "hub:2026-10-31-matchday-football-guide": {
+    "eventId": "",
+    "slug": "2026-10-31-matchday-football-guide",
+    "date": "2026-10-31",
+    "home": "GlobalScore",
+    "away": "Matchday guide",
+    "lastGenerated": "2026-10-31T10:57:01.488391+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-matchday-hub-v1",
+    "type": "matchday-hub"
   }
 }
