@@ -3898,5 +3898,81 @@
     ],
     "templateVersion": "2026-08-matchday-hub-v1",
     "type": "matchday-hub"
+  },
+  "snapshot:2494082": {
+    "eventId": "2494082",
+    "slug": "2026-11-01-liverpool-arsenal",
+    "date": "2026-11-01",
+    "home": "Liverpool",
+    "away": "Arsenal",
+    "lastGenerated": "2026-11-01T11:52:17.481128+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506270": {
+    "eventId": "2506270",
+    "slug": "2026-11-01-athletic-bilbao-real-sociedad",
+    "date": "2026-11-01",
+    "home": "Athletic Bilbao",
+    "away": "Real Sociedad",
+    "lastGenerated": "2026-11-01T11:52:17.481128+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506275": {
+    "eventId": "2506275",
+    "slug": "2026-11-01-getafe-sevilla",
+    "date": "2026-11-01",
+    "home": "Getafe",
+    "away": "Sevilla",
+    "lastGenerated": "2026-11-01T11:52:17.481128+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506277": {
+    "eventId": "2506277",
+    "slug": "2026-11-01-elche-valencia",
+    "date": "2026-11-01",
+    "home": "Elche",
+    "away": "Valencia",
+    "lastGenerated": "2026-11-01T11:52:17.481128+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "hub:2026-11-01-matchday-football-guide": {
+    "eventId": "",
+    "slug": "2026-11-01-matchday-football-guide",
+    "date": "2026-11-01",
+    "home": "GlobalScore",
+    "away": "Matchday guide",
+    "lastGenerated": "2026-11-01T11:52:17.481128+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-matchday-hub-v1",
+    "type": "matchday-hub"
   }
 }
