@@ -3974,5 +3974,51 @@
     ],
     "templateVersion": "2026-08-matchday-hub-v1",
     "type": "matchday-hub"
+  },
+  "snapshot:2494080": {
+    "eventId": "2494080",
+    "slug": "2026-11-02-newcastle-united-everton",
+    "date": "2026-11-02",
+    "home": "Newcastle United",
+    "away": "Everton",
+    "lastGenerated": "2026-11-02T13:34:08.051377+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506274": {
+    "eventId": "2506274",
+    "slug": "2026-11-02-deportivo-de-a-coruna-osasuna",
+    "date": "2026-11-02",
+    "home": "Deportivo de A Coruña",
+    "away": "Osasuna",
+    "lastGenerated": "2026-11-02T13:34:08.051377+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "hub:2026-11-02-matchday-football-guide": {
+    "eventId": "",
+    "slug": "2026-11-02-matchday-football-guide",
+    "date": "2026-11-02",
+    "home": "GlobalScore",
+    "away": "Matchday guide",
+    "lastGenerated": "2026-11-02T13:34:08.051377+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-matchday-hub-v1",
+    "type": "matchday-hub"
   }
 }
