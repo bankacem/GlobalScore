@@ -1,30 +1,6 @@
 {
   "matches": [
     {
-      "id": "2494080",
-      "date": "2026-11-02",
-      "league": "Premier League",
-      "leagueAr": "الدوري الإنجليزي الممتاز",
-      "home": "Newcastle United",
-      "homeAr": "Newcastle United",
-      "away": "Everton",
-      "awayAr": "Everton",
-      "homeLogo": "https://www.thesportsdb.com/images/media/team/badge/kwaz8w1793219401.png",
-      "awayLogo": "https://r2.thesportsdb.com/images/media/team/badge/eqayrf1523184794.png",
-      "score": "0 - 1",
-      "status": "FT",
-      "minute": 0,
-      "time": "20:00",
-      "day": "02",
-      "month": "NOV",
-      "dayAr": "02",
-      "monthAr": "11/2026",
-      "lineups": null,
-      "stats": [],
-      "events": [],
-      "source": "TheSportsDB"
-    },
-    {
       "id": "2494093",
       "date": "2026-11-06",
       "league": "Premier League",
@@ -42,30 +18,6 @@
       "day": "06",
       "month": "NOV",
       "dayAr": "06",
-      "monthAr": "11/2026",
-      "lineups": null,
-      "stats": [],
-      "events": [],
-      "source": "TheSportsDB"
-    },
-    {
-      "id": "2506274",
-      "date": "2026-11-02",
-      "league": "La Liga",
-      "leagueAr": "الدوري الإسباني",
-      "home": "Deportivo de A Coruña",
-      "homeAr": "Deportivo de A Coruña",
-      "away": "Osasuna",
-      "awayAr": "Osasuna",
-      "homeLogo": "https://r2.thesportsdb.com/images/media/team/badge/62bvwv1783013156.png",
-      "awayLogo": "https://r2.thesportsdb.com/images/media/team/badge/rvspvt1473502960.png",
-      "score": "2 - 1",
-      "status": "FT",
-      "minute": 0,
-      "time": "20:00",
-      "day": "02",
-      "month": "NOV",
-      "dayAr": "02",
       "monthAr": "11/2026",
       "lineups": null,
       "stats": [],
@@ -239,5 +191,5 @@
       }
     ]
   },
-  "updatedAt": "2026-11-03T12:50:24.705639Z"
+  "updatedAt": "2026-11-04T13:01:28.230270Z"
 }
