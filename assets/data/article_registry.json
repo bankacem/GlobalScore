@@ -4020,5 +4020,51 @@
     ],
     "templateVersion": "2026-08-matchday-hub-v1",
     "type": "matchday-hub"
+  },
+  "snapshot:2494093": {
+    "eventId": "2494093",
+    "slug": "2026-11-06-everton-coventry-city",
+    "date": "2026-11-06",
+    "home": "Everton",
+    "away": "Coventry City",
+    "lastGenerated": "2026-11-05T13:15:05.513626+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506283": {
+    "eventId": "2506283",
+    "slug": "2026-11-06-sevilla-deportivo-alaves",
+    "date": "2026-11-06",
+    "home": "Sevilla",
+    "away": "Deportivo Alavés",
+    "lastGenerated": "2026-11-05T13:15:05.513626+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "hub:2026-11-06-matchday-football-guide": {
+    "eventId": "",
+    "slug": "2026-11-06-matchday-football-guide",
+    "date": "2026-11-06",
+    "home": "GlobalScore",
+    "away": "Matchday guide",
+    "lastGenerated": "2026-11-05T13:15:05.513626+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-matchday-hub-v1",
+    "type": "matchday-hub"
   }
 }
