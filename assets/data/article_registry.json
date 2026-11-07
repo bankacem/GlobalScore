@@ -4066,5 +4066,111 @@
     ],
     "templateVersion": "2026-08-matchday-hub-v1",
     "type": "matchday-hub"
+  },
+  "snapshot:2494091": {
+    "eventId": "2494091",
+    "slug": "2026-11-07-fulham-newcastle-united",
+    "date": "2026-11-07",
+    "home": "Fulham",
+    "away": "Newcastle United",
+    "lastGenerated": "2026-11-07T11:45:51.882792+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2494092": {
+    "eventId": "2494092",
+    "slug": "2026-11-07-arsenal-hull-city",
+    "date": "2026-11-07",
+    "home": "Arsenal",
+    "away": "Hull City",
+    "lastGenerated": "2026-11-07T11:45:51.882792+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2494097": {
+    "eventId": "2494097",
+    "slug": "2026-11-07-leeds-united-tottenham-hotspur",
+    "date": "2026-11-07",
+    "home": "Leeds United",
+    "away": "Tottenham Hotspur",
+    "lastGenerated": "2026-11-07T11:45:51.882792+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506280": {
+    "eventId": "2506280",
+    "slug": "2026-11-07-valencia-real-madrid",
+    "date": "2026-11-07",
+    "home": "Valencia",
+    "away": "Real Madrid",
+    "lastGenerated": "2026-11-07T11:45:51.882792+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506282": {
+    "eventId": "2506282",
+    "slug": "2026-11-07-malaga-racing-de-santander",
+    "date": "2026-11-07",
+    "home": "Málaga",
+    "away": "Racing de Santander",
+    "lastGenerated": "2026-11-07T11:45:51.882792+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506285": {
+    "eventId": "2506285",
+    "slug": "2026-11-07-espanyol-deportivo-de-a-coruna",
+    "date": "2026-11-07",
+    "home": "Espanyol",
+    "away": "Deportivo de A Coruña",
+    "lastGenerated": "2026-11-07T11:45:51.882792+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "hub:2026-11-07-matchday-football-guide": {
+    "eventId": "",
+    "slug": "2026-11-07-matchday-football-guide",
+    "date": "2026-11-07",
+    "home": "GlobalScore",
+    "away": "Matchday guide",
+    "lastGenerated": "2026-11-07T11:45:51.882792+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-matchday-hub-v1",
+    "type": "matchday-hub"
   }
 }
