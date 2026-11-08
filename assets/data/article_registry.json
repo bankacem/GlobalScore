@@ -4172,5 +4172,126 @@
     ],
     "templateVersion": "2026-08-matchday-hub-v1",
     "type": "matchday-hub"
+  },
+  "snapshot:2494090": {
+    "eventId": "2494090",
+    "slug": "2026-11-08-manchester-united-aston-villa",
+    "date": "2026-11-08",
+    "home": "Manchester United",
+    "away": "Aston Villa",
+    "lastGenerated": "2026-11-08T11:57:50.030035+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2494094": {
+    "eventId": "2494094",
+    "slug": "2026-11-08-brighton-and-hove-albion-brentford",
+    "date": "2026-11-08",
+    "home": "Brighton and Hove Albion",
+    "away": "Brentford",
+    "lastGenerated": "2026-11-08T11:57:50.030035+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2494095": {
+    "eventId": "2494095",
+    "slug": "2026-11-08-crystal-palace-liverpool",
+    "date": "2026-11-08",
+    "home": "Crystal Palace",
+    "away": "Liverpool",
+    "lastGenerated": "2026-11-08T11:57:50.030035+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506279": {
+    "eventId": "2506279",
+    "slug": "2026-11-08-atletico-madrid-barcelona",
+    "date": "2026-11-08",
+    "home": "Atlético Madrid",
+    "away": "Barcelona",
+    "lastGenerated": "2026-11-08T11:57:50.030035+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506281": {
+    "eventId": "2506281",
+    "slug": "2026-11-08-villarreal-getafe",
+    "date": "2026-11-08",
+    "home": "Villarreal",
+    "away": "Getafe",
+    "lastGenerated": "2026-11-08T11:57:50.030035+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506284": {
+    "eventId": "2506284",
+    "slug": "2026-11-08-celta-vigo-levante",
+    "date": "2026-11-08",
+    "home": "Celta Vigo",
+    "away": "Levante",
+    "lastGenerated": "2026-11-08T11:57:50.030035+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506288": {
+    "eventId": "2506288",
+    "slug": "2026-11-08-elche-real-betis",
+    "date": "2026-11-08",
+    "home": "Elche",
+    "away": "Real Betis",
+    "lastGenerated": "2026-11-08T11:57:50.030035+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "hub:2026-11-08-matchday-football-guide": {
+    "eventId": "",
+    "slug": "2026-11-08-matchday-football-guide",
+    "date": "2026-11-08",
+    "home": "GlobalScore",
+    "away": "Matchday guide",
+    "lastGenerated": "2026-11-08T11:57:50.030035+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-matchday-hub-v1",
+    "type": "matchday-hub"
   }
 }
