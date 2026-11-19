@@ -4293,5 +4293,36 @@
     ],
     "templateVersion": "2026-08-matchday-hub-v1",
     "type": "matchday-hub"
+  },
+  "snapshot:2506290": {
+    "eventId": "2506290",
+    "slug": "2026-11-20-athletic-bilbao-espanyol",
+    "date": "2026-11-20",
+    "home": "Athletic Bilbao",
+    "away": "Espanyol",
+    "lastGenerated": "2026-11-19T14:28:21.231323+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "hub:2026-11-20-matchday-football-guide": {
+    "eventId": "",
+    "slug": "2026-11-20-matchday-football-guide",
+    "date": "2026-11-20",
+    "home": "GlobalScore",
+    "away": "Matchday guide",
+    "lastGenerated": "2026-11-19T14:28:21.231323+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-matchday-hub-v1",
+    "type": "matchday-hub"
   }
 }
