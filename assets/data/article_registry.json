@@ -4324,5 +4324,20 @@
     ],
     "templateVersion": "2026-08-matchday-hub-v1",
     "type": "matchday-hub"
+  },
+  "snapshot:2494105": {
+    "eventId": "2494105",
+    "slug": "2026-11-21-manchester-city-fulham",
+    "date": "2026-11-21",
+    "home": "Manchester City",
+    "away": "Fulham",
+    "lastGenerated": "2026-11-20T14:04:51.963235+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
   }
 }
