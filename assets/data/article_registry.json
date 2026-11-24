@@ -4657,5 +4657,66 @@
     ],
     "templateVersion": "2026-08-matchday-hub-v1",
     "type": "matchday-hub"
+  },
+  "snapshot:2561152": {
+    "eventId": "2561152",
+    "slug": "2026-11-24-smouha-national-bank-of-egypt",
+    "date": "2026-11-24",
+    "home": "Smouha",
+    "away": "National Bank of Egypt",
+    "lastGenerated": "2026-11-24T15:55:58.926722+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2561153": {
+    "eventId": "2561153",
+    "slug": "2026-11-24-zed-abou-qir-fertilizers",
+    "date": "2026-11-24",
+    "home": "ZED",
+    "away": "Abou Qir Fertilizers",
+    "lastGenerated": "2026-11-24T15:55:58.926722+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2561154": {
+    "eventId": "2561154",
+    "slug": "2026-11-24-al-masry-asyut-petroleum",
+    "date": "2026-11-24",
+    "home": "Al Masry",
+    "away": "Asyut Petroleum",
+    "lastGenerated": "2026-11-24T15:55:58.926722+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "hub:2026-11-24-matchday-football-guide": {
+    "eventId": "",
+    "slug": "2026-11-24-matchday-football-guide",
+    "date": "2026-11-24",
+    "home": "GlobalScore",
+    "away": "Matchday guide",
+    "lastGenerated": "2026-11-24T15:55:58.926722+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-matchday-hub-v1",
+    "type": "matchday-hub"
   }
 }
