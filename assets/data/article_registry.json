@@ -4718,5 +4718,66 @@
     ],
     "templateVersion": "2026-08-matchday-hub-v1",
     "type": "matchday-hub"
+  },
+  "snapshot:2561156": {
+    "eventId": "2561156",
+    "slug": "2026-11-25-tala-ea-el-gaish-modern-sport",
+    "date": "2026-11-25",
+    "home": "Tala'ea El Gaish",
+    "away": "Modern Sport",
+    "lastGenerated": "2026-11-25T15:41:12.130909+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2561158": {
+    "eventId": "2561158",
+    "slug": "2026-11-25-enppi-ceramica-cleopatra",
+    "date": "2026-11-25",
+    "home": "ENPPI",
+    "away": "Ceramica Cleopatra",
+    "lastGenerated": "2026-11-25T15:41:12.130909+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2561159": {
+    "eventId": "2561159",
+    "slug": "2026-11-25-ghazl-el-mahalla-petrojet",
+    "date": "2026-11-25",
+    "home": "Ghazl El Mahalla",
+    "away": "Petrojet",
+    "lastGenerated": "2026-11-25T15:41:12.130909+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "hub:2026-11-25-matchday-football-guide": {
+    "eventId": "",
+    "slug": "2026-11-25-matchday-football-guide",
+    "date": "2026-11-25",
+    "home": "GlobalScore",
+    "away": "Matchday guide",
+    "lastGenerated": "2026-11-25T15:41:12.130909+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-matchday-hub-v1",
+    "type": "matchday-hub"
   }
 }
