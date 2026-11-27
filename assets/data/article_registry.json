@@ -4779,5 +4779,51 @@
     ],
     "templateVersion": "2026-08-matchday-hub-v1",
     "type": "matchday-hub"
+  },
+  "snapshot:2494118": {
+    "eventId": "2494118",
+    "slug": "2026-11-27-nottingham-forest-chelsea",
+    "date": "2026-11-27",
+    "home": "Nottingham Forest",
+    "away": "Chelsea",
+    "lastGenerated": "2026-11-27T15:10:21.525478+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506302": {
+    "eventId": "2506302",
+    "slug": "2026-11-27-levante-racing-de-santander",
+    "date": "2026-11-27",
+    "home": "Levante",
+    "away": "Racing de Santander",
+    "lastGenerated": "2026-11-27T15:10:21.525478+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "hub:2026-11-27-matchday-football-guide": {
+    "eventId": "",
+    "slug": "2026-11-27-matchday-football-guide",
+    "date": "2026-11-27",
+    "home": "GlobalScore",
+    "away": "Matchday guide",
+    "lastGenerated": "2026-11-27T15:10:21.525478+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-matchday-hub-v1",
+    "type": "matchday-hub"
   }
 }
