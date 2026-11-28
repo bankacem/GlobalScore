@@ -4825,5 +4825,111 @@
     ],
     "templateVersion": "2026-08-matchday-hub-v1",
     "type": "matchday-hub"
+  },
+  "snapshot:2494110": {
+    "eventId": "2494110",
+    "slug": "2026-11-28-manchester-united-brentford",
+    "date": "2026-11-28",
+    "home": "Manchester United",
+    "away": "Brentford",
+    "lastGenerated": "2026-11-28T14:16:03.781156+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2494116": {
+    "eventId": "2494116",
+    "slug": "2026-11-28-ipswich-town-aston-villa",
+    "date": "2026-11-28",
+    "home": "Ipswich Town",
+    "away": "Aston Villa",
+    "lastGenerated": "2026-11-28T14:16:03.781156+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2494117": {
+    "eventId": "2494117",
+    "slug": "2026-11-28-leeds-united-coventry-city",
+    "date": "2026-11-28",
+    "home": "Leeds United",
+    "away": "Coventry City",
+    "lastGenerated": "2026-11-28T14:16:03.781156+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506300": {
+    "eventId": "2506300",
+    "slug": "2026-11-28-malaga-athletic-bilbao",
+    "date": "2026-11-28",
+    "home": "Málaga",
+    "away": "Athletic Bilbao",
+    "lastGenerated": "2026-11-28T14:16:03.781156+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506304": {
+    "eventId": "2506304",
+    "slug": "2026-11-28-real-madrid-deportivo-alaves",
+    "date": "2026-11-28",
+    "home": "Real Madrid",
+    "away": "Deportivo Alavés",
+    "lastGenerated": "2026-11-28T14:16:03.781156+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "snapshot:2506305": {
+    "eventId": "2506305",
+    "slug": "2026-11-28-real-betis-rayo-vallecano",
+    "date": "2026-11-28",
+    "home": "Real Betis",
+    "away": "Rayo Vallecano",
+    "lastGenerated": "2026-11-28T14:16:03.781156+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-editorial-v2"
+  },
+  "hub:2026-11-28-matchday-football-guide": {
+    "eventId": "",
+    "slug": "2026-11-28-matchday-football-guide",
+    "date": "2026-11-28",
+    "home": "GlobalScore",
+    "away": "Matchday guide",
+    "lastGenerated": "2026-11-28T14:16:03.781156+00:00",
+    "languages": [
+      "ar",
+      "en",
+      "fr",
+      "es"
+    ],
+    "templateVersion": "2026-08-matchday-hub-v1",
+    "type": "matchday-hub"
   }
 }
